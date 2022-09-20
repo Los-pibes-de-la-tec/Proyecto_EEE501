@@ -54,21 +54,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\Alumnos\AgregarAlumno.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\Alumnos\AgregarAlumno.cs" />
     <Compile Include="Views\Alumnos\AgregarAlumno.Designer.cs">
       <DependentUpon>AgregarAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Alumnos\AlumnosHome.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\Alumnos\AlumnosHome.cs" />
     <Compile Include="Views\Alumnos\AlumnosHome.Designer.cs">
       <DependentUpon>AlumnosHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Alumnos\BuscarAlumno.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\Alumnos\BuscarAlumno.cs" />
     <Compile Include="Views\Alumnos\BuscarAlumno.Designer.cs">
       <DependentUpon>BuscarAlumno.cs</DependentUpon>
     </Compile>
@@ -78,9 +72,7 @@
     <Compile Include="Views\Documentos\DocumentosHome.Designer.cs">
       <DependentUpon>DocumentosHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\Login.cs" />
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
