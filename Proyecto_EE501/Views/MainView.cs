@@ -47,7 +47,7 @@ namespace EjemploLibreriaForms.Views
 
         private void MainView_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("¿ Seguro que quieres cerrar la aplicación ?",
+            if (DialogResult.Yes == MessageBox.Show("¿Seguro que quieres cerrar la aplicación?",
                     "Cerrar aplicación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) { 
                 this.Dispose();
                 Application.Exit();

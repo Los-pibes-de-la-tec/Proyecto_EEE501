@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AlumnoModel.cs" />
     <Compile Include="Views\Alumnos\AgregarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
