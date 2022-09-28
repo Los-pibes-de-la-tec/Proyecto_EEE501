@@ -21,17 +21,20 @@ namespace EjemploLibreriaForms.Views
 
         private void btnAlumnos_Click(object sender, EventArgs e)
         {
+            BuscarAlumno Alumno = new BuscarAlumno();
 
-            var view = this.GetInstace(this);
+            var view = this.GetInstace(this, Alumno);
         }
 
         //Singleton pattern (Open a single form instance)
         private static Form instance;
-        public Form GetInstace(Form parentContainer)
+        public Form GetInstace(Form parentContainer,Form XD)
         {
+            instance = null;
             if (instance == null || instance.IsDisposed)
             {
-                instance = new BuscarAlumno();
+
+                instance = XD;
                 instance.MdiParent = parentContainer;
                 instance.FormBorderStyle = FormBorderStyle.None;
                 instance.Dock = DockStyle.Fill;
@@ -41,7 +44,9 @@ namespace EjemploLibreriaForms.Views
                 if (instance.WindowState == FormWindowState.Minimized)
                     instance.WindowState = FormWindowState.Normal;
                 instance.BringToFront();
+               
             }
+            
             return instance;
         }
 
@@ -55,6 +60,13 @@ namespace EjemploLibreriaForms.Views
 
             else
                 e.Cancel = true;
+        }
+
+        private void btnDocentes_Click(object sender, EventArgs e)
+        {
+            Docentes.BuscarDocente Docente = new Docentes.BuscarDocente();
+
+            var view = this.GetInstace(this, Docente);
         }
     }
 }

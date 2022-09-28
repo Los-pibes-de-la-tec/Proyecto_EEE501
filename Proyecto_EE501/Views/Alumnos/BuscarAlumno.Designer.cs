@@ -46,7 +46,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_lNombre = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Formacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ciclo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Caracterizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageDetalleAlumno = new System.Windows.Forms.TabPage();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txt_dGrupo = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txt_dNivel = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txt_dCiclo = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txt_dCaracterizacion = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txt_dFormacion = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
@@ -88,24 +106,6 @@
             this.txt_dApellido = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txt_dNombre = new System.Windows.Forms.TextBox();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Formacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ciclo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Caracterizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label23 = new System.Windows.Forms.Label();
-            this.txt_dCaracterizacion = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txt_dFormacion = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txt_dCiclo = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txt_dGrupo = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txt_dNivel = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageListaAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -340,6 +340,62 @@
             this.dataGridView1.Size = new System.Drawing.Size(834, 296);
             this.dataGridView1.TabIndex = 16;
             // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Visible = false;
+            this.Nombre.Width = 99;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.Visible = false;
+            this.Apellido.Width = 99;
+            // 
+            // Nivel
+            // 
+            this.Nivel.HeaderText = "Nivel";
+            this.Nivel.Name = "Nivel";
+            this.Nivel.Visible = false;
+            this.Nivel.Width = 99;
+            // 
+            // DNI
+            // 
+            this.DNI.HeaderText = "DNI";
+            this.DNI.Name = "DNI";
+            this.DNI.Visible = false;
+            this.DNI.Width = 99;
+            // 
+            // Formacion
+            // 
+            this.Formacion.HeaderText = "Formación";
+            this.Formacion.Name = "Formacion";
+            this.Formacion.Visible = false;
+            this.Formacion.Width = 98;
+            // 
+            // Ciclo
+            // 
+            this.Ciclo.HeaderText = "Ciclo";
+            this.Ciclo.Name = "Ciclo";
+            this.Ciclo.Visible = false;
+            this.Ciclo.Width = 99;
+            // 
+            // Caracterizacion
+            // 
+            this.Caracterizacion.HeaderText = "Caracterización";
+            this.Caracterizacion.Name = "Caracterizacion";
+            this.Caracterizacion.Visible = false;
+            this.Caracterizacion.Width = 99;
+            // 
+            // Grupo
+            // 
+            this.Grupo.HeaderText = "Grupo";
+            this.Grupo.Name = "Grupo";
+            this.Grupo.Visible = false;
+            this.Grupo.Width = 99;
+            // 
             // tabPageDetalleAlumno
             // 
             this.tabPageDetalleAlumno.Controls.Add(this.label27);
@@ -400,6 +456,86 @@
             this.tabPageDetalleAlumno.TabIndex = 1;
             this.tabPageDetalleAlumno.Text = "Detalle Alumno";
             this.tabPageDetalleAlumno.UseVisualStyleBackColor = true;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(254, 255);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(45, 16);
+            this.label27.TabIndex = 319;
+            this.label27.Text = "Grupo";
+            // 
+            // txt_dGrupo
+            // 
+            this.txt_dGrupo.Location = new System.Drawing.Point(377, 251);
+            this.txt_dGrupo.Name = "txt_dGrupo";
+            this.txt_dGrupo.Size = new System.Drawing.Size(100, 22);
+            this.txt_dGrupo.TabIndex = 318;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(47, 254);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(39, 16);
+            this.label28.TabIndex = 317;
+            this.label28.Text = "Nivel";
+            // 
+            // txt_dNivel
+            // 
+            this.txt_dNivel.Location = new System.Drawing.Point(127, 248);
+            this.txt_dNivel.Name = "txt_dNivel";
+            this.txt_dNivel.Size = new System.Drawing.Size(100, 22);
+            this.txt_dNivel.TabIndex = 316;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(47, 337);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(38, 16);
+            this.label26.TabIndex = 313;
+            this.label26.Text = "Ciclo";
+            // 
+            // txt_dCiclo
+            // 
+            this.txt_dCiclo.Location = new System.Drawing.Point(127, 331);
+            this.txt_dCiclo.Name = "txt_dCiclo";
+            this.txt_dCiclo.Size = new System.Drawing.Size(100, 22);
+            this.txt_dCiclo.TabIndex = 312;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(254, 297);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(101, 16);
+            this.label23.TabIndex = 311;
+            this.label23.Text = "Caracterización";
+            // 
+            // txt_dCaracterizacion
+            // 
+            this.txt_dCaracterizacion.Location = new System.Drawing.Point(377, 293);
+            this.txt_dCaracterizacion.Name = "txt_dCaracterizacion";
+            this.txt_dCaracterizacion.Size = new System.Drawing.Size(100, 22);
+            this.txt_dCaracterizacion.TabIndex = 310;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(47, 296);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(72, 16);
+            this.label24.TabIndex = 309;
+            this.label24.Text = "Formación";
+            // 
+            // txt_dFormacion
+            // 
+            this.txt_dFormacion.Location = new System.Drawing.Point(127, 290);
+            this.txt_dFormacion.Name = "txt_dFormacion";
+            this.txt_dFormacion.Size = new System.Drawing.Size(100, 22);
+            this.txt_dFormacion.TabIndex = 308;
             // 
             // btnCancel
             // 
@@ -759,142 +895,6 @@
             this.txt_dNombre.Name = "txt_dNombre";
             this.txt_dNombre.Size = new System.Drawing.Size(100, 22);
             this.txt_dNombre.TabIndex = 267;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Visible = false;
-            this.Nombre.Width = 99;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.Visible = false;
-            this.Apellido.Width = 99;
-            // 
-            // Nivel
-            // 
-            this.Nivel.HeaderText = "Nivel";
-            this.Nivel.Name = "Nivel";
-            this.Nivel.Visible = false;
-            this.Nivel.Width = 99;
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            this.DNI.Visible = false;
-            this.DNI.Width = 99;
-            // 
-            // Formacion
-            // 
-            this.Formacion.HeaderText = "Formación";
-            this.Formacion.Name = "Formacion";
-            this.Formacion.Visible = false;
-            this.Formacion.Width = 98;
-            // 
-            // Ciclo
-            // 
-            this.Ciclo.HeaderText = "Ciclo";
-            this.Ciclo.Name = "Ciclo";
-            this.Ciclo.Visible = false;
-            this.Ciclo.Width = 99;
-            // 
-            // Caracterizacion
-            // 
-            this.Caracterizacion.HeaderText = "Caracterización";
-            this.Caracterizacion.Name = "Caracterizacion";
-            this.Caracterizacion.Visible = false;
-            this.Caracterizacion.Width = 99;
-            // 
-            // Grupo
-            // 
-            this.Grupo.HeaderText = "Grupo";
-            this.Grupo.Name = "Grupo";
-            this.Grupo.Visible = false;
-            this.Grupo.Width = 99;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(254, 297);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(101, 16);
-            this.label23.TabIndex = 311;
-            this.label23.Text = "Caracterización";
-            // 
-            // txt_dCaracterizacion
-            // 
-            this.txt_dCaracterizacion.Location = new System.Drawing.Point(377, 293);
-            this.txt_dCaracterizacion.Name = "txt_dCaracterizacion";
-            this.txt_dCaracterizacion.Size = new System.Drawing.Size(100, 22);
-            this.txt_dCaracterizacion.TabIndex = 310;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(47, 296);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(72, 16);
-            this.label24.TabIndex = 309;
-            this.label24.Text = "Formación";
-            // 
-            // txt_dFormacion
-            // 
-            this.txt_dFormacion.Location = new System.Drawing.Point(127, 290);
-            this.txt_dFormacion.Name = "txt_dFormacion";
-            this.txt_dFormacion.Size = new System.Drawing.Size(100, 22);
-            this.txt_dFormacion.TabIndex = 308;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(47, 337);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(38, 16);
-            this.label26.TabIndex = 313;
-            this.label26.Text = "Ciclo";
-            // 
-            // txt_dCiclo
-            // 
-            this.txt_dCiclo.Location = new System.Drawing.Point(127, 331);
-            this.txt_dCiclo.Name = "txt_dCiclo";
-            this.txt_dCiclo.Size = new System.Drawing.Size(100, 22);
-            this.txt_dCiclo.TabIndex = 312;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(254, 255);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(45, 16);
-            this.label27.TabIndex = 319;
-            this.label27.Text = "Grupo";
-            // 
-            // txt_dGrupo
-            // 
-            this.txt_dGrupo.Location = new System.Drawing.Point(377, 251);
-            this.txt_dGrupo.Name = "txt_dGrupo";
-            this.txt_dGrupo.Size = new System.Drawing.Size(100, 22);
-            this.txt_dGrupo.TabIndex = 318;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(47, 254);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(39, 16);
-            this.label28.TabIndex = 317;
-            this.label28.Text = "Nivel";
-            // 
-            // txt_dNivel
-            // 
-            this.txt_dNivel.Location = new System.Drawing.Point(127, 248);
-            this.txt_dNivel.Name = "txt_dNivel";
-            this.txt_dNivel.Size = new System.Drawing.Size(100, 22);
-            this.txt_dNivel.TabIndex = 316;
             // 
             // BuscarAlumno
             // 

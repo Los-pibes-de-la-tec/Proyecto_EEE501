@@ -55,17 +55,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AlumnoModel.cs" />
-    <Compile Include="Views\Alumnos\AgregarAlumno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Alumnos\AgregarAlumno.Designer.cs">
-      <DependentUpon>AgregarAlumno.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Models\DocenteModel.cs" />
+    <Compile Include="Skin.cs" />
     <Compile Include="Views\Alumnos\BuscarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Alumnos\BuscarAlumno.Designer.cs">
       <DependentUpon>BuscarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Docentes\BuscarDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Docentes\BuscarDocente.Designer.cs">
+      <DependentUpon>BuscarDocente.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Documentos\DocumentosHome.cs">
       <SubType>Form</SubType>
@@ -78,12 +80,6 @@
     </Compile>
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Docentes\ProfesoresHome.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Docentes\ProfesoresHome.Designer.cs">
-      <DependentUpon>ProfesoresHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,11 +95,11 @@
     <Compile Include="Views\Trayectoria\TrayectoriaHome.Designer.cs">
       <DependentUpon>TrayectoriaHome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Alumnos\AgregarAlumno.resx">
-      <DependentUpon>AgregarAlumno.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Alumnos\BuscarAlumno.resx">
       <DependentUpon>BuscarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Docentes\BuscarDocente.resx">
+      <DependentUpon>BuscarDocente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
