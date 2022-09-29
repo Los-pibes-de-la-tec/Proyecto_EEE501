@@ -33,7 +33,7 @@ namespace EjemploLibreriaForms.Alumnos
         private void CargarGrilla() 
         {
             
-            alumnos.Add(new AlumnoModel("Pepito", "Ramirez", "51453546", new DateTime(2014, 12, 31), "Belgrano 268", "San Vicente", "11111111", "222222222", "Primario", "SEDE", "1° Ciclo", "SV", "7"));
+            alumnos.Add(new AlumnoModel("Pepito", "zarate", "51453546", new DateTime(2014, 12, 31), "Belgrano 268", "San Vicente", "11111111", "222222222", "Primario", "SEDE", "1° Ciclo", "SV", "7"));
           
             dataGridView1.DataSource = alumnos;
         }
