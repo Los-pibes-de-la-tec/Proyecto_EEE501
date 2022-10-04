@@ -70,6 +70,9 @@
             this.txt_lNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.tabPageDetalleDocente.SuspendLayout();
             this.tabPageListaDocentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -78,6 +81,9 @@
             // 
             // tabPageDetalleDocente
             // 
+            this.tabPageDetalleDocente.Controls.Add(this.button1);
+            this.tabPageDetalleDocente.Controls.Add(this.button2);
+            this.tabPageDetalleDocente.Controls.Add(this.materialDivider2);
             this.tabPageDetalleDocente.Controls.Add(this.label27);
             this.tabPageDetalleDocente.Controls.Add(this.txt_dGrupo);
             this.tabPageDetalleDocente.Controls.Add(this.txt_dEmail);
@@ -94,9 +100,9 @@
             this.tabPageDetalleDocente.Controls.Add(this.label13);
             this.tabPageDetalleDocente.Controls.Add(this.label14);
             this.tabPageDetalleDocente.Location = new System.Drawing.Point(4, 25);
-            this.tabPageDetalleDocente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageDetalleDocente.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageDetalleDocente.Name = "tabPageDetalleDocente";
-            this.tabPageDetalleDocente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageDetalleDocente.Padding = new System.Windows.Forms.Padding(4);
             this.tabPageDetalleDocente.Size = new System.Drawing.Size(1021, 437);
             this.tabPageDetalleDocente.TabIndex = 1;
             this.tabPageDetalleDocente.Text = "Detalle Docente";
@@ -116,7 +122,7 @@
             // txt_dGrupo
             // 
             this.txt_dGrupo.Location = new System.Drawing.Point(542, 231);
-            this.txt_dGrupo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_dGrupo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_dGrupo.Name = "txt_dGrupo";
             this.txt_dGrupo.Size = new System.Drawing.Size(132, 22);
             this.txt_dGrupo.TabIndex = 320;
@@ -124,7 +130,7 @@
             // txt_dEmail
             // 
             this.txt_dEmail.Location = new System.Drawing.Point(272, 231);
-            this.txt_dEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_dEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txt_dEmail.Name = "txt_dEmail";
             this.txt_dEmail.Size = new System.Drawing.Size(132, 22);
             this.txt_dEmail.TabIndex = 310;
@@ -143,7 +149,7 @@
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(705, 471);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(244, 54);
             this.btnCancel.TabIndex = 308;
@@ -154,7 +160,7 @@
             // txt_dTelefono
             // 
             this.txt_dTelefono.Location = new System.Drawing.Point(542, 177);
-            this.txt_dTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_dTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txt_dTelefono.Name = "txt_dTelefono";
             this.txt_dTelefono.Size = new System.Drawing.Size(132, 22);
             this.txt_dTelefono.TabIndex = 307;
@@ -162,7 +168,7 @@
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(417, 471);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(244, 54);
             this.btnSave.TabIndex = 306;
@@ -173,7 +179,7 @@
             // txt_dDni
             // 
             this.txt_dDni.Location = new System.Drawing.Point(272, 177);
-            this.txt_dDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_dDni.Margin = new System.Windows.Forms.Padding(4);
             this.txt_dDni.Name = "txt_dDni";
             this.txt_dDni.Size = new System.Drawing.Size(132, 22);
             this.txt_dDni.TabIndex = 271;
@@ -181,7 +187,7 @@
             // txt_dApellido
             // 
             this.txt_dApellido.Location = new System.Drawing.Point(542, 131);
-            this.txt_dApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_dApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txt_dApellido.Name = "txt_dApellido";
             this.txt_dApellido.Size = new System.Drawing.Size(132, 22);
             this.txt_dApellido.TabIndex = 269;
@@ -189,7 +195,7 @@
             // txt_dNombre
             // 
             this.txt_dNombre.Location = new System.Drawing.Point(272, 125);
-            this.txt_dNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_dNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_dNombre.Name = "txt_dNombre";
             this.txt_dNombre.Size = new System.Drawing.Size(132, 22);
             this.txt_dNombre.TabIndex = 267;
@@ -271,9 +277,9 @@
             this.tabPageListaDocentes.Controls.Add(this.txt_lNombre);
             this.tabPageListaDocentes.Controls.Add(this.label1);
             this.tabPageListaDocentes.Location = new System.Drawing.Point(4, 25);
-            this.tabPageListaDocentes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageListaDocentes.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageListaDocentes.Name = "tabPageListaDocentes";
-            this.tabPageListaDocentes.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageListaDocentes.Padding = new System.Windows.Forms.Padding(4);
             this.tabPageListaDocentes.Size = new System.Drawing.Size(1021, 437);
             this.tabPageListaDocentes.TabIndex = 0;
             this.tabPageListaDocentes.Text = "Lista Docentes";
@@ -296,7 +302,7 @@
             this.Caracterizacion,
             this.Grupo});
             this.dataGridView1.Location = new System.Drawing.Point(9, 144);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(834, 231);
@@ -384,7 +390,7 @@
             "9",
             "10"});
             this.cmb_lGrupo.Location = new System.Drawing.Point(596, 89);
-            this.cmb_lGrupo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cmb_lGrupo.Margin = new System.Windows.Forms.Padding(5);
             this.cmb_lGrupo.Name = "cmb_lGrupo";
             this.cmb_lGrupo.Size = new System.Drawing.Size(160, 24);
             this.cmb_lGrupo.TabIndex = 39;
@@ -392,7 +398,7 @@
             // txt_lTelefono
             // 
             this.txt_lTelefono.Location = new System.Drawing.Point(362, 86);
-            this.txt_lTelefono.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_lTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.txt_lTelefono.Name = "txt_lTelefono";
             this.txt_lTelefono.Size = new System.Drawing.Size(160, 22);
             this.txt_lTelefono.TabIndex = 38;
@@ -400,7 +406,7 @@
             // txt_IDNI
             // 
             this.txt_IDNI.Location = new System.Drawing.Point(81, 80);
-            this.txt_IDNI.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_IDNI.Margin = new System.Windows.Forms.Padding(5);
             this.txt_IDNI.Name = "txt_IDNI";
             this.txt_IDNI.Size = new System.Drawing.Size(160, 22);
             this.txt_IDNI.TabIndex = 37;
@@ -408,7 +414,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(596, 48);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(160, 22);
             this.textBox1.TabIndex = 36;
@@ -428,7 +434,7 @@
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Location = new System.Drawing.Point(863, 292);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(5);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(132, 37);
             this.btnDelete.TabIndex = 29;
@@ -440,7 +446,7 @@
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Location = new System.Drawing.Point(863, 222);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(5);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(132, 37);
             this.btnEdit.TabIndex = 28;
@@ -452,7 +458,7 @@
             // 
             this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddNew.Location = new System.Drawing.Point(863, 159);
-            this.btnAddNew.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnAddNew.Margin = new System.Windows.Forms.Padding(5);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(132, 37);
             this.btnAddNew.TabIndex = 27;
@@ -496,7 +502,7 @@
             // txt_lApellido
             // 
             this.txt_lApellido.Location = new System.Drawing.Point(362, 45);
-            this.txt_lApellido.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_lApellido.Margin = new System.Windows.Forms.Padding(5);
             this.txt_lApellido.Name = "txt_lApellido";
             this.txt_lApellido.Size = new System.Drawing.Size(160, 22);
             this.txt_lApellido.TabIndex = 19;
@@ -504,7 +510,7 @@
             // txt_lNombre
             // 
             this.txt_lNombre.Location = new System.Drawing.Point(81, 39);
-            this.txt_lNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_lNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txt_lNombre.Name = "txt_lNombre";
             this.txt_lNombre.Size = new System.Drawing.Size(160, 22);
             this.txt_lNombre.TabIndex = 17;
@@ -526,11 +532,40 @@
             this.tabControl1.Controls.Add(this.tabPageListaDocentes);
             this.tabControl1.Controls.Add(this.tabPageDetalleDocente);
             this.tabControl1.Location = new System.Drawing.Point(1, 64);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1029, 466);
             this.tabControl1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(508, 388);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(183, 44);
+            this.button1.TabIndex = 325;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(311, 388);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(183, 44);
+            this.button2.TabIndex = 324;
+            this.button2.Text = "Guardar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // materialDivider2
+            // 
+            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(1, 372);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(1018, 1);
+            this.materialDivider2.TabIndex = 323;
+            this.materialDivider2.Text = "materialDivider2";
             // 
             // BuscarDocente
             // 
@@ -540,7 +575,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BuscarDocente";
             this.Text = "BuscarDocente";
             this.Load += new System.EventHandler(this.BuscarDocente_Load);
@@ -598,6 +633,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ciclo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Caracterizacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private MaterialSkin.Controls.MaterialDivider materialDivider2;
 
     }
 }

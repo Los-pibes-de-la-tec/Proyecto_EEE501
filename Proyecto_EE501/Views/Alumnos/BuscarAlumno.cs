@@ -23,8 +23,9 @@ namespace EjemploLibreriaForms.Alumnos
         public BuscarAlumno()
         {
             InitializeComponent();
-            Skin.CargarSkin(tabControl1, tabPageDetalleAlumno, this);
-
+            tabControl1.TabPages.Remove(tabPageDetalleAlumno);
+            tabControl1.TabPages.Remove(tabPageNuevoAdulto);
+            Skin.CargarSkin(this);
             this.CargarGrilla();
         }
 
@@ -32,15 +33,11 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void CargarGrilla() 
         {
+
             alumnos.Add(new AlumnoModel("Pepito", "Ramirez", "51453546", new DateTime(2014, 12, 31), "Belgrano 268", "San Vicente", "11111111", "222222222", "Primario", "SEDE", "1° Ciclo", "SV", "7"));
             alumnos.Add(new AlumnoModel("Juanito", "Perez", "44566768", new DateTime(2004, 8, 23), "Av. Pres. Perón 6550", "Alejandro Korn", "11111111", "222222222", "SAFI", "SEDE", "2° Ciclo", "DV", "5"));
-<<<<<<< HEAD
             alumnos.Add(new AlumnoModel("Ramon", "Lopez", "43656765", new DateTime(2003, 4, 7), "Calle falsa 123", "Springfield", "11111111", "222222222", "Secundario", "INCLUSION", "2° Ciclo", "TEL", "10"));
           
-=======
-            alumnos.Add(new AlumnoModel("Ramiro", "Lopez", "43656765", new DateTime(2003, 4, 7), "Calle falsa 123", "Springfield", "11111111", "222222222", "Secundario", "INCLUSION", "2° Ciclo", "TEL", "10"));
-      
->>>>>>> 3ede391b0f095401968973b9697c42cad0739508
             dataGridView1.DataSource = alumnos;
         }
 
@@ -63,7 +60,7 @@ namespace EjemploLibreriaForms.Alumnos
         {
             txt_dNombre.Text = alumnoToEdit.Nombre;
             txt_dApellido.Text = alumnoToEdit.Apellido;
-            txt_dDni.Text = alumnoToEdit.DNI;
+            txt_dCuit.Text = alumnoToEdit.DNI;
             dtp_dFechaNacimiento.Text = alumnoToEdit.FechaNacimiento;
             txt_dDomicilio.Text = alumnoToEdit.Domicilio;
             txt_dLocalidad.Text = alumnoToEdit.Localidad;
@@ -80,7 +77,7 @@ namespace EjemploLibreriaForms.Alumnos
         {
             txt_dNombre.Text = "";
             txt_dApellido.Text = "";
-            txt_dDni.Text = "";
+            txt_dCuit.Text = "";
             dtp_dFechaNacimiento.Text = DateTime.Now.ToShortDateString();
             txt_dDomicilio.Text = "";
             txt_dLocalidad.Text = "";
@@ -111,7 +108,7 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            var alumnoToSave = new AlumnoModel(txt_dNombre.Text, txt_dApellido.Text, txt_dDni.Text,
+            var alumnoToSave = new AlumnoModel(txt_dNombre.Text, txt_dApellido.Text, txt_dCuit.Text,
                 dtp_dFechaNacimiento.Value, txt_dDomicilio.Text, txt_dLocalidad.Text,
                 txt_dAlumnoTel1.Text, txt_dAlumnoTel2.Text, txt_dNivel.Text,
                 txt_dFormacion.Text, txt_dCiclo.Text, txt_dCaracterizacion.Text, txt_dGrupo.Text);
@@ -182,5 +179,24 @@ namespace EjemploLibreriaForms.Alumnos
                 txt_dAlumnoTel2.Visible = false;
             }
         }
+
+        private void chxAddNewAdulto1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!tabControl1.TabPages.Contains(tabPageNuevoAdulto)) 
+            {
+                if (chxAddNewAdulto1.Checked)
+                {
+                    tabControl1.TabPages.Add(tabPageNuevoAdulto);
+                    tabControl1.SelectedTab = tabControl1.TabPages[1];
+                }
+            } 
+            
+        }
+
+        private void btnCancel2_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabPageNuevoAdulto);
+        }
+
     }
 }

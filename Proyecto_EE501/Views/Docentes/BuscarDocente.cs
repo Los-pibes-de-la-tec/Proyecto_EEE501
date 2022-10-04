@@ -21,7 +21,7 @@ namespace EjemploLibreriaForms.Views.Docentes
         public BuscarDocente()
         {
             InitializeComponent();
-            Skin.CargarSkin(tabControl1, tabPageDetalleDocente, this);
+            Skin.CargarSkin(this);
             dataGridView1.DataSource = Docentes;
         }
 

@@ -69,25 +69,25 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.chxAddNewAdulto1 = new System.Windows.Forms.CheckBox();
+            this.dtp_Adulto1FechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtAdulto1Tel2 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtAdulto1Tel1 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtAdulto1Localidad = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtAdulto1Parentesco = new System.Windows.Forms.TextBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtAdulto1Cuit = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtAdulto1Apellido = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtAdulto1Nombre = new System.Windows.Forms.TextBox();
             this.dtp_dFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -101,21 +101,64 @@
             this.txt_dDomicilio = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txt_dDni = new System.Windows.Forms.TextBox();
+            this.txt_dCuit = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txt_dApellido = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txt_dNombre = new System.Windows.Forms.TextBox();
+            this.tabPageNuevoAdulto = new System.Windows.Forms.TabPage();
+            this.dtp_Adulto2FechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtAdulto2Tel2 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtAdulto2Tel1 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtAdulto2Localidad = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtAdulto2Parentesco = new System.Windows.Forms.TextBox();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtAdulto2Cuit = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtAdulto2Apellido = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txtAdulto2Nombre = new System.Windows.Forms.TextBox();
+            this.btnCancel2 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialDivider4 = new MaterialSkin.Controls.MaterialDivider();
+            this.dtp_Adulto3FechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.txtAdulto3Tel2 = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.txtAdulto3Tel1 = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.txtAdulto3Localidad = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.txtAdulto3Parentesco = new System.Windows.Forms.TextBox();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.txtAdulto3Cuit = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.txtAdulto3Apellido = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.txtAdulto3Nombre = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageListaAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPageDetalleAlumno.SuspendLayout();
+            this.tabPageNuevoAdulto.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPageListaAlumnos);
             this.tabControl1.Controls.Add(this.tabPageDetalleAlumno);
+            this.tabControl1.Controls.Add(this.tabPageNuevoAdulto);
             this.tabControl1.Location = new System.Drawing.Point(2, 64);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -412,25 +455,25 @@
             this.tabPageDetalleAlumno.Controls.Add(this.btnSave);
             this.tabPageDetalleAlumno.Controls.Add(this.materialDivider2);
             this.tabPageDetalleAlumno.Controls.Add(this.materialDivider1);
-            this.tabPageDetalleAlumno.Controls.Add(this.checkBox4);
-            this.tabPageDetalleAlumno.Controls.Add(this.dateTimePicker2);
+            this.tabPageDetalleAlumno.Controls.Add(this.chxAddNewAdulto1);
+            this.tabPageDetalleAlumno.Controls.Add(this.dtp_Adulto1FechaNacimiento);
             this.tabPageDetalleAlumno.Controls.Add(this.checkBox2);
             this.tabPageDetalleAlumno.Controls.Add(this.label15);
-            this.tabPageDetalleAlumno.Controls.Add(this.textBox13);
+            this.tabPageDetalleAlumno.Controls.Add(this.txtAdulto1Tel2);
             this.tabPageDetalleAlumno.Controls.Add(this.label16);
-            this.tabPageDetalleAlumno.Controls.Add(this.textBox14);
+            this.tabPageDetalleAlumno.Controls.Add(this.txtAdulto1Tel1);
             this.tabPageDetalleAlumno.Controls.Add(this.label17);
-            this.tabPageDetalleAlumno.Controls.Add(this.textBox15);
+            this.tabPageDetalleAlumno.Controls.Add(this.txtAdulto1Localidad);
             this.tabPageDetalleAlumno.Controls.Add(this.label18);
-            this.tabPageDetalleAlumno.Controls.Add(this.textBox16);
+            this.tabPageDetalleAlumno.Controls.Add(this.txtAdulto1Parentesco);
             this.tabPageDetalleAlumno.Controls.Add(this.materialLabel2);
             this.tabPageDetalleAlumno.Controls.Add(this.label19);
             this.tabPageDetalleAlumno.Controls.Add(this.label20);
-            this.tabPageDetalleAlumno.Controls.Add(this.textBox10);
+            this.tabPageDetalleAlumno.Controls.Add(this.txtAdulto1Cuit);
             this.tabPageDetalleAlumno.Controls.Add(this.label21);
-            this.tabPageDetalleAlumno.Controls.Add(this.textBox11);
+            this.tabPageDetalleAlumno.Controls.Add(this.txtAdulto1Apellido);
             this.tabPageDetalleAlumno.Controls.Add(this.label22);
-            this.tabPageDetalleAlumno.Controls.Add(this.textBox12);
+            this.tabPageDetalleAlumno.Controls.Add(this.txtAdulto1Nombre);
             this.tabPageDetalleAlumno.Controls.Add(this.dtp_dFechaNacimiento);
             this.tabPageDetalleAlumno.Controls.Add(this.materialLabel1);
             this.tabPageDetalleAlumno.Controls.Add(this.checkBox1);
@@ -444,7 +487,7 @@
             this.tabPageDetalleAlumno.Controls.Add(this.txt_dDomicilio);
             this.tabPageDetalleAlumno.Controls.Add(this.label11);
             this.tabPageDetalleAlumno.Controls.Add(this.label12);
-            this.tabPageDetalleAlumno.Controls.Add(this.txt_dDni);
+            this.tabPageDetalleAlumno.Controls.Add(this.txt_dCuit);
             this.tabPageDetalleAlumno.Controls.Add(this.label13);
             this.tabPageDetalleAlumno.Controls.Add(this.txt_dApellido);
             this.tabPageDetalleAlumno.Controls.Add(this.label14);
@@ -579,22 +622,23 @@
             this.materialDivider1.TabIndex = 304;
             this.materialDivider1.Text = "materialDivider1";
             // 
-            // checkBox4
+            // chxAddNewAdulto1
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(542, 287);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(181, 20);
-            this.checkBox4.TabIndex = 303;
-            this.checkBox4.Text = "Más de 1 adulto a cargo ?";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chxAddNewAdulto1.AutoSize = true;
+            this.chxAddNewAdulto1.Location = new System.Drawing.Point(542, 287);
+            this.chxAddNewAdulto1.Name = "chxAddNewAdulto1";
+            this.chxAddNewAdulto1.Size = new System.Drawing.Size(181, 20);
+            this.chxAddNewAdulto1.TabIndex = 303;
+            this.chxAddNewAdulto1.Text = "Más de 1 adulto a cargo ?";
+            this.chxAddNewAdulto1.UseVisualStyleBackColor = true;
+            this.chxAddNewAdulto1.CheckedChanged += new System.EventHandler(this.chxAddNewAdulto1_CheckedChanged);
             // 
-            // dateTimePicker2
+            // dtp_Adulto1FechaNacimiento
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(867, 134);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(100, 22);
-            this.dateTimePicker2.TabIndex = 302;
+            this.dtp_Adulto1FechaNacimiento.Location = new System.Drawing.Point(867, 134);
+            this.dtp_Adulto1FechaNacimiento.Name = "dtp_Adulto1FechaNacimiento";
+            this.dtp_Adulto1FechaNacimiento.Size = new System.Drawing.Size(100, 22);
+            this.dtp_Adulto1FechaNacimiento.TabIndex = 302;
             // 
             // checkBox2
             // 
@@ -616,13 +660,13 @@
             this.label15.Text = "Telefono 2";
             this.label15.Visible = false;
             // 
-            // textBox13
+            // txtAdulto1Tel2
             // 
-            this.textBox13.Location = new System.Drawing.Point(867, 233);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 22);
-            this.textBox13.TabIndex = 299;
-            this.textBox13.Visible = false;
+            this.txtAdulto1Tel2.Location = new System.Drawing.Point(867, 233);
+            this.txtAdulto1Tel2.Name = "txtAdulto1Tel2";
+            this.txtAdulto1Tel2.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto1Tel2.TabIndex = 299;
+            this.txtAdulto1Tel2.Visible = false;
             // 
             // label16
             // 
@@ -633,12 +677,12 @@
             this.label16.TabIndex = 298;
             this.label16.Text = "Telefono 1";
             // 
-            // textBox14
+            // txtAdulto1Tel1
             // 
-            this.textBox14.Location = new System.Drawing.Point(620, 233);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 22);
-            this.textBox14.TabIndex = 297;
+            this.txtAdulto1Tel1.Location = new System.Drawing.Point(620, 233);
+            this.txtAdulto1Tel1.Name = "txtAdulto1Tel1";
+            this.txtAdulto1Tel1.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto1Tel1.TabIndex = 297;
             // 
             // label17
             // 
@@ -649,12 +693,12 @@
             this.label17.TabIndex = 296;
             this.label17.Text = "Localidad";
             // 
-            // textBox15
+            // txtAdulto1Localidad
             // 
-            this.textBox15.Location = new System.Drawing.Point(867, 188);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 22);
-            this.textBox15.TabIndex = 295;
+            this.txtAdulto1Localidad.Location = new System.Drawing.Point(867, 188);
+            this.txtAdulto1Localidad.Name = "txtAdulto1Localidad";
+            this.txtAdulto1Localidad.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto1Localidad.TabIndex = 295;
             // 
             // label18
             // 
@@ -665,12 +709,12 @@
             this.label18.TabIndex = 294;
             this.label18.Text = "Parentesco";
             // 
-            // textBox16
+            // txtAdulto1Parentesco
             // 
-            this.textBox16.Location = new System.Drawing.Point(620, 184);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 22);
-            this.textBox16.TabIndex = 293;
+            this.txtAdulto1Parentesco.Location = new System.Drawing.Point(620, 184);
+            this.txtAdulto1Parentesco.Name = "txtAdulto1Parentesco";
+            this.txtAdulto1Parentesco.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto1Parentesco.TabIndex = 293;
             // 
             // materialLabel2
             // 
@@ -699,16 +743,16 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(543, 137);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(31, 16);
+            this.label20.Size = new System.Drawing.Size(39, 16);
             this.label20.TabIndex = 290;
-            this.label20.Text = "DNI";
+            this.label20.Text = "CUIT";
             // 
-            // textBox10
+            // txtAdulto1Cuit
             // 
-            this.textBox10.Location = new System.Drawing.Point(620, 134);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 22);
-            this.textBox10.TabIndex = 289;
+            this.txtAdulto1Cuit.Location = new System.Drawing.Point(620, 134);
+            this.txtAdulto1Cuit.Name = "txtAdulto1Cuit";
+            this.txtAdulto1Cuit.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto1Cuit.TabIndex = 289;
             // 
             // label21
             // 
@@ -719,12 +763,12 @@
             this.label21.TabIndex = 288;
             this.label21.Text = "Apellido";
             // 
-            // textBox11
+            // txtAdulto1Apellido
             // 
-            this.textBox11.Location = new System.Drawing.Point(867, 85);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 22);
-            this.textBox11.TabIndex = 287;
+            this.txtAdulto1Apellido.Location = new System.Drawing.Point(867, 85);
+            this.txtAdulto1Apellido.Name = "txtAdulto1Apellido";
+            this.txtAdulto1Apellido.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto1Apellido.TabIndex = 287;
             // 
             // label22
             // 
@@ -735,12 +779,12 @@
             this.label22.TabIndex = 286;
             this.label22.Text = "Nombre";
             // 
-            // textBox12
+            // txtAdulto1Nombre
             // 
-            this.textBox12.Location = new System.Drawing.Point(620, 85);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 22);
-            this.textBox12.TabIndex = 285;
+            this.txtAdulto1Nombre.Location = new System.Drawing.Point(620, 85);
+            this.txtAdulto1Nombre.Name = "txtAdulto1Nombre";
+            this.txtAdulto1Nombre.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto1Nombre.TabIndex = 285;
             // 
             // dtp_dFechaNacimiento
             // 
@@ -853,16 +897,16 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(47, 107);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 16);
+            this.label12.Size = new System.Drawing.Size(39, 16);
             this.label12.TabIndex = 272;
-            this.label12.Text = "DNI";
+            this.label12.Text = "CUIT";
             // 
-            // txt_dDni
+            // txt_dCuit
             // 
-            this.txt_dDni.Location = new System.Drawing.Point(127, 101);
-            this.txt_dDni.Name = "txt_dDni";
-            this.txt_dDni.Size = new System.Drawing.Size(100, 22);
-            this.txt_dDni.TabIndex = 271;
+            this.txt_dCuit.Location = new System.Drawing.Point(127, 101);
+            this.txt_dCuit.Name = "txt_dCuit";
+            this.txt_dCuit.Size = new System.Drawing.Size(100, 22);
+            this.txt_dCuit.TabIndex = 271;
             // 
             // label13
             // 
@@ -896,6 +940,403 @@
             this.txt_dNombre.Size = new System.Drawing.Size(100, 22);
             this.txt_dNombre.TabIndex = 267;
             // 
+            // tabPageNuevoAdulto
+            // 
+            this.tabPageNuevoAdulto.Controls.Add(this.dtp_Adulto3FechaNacimiento);
+            this.tabPageNuevoAdulto.Controls.Add(this.checkBox3);
+            this.tabPageNuevoAdulto.Controls.Add(this.label36);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto3Tel2);
+            this.tabPageNuevoAdulto.Controls.Add(this.label37);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto3Tel1);
+            this.tabPageNuevoAdulto.Controls.Add(this.label38);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto3Localidad);
+            this.tabPageNuevoAdulto.Controls.Add(this.label39);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto3Parentesco);
+            this.tabPageNuevoAdulto.Controls.Add(this.materialLabel4);
+            this.tabPageNuevoAdulto.Controls.Add(this.label40);
+            this.tabPageNuevoAdulto.Controls.Add(this.label41);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto3Cuit);
+            this.tabPageNuevoAdulto.Controls.Add(this.label42);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto3Apellido);
+            this.tabPageNuevoAdulto.Controls.Add(this.label43);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto3Nombre);
+            this.tabPageNuevoAdulto.Controls.Add(this.btnCancel2);
+            this.tabPageNuevoAdulto.Controls.Add(this.button2);
+            this.tabPageNuevoAdulto.Controls.Add(this.materialDivider3);
+            this.tabPageNuevoAdulto.Controls.Add(this.materialDivider4);
+            this.tabPageNuevoAdulto.Controls.Add(this.dtp_Adulto2FechaNacimiento);
+            this.tabPageNuevoAdulto.Controls.Add(this.checkBox4);
+            this.tabPageNuevoAdulto.Controls.Add(this.label25);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto2Tel2);
+            this.tabPageNuevoAdulto.Controls.Add(this.label29);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto2Tel1);
+            this.tabPageNuevoAdulto.Controls.Add(this.label30);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto2Localidad);
+            this.tabPageNuevoAdulto.Controls.Add(this.label31);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto2Parentesco);
+            this.tabPageNuevoAdulto.Controls.Add(this.materialLabel3);
+            this.tabPageNuevoAdulto.Controls.Add(this.label32);
+            this.tabPageNuevoAdulto.Controls.Add(this.label33);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto2Cuit);
+            this.tabPageNuevoAdulto.Controls.Add(this.label34);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto2Apellido);
+            this.tabPageNuevoAdulto.Controls.Add(this.label35);
+            this.tabPageNuevoAdulto.Controls.Add(this.txtAdulto2Nombre);
+            this.tabPageNuevoAdulto.Location = new System.Drawing.Point(4, 25);
+            this.tabPageNuevoAdulto.Name = "tabPageNuevoAdulto";
+            this.tabPageNuevoAdulto.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageNuevoAdulto.Size = new System.Drawing.Size(1021, 437);
+            this.tabPageNuevoAdulto.TabIndex = 2;
+            this.tabPageNuevoAdulto.Text = "Nuevo Adulto";
+            this.tabPageNuevoAdulto.UseVisualStyleBackColor = true;
+            // 
+            // dtp_Adulto2FechaNacimiento
+            // 
+            this.dtp_Adulto2FechaNacimiento.Location = new System.Drawing.Point(372, 146);
+            this.dtp_Adulto2FechaNacimiento.Name = "dtp_Adulto2FechaNacimiento";
+            this.dtp_Adulto2FechaNacimiento.Size = new System.Drawing.Size(100, 22);
+            this.dtp_Adulto2FechaNacimiento.TabIndex = 321;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(240, 247);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(163, 20);
+            this.checkBox4.TabIndex = 320;
+            this.checkBox4.Text = "Agregar otro teléfono ?";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(252, 252);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(72, 16);
+            this.label25.TabIndex = 319;
+            this.label25.Text = "Telefono 2";
+            this.label25.Visible = false;
+            // 
+            // txtAdulto2Tel2
+            // 
+            this.txtAdulto2Tel2.Location = new System.Drawing.Point(372, 245);
+            this.txtAdulto2Tel2.Name = "txtAdulto2Tel2";
+            this.txtAdulto2Tel2.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto2Tel2.TabIndex = 318;
+            this.txtAdulto2Tel2.Visible = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(48, 248);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(72, 16);
+            this.label29.TabIndex = 317;
+            this.label29.Text = "Telefono 1";
+            // 
+            // txtAdulto2Tel1
+            // 
+            this.txtAdulto2Tel1.Location = new System.Drawing.Point(125, 245);
+            this.txtAdulto2Tel1.Name = "txtAdulto2Tel1";
+            this.txtAdulto2Tel1.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto2Tel1.TabIndex = 316;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(252, 203);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(68, 16);
+            this.label30.TabIndex = 315;
+            this.label30.Text = "Localidad";
+            // 
+            // txtAdulto2Localidad
+            // 
+            this.txtAdulto2Localidad.Location = new System.Drawing.Point(372, 200);
+            this.txtAdulto2Localidad.Name = "txtAdulto2Localidad";
+            this.txtAdulto2Localidad.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto2Localidad.TabIndex = 314;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(44, 199);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(77, 16);
+            this.label31.TabIndex = 313;
+            this.label31.Text = "Parentesco";
+            // 
+            // txtAdulto2Parentesco
+            // 
+            this.txtAdulto2Parentesco.Location = new System.Drawing.Point(125, 196);
+            this.txtAdulto2Parentesco.Name = "txtAdulto2Parentesco";
+            this.txtAdulto2Parentesco.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto2Parentesco.TabIndex = 312;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(47, 55);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(189, 19);
+            this.materialLabel3.TabIndex = 311;
+            this.materialLabel3.Text = "Datos del adulto a cargo 2:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(252, 153);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(114, 16);
+            this.label32.TabIndex = 310;
+            this.label32.Text = "Fecha nacimiento";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(48, 149);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(39, 16);
+            this.label33.TabIndex = 309;
+            this.label33.Text = "CUIT";
+            // 
+            // txtAdulto2Cuit
+            // 
+            this.txtAdulto2Cuit.Location = new System.Drawing.Point(125, 146);
+            this.txtAdulto2Cuit.Name = "txtAdulto2Cuit";
+            this.txtAdulto2Cuit.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto2Cuit.TabIndex = 308;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(252, 100);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(58, 16);
+            this.label34.TabIndex = 307;
+            this.label34.Text = "Apellido";
+            // 
+            // txtAdulto2Apellido
+            // 
+            this.txtAdulto2Apellido.Location = new System.Drawing.Point(372, 97);
+            this.txtAdulto2Apellido.Name = "txtAdulto2Apellido";
+            this.txtAdulto2Apellido.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto2Apellido.TabIndex = 306;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(48, 100);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(57, 16);
+            this.label35.TabIndex = 305;
+            this.label35.Text = "Nombre";
+            // 
+            // txtAdulto2Nombre
+            // 
+            this.txtAdulto2Nombre.Location = new System.Drawing.Point(125, 97);
+            this.txtAdulto2Nombre.Name = "txtAdulto2Nombre";
+            this.txtAdulto2Nombre.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto2Nombre.TabIndex = 304;
+            // 
+            // btnCancel2
+            // 
+            this.btnCancel2.Location = new System.Drawing.Point(508, 388);
+            this.btnCancel2.Name = "btnCancel2";
+            this.btnCancel2.Size = new System.Drawing.Size(183, 44);
+            this.btnCancel2.TabIndex = 326;
+            this.btnCancel2.Text = "Cancelar";
+            this.btnCancel2.UseVisualStyleBackColor = true;
+            this.btnCancel2.Click += new System.EventHandler(this.btnCancel2_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(311, 388);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(183, 44);
+            this.button2.TabIndex = 325;
+            this.button2.Text = "Guardar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // materialDivider3
+            // 
+            this.materialDivider3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider3.Depth = 0;
+            this.materialDivider3.Location = new System.Drawing.Point(1, 372);
+            this.materialDivider3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider3.Name = "materialDivider3";
+            this.materialDivider3.Size = new System.Drawing.Size(1018, 1);
+            this.materialDivider3.TabIndex = 324;
+            this.materialDivider3.Text = "materialDivider3";
+            // 
+            // materialDivider4
+            // 
+            this.materialDivider4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider4.Depth = 0;
+            this.materialDivider4.Location = new System.Drawing.Point(496, 5);
+            this.materialDivider4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider4.Name = "materialDivider4";
+            this.materialDivider4.Size = new System.Drawing.Size(1, 367);
+            this.materialDivider4.TabIndex = 323;
+            this.materialDivider4.Text = "materialDivider4";
+            // 
+            // dtp_Adulto3FechaNacimiento
+            // 
+            this.dtp_Adulto3FechaNacimiento.Location = new System.Drawing.Point(880, 146);
+            this.dtp_Adulto3FechaNacimiento.Name = "dtp_Adulto3FechaNacimiento";
+            this.dtp_Adulto3FechaNacimiento.Size = new System.Drawing.Size(100, 22);
+            this.dtp_Adulto3FechaNacimiento.TabIndex = 344;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(748, 247);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(163, 20);
+            this.checkBox3.TabIndex = 343;
+            this.checkBox3.Text = "Agregar otro teléfono ?";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(760, 252);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(72, 16);
+            this.label36.TabIndex = 342;
+            this.label36.Text = "Telefono 2";
+            this.label36.Visible = false;
+            // 
+            // txtAdulto3Tel2
+            // 
+            this.txtAdulto3Tel2.Location = new System.Drawing.Point(880, 245);
+            this.txtAdulto3Tel2.Name = "txtAdulto3Tel2";
+            this.txtAdulto3Tel2.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto3Tel2.TabIndex = 341;
+            this.txtAdulto3Tel2.Visible = false;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(556, 248);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(72, 16);
+            this.label37.TabIndex = 340;
+            this.label37.Text = "Telefono 1";
+            // 
+            // txtAdulto3Tel1
+            // 
+            this.txtAdulto3Tel1.Location = new System.Drawing.Point(633, 245);
+            this.txtAdulto3Tel1.Name = "txtAdulto3Tel1";
+            this.txtAdulto3Tel1.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto3Tel1.TabIndex = 339;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(760, 203);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(68, 16);
+            this.label38.TabIndex = 338;
+            this.label38.Text = "Localidad";
+            // 
+            // txtAdulto3Localidad
+            // 
+            this.txtAdulto3Localidad.Location = new System.Drawing.Point(880, 200);
+            this.txtAdulto3Localidad.Name = "txtAdulto3Localidad";
+            this.txtAdulto3Localidad.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto3Localidad.TabIndex = 337;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(552, 199);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(77, 16);
+            this.label39.TabIndex = 336;
+            this.label39.Text = "Parentesco";
+            // 
+            // txtAdulto3Parentesco
+            // 
+            this.txtAdulto3Parentesco.Location = new System.Drawing.Point(633, 196);
+            this.txtAdulto3Parentesco.Name = "txtAdulto3Parentesco";
+            this.txtAdulto3Parentesco.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto3Parentesco.TabIndex = 335;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(555, 55);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(189, 19);
+            this.materialLabel4.TabIndex = 334;
+            this.materialLabel4.Text = "Datos del adulto a cargo 3:";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(760, 153);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(114, 16);
+            this.label40.TabIndex = 333;
+            this.label40.Text = "Fecha nacimiento";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(556, 149);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(39, 16);
+            this.label41.TabIndex = 332;
+            this.label41.Text = "CUIT";
+            // 
+            // txtAdulto3Cuit
+            // 
+            this.txtAdulto3Cuit.Location = new System.Drawing.Point(633, 146);
+            this.txtAdulto3Cuit.Name = "txtAdulto3Cuit";
+            this.txtAdulto3Cuit.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto3Cuit.TabIndex = 331;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(760, 100);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(58, 16);
+            this.label42.TabIndex = 330;
+            this.label42.Text = "Apellido";
+            // 
+            // txtAdulto3Apellido
+            // 
+            this.txtAdulto3Apellido.Location = new System.Drawing.Point(880, 97);
+            this.txtAdulto3Apellido.Name = "txtAdulto3Apellido";
+            this.txtAdulto3Apellido.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto3Apellido.TabIndex = 329;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(556, 100);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(57, 16);
+            this.label43.TabIndex = 328;
+            this.label43.Text = "Nombre";
+            // 
+            // txtAdulto3Nombre
+            // 
+            this.txtAdulto3Nombre.Location = new System.Drawing.Point(633, 97);
+            this.txtAdulto3Nombre.Name = "txtAdulto3Nombre";
+            this.txtAdulto3Nombre.Size = new System.Drawing.Size(100, 22);
+            this.txtAdulto3Nombre.TabIndex = 327;
+            // 
             // BuscarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -916,6 +1357,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPageDetalleAlumno.ResumeLayout(false);
             this.tabPageDetalleAlumno.PerformLayout();
+            this.tabPageNuevoAdulto.ResumeLayout(false);
+            this.tabPageNuevoAdulto.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -941,25 +1384,25 @@
         private System.Windows.Forms.TextBox txt_lNombre;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPageDetalleAlumno;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtp_Adulto1FechaNacimiento;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtAdulto1Tel2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtAdulto1Tel1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtAdulto1Localidad;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtAdulto1Parentesco;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtAdulto1Cuit;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtAdulto1Apellido;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.TextBox txtAdulto1Nombre;
+        private System.Windows.Forms.CheckBox chxAddNewAdulto1;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.DateTimePicker dtp_dFechaNacimiento;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
@@ -974,7 +1417,7 @@
         private System.Windows.Forms.TextBox txt_dDomicilio;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txt_dDni;
+        private System.Windows.Forms.TextBox txt_dCuit;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_dApellido;
         private System.Windows.Forms.Label label14;
@@ -1000,6 +1443,47 @@
         private System.Windows.Forms.TextBox txt_dCaracterizacion;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txt_dFormacion;
+        private System.Windows.Forms.TabPage tabPageNuevoAdulto;
+        private System.Windows.Forms.DateTimePicker dtp_Adulto3FechaNacimiento;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox txtAdulto3Tel2;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox txtAdulto3Tel1;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox txtAdulto3Localidad;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox txtAdulto3Parentesco;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox txtAdulto3Cuit;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox txtAdulto3Apellido;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox txtAdulto3Nombre;
+        private System.Windows.Forms.Button btnCancel2;
+        private System.Windows.Forms.Button button2;
+        private MaterialSkin.Controls.MaterialDivider materialDivider3;
+        private MaterialSkin.Controls.MaterialDivider materialDivider4;
+        private System.Windows.Forms.DateTimePicker dtp_Adulto2FechaNacimiento;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox txtAdulto2Tel2;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtAdulto2Tel1;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox txtAdulto2Localidad;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txtAdulto2Parentesco;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox txtAdulto2Cuit;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txtAdulto2Apellido;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox txtAdulto2Nombre;
 
     }
 }
