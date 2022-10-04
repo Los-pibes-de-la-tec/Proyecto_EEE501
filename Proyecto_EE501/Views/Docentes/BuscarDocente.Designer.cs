@@ -1,4 +1,4 @@
-﻿namespace EjemploLibreriaForms.Views.Docentes
+﻿namespace EjemploLibreriaForms.Docentes
 {
     partial class BuscarDocente
     {

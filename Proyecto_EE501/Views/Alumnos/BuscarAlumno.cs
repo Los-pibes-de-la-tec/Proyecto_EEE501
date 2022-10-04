@@ -180,6 +180,9 @@ namespace EjemploLibreriaForms.Alumnos
             }
         }
 
+
+        /* ----------------------------- Adulto a cargo -------------------------------------*/
+
         private void chxAddNewAdulto1_CheckedChanged(object sender, EventArgs e)
         {
             if (!tabControl1.TabPages.Contains(tabPageNuevoAdulto)) 

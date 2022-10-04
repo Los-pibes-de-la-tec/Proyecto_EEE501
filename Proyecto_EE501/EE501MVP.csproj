@@ -75,6 +75,12 @@
     <Compile Include="Views\Documentos\DocumentosHome.Designer.cs">
       <DependentUpon>DocumentosHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Grupos\BuscarGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Grupos\BuscarGrupo.Designer.cs">
+      <DependentUpon>BuscarGrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Docentes\BuscarDocente.resx">
       <DependentUpon>BuscarDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Grupos\BuscarGrupo.resx">
+      <DependentUpon>BuscarGrupo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -137,9 +146,7 @@
   <ItemGroup>
     <None Include="Resources\SV_logo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Grupos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

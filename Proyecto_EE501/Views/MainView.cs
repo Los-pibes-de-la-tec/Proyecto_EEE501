@@ -1,5 +1,4 @@
-﻿using EjemploLibreriaForms.Alumnos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using EjemploLibreriaForms.Alumnos;
+using EjemploLibreriaForms.Docentes;
+using EjemploLibreriaForms.Grupos;
 
 namespace EjemploLibreriaForms.Views
 {
@@ -59,16 +61,23 @@ namespace EjemploLibreriaForms.Views
 
         private void btnAlumnos_Click(object sender, EventArgs e)
         {
-            BuscarAlumno Alumno = new BuscarAlumno();
+            var AlumnoForm = new BuscarAlumno();
 
-            var view = this.GetInstace(this, Alumno);
+            this.GetInstace(this, AlumnoForm);
         }
 
         private void btnDocentes_Click(object sender, EventArgs e)
         {
-            Docentes.BuscarDocente Docente = new Docentes.BuscarDocente();
+            BuscarDocente DocenteForm = new BuscarDocente();
 
-            var view = this.GetInstace(this, Docente);
+            var view = this.GetInstace(this, DocenteForm);
+        }
+
+        private void btnGrupos_Click(object sender, EventArgs e)
+        {
+            var GrupoForm = new BuscarGrupo();
+
+            this.GetInstace(this, GrupoForm);
         }
     }
 }

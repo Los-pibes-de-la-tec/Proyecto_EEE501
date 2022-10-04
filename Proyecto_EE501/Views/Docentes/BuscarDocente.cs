@@ -11,7 +11,7 @@ using MaterialSkin;
 using EjemploLibreriaForms.Models;
 using System.Collections;
 
-namespace EjemploLibreriaForms.Views.Docentes
+namespace EjemploLibreriaForms.Docentes
 {
     public partial class BuscarDocente : MaterialForm
     {
