@@ -34,16 +34,16 @@ namespace EjemploLibreriaForms.Alumnos
         private void CargarGrilla() 
         {
 
-            alumnos.Add(new AlumnoModel("Pepito", "Ramirez", "51453546", new DateTime(2014, 12, 31), "Belgrano 268", "San Vicente", "11111111", "222222222", "Primario", "SEDE", "1° Ciclo", "SV", "7"));
-            alumnos.Add(new AlumnoModel("Juanito", "Perez", "44566768", new DateTime(2004, 8, 23), "Av. Pres. Perón 6550", "Alejandro Korn", "11111111", "222222222", "SAFI", "SEDE", "2° Ciclo", "DV", "5"));
-            alumnos.Add(new AlumnoModel("Ramon", "Lopez", "43656765", new DateTime(2003, 4, 7), "Calle falsa 123", "Springfield", "11111111", "222222222", "Secundario", "INCLUSION", "2° Ciclo", "TEL", "10"));
+            alumnos.Add(new AlumnoModel("Pepito", "Ramirez", "51453546", new DateTime(2014, 12, 31), "Belgrano 268", "San Vicente", "11111111", "222222222", "Primario", "SEDE", "1° Ciclo", "SV"));
+            alumnos.Add(new AlumnoModel("Juanito", "Perez", "44566768", new DateTime(2004, 8, 23), "Av. Pres. Perón 6550", "Alejandro Korn", "11111111", "222222222", "SAFI", "SEDE", "2° Ciclo", "DV"));
+            alumnos.Add(new AlumnoModel("Ramon", "Lopez", "43656765", new DateTime(2003, 4, 7), "Calle falsa 123", "Springfield", "11111111", "222222222", "Secundario", "INCLUSION", "2° Ciclo", "TEL"));
           
             dataGridView1.DataSource = alumnos;
         }
 
         private AlumnoModel GetSelectedRowAsAlumno() 
         {
-            List<int> indexes = dataGridView1.SelectedRows.Cast<DataGridViewRow>().Select(x => x.Index).ToList();
+            //List<int> indexes = dataGridView1.SelectedRows.Cast<DataGridViewRow>().Select(x => x.Index).ToList();
 
             foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
             {
@@ -60,14 +60,13 @@ namespace EjemploLibreriaForms.Alumnos
         {
             txt_dNombre.Text = alumnoToEdit.Nombre;
             txt_dApellido.Text = alumnoToEdit.Apellido;
-            txt_dCuit.Text = alumnoToEdit.DNI;
+            txt_dCuit.Text = alumnoToEdit.CUIT;
             dtp_dFechaNacimiento.Text = alumnoToEdit.FechaNacimiento;
             txt_dDomicilio.Text = alumnoToEdit.Domicilio;
             txt_dLocalidad.Text = alumnoToEdit.Localidad;
             txt_dAlumnoTel1.Text = alumnoToEdit.Telefono1;
             txt_dAlumnoTel2.Text = alumnoToEdit.Telefono2;
             txt_dNivel.Text = alumnoToEdit.Nivel;
-            txt_dGrupo.Text = alumnoToEdit.Grupo;
             txt_dFormacion.Text = alumnoToEdit.Formacion;
             txt_dCiclo.Text = alumnoToEdit.Ciclo;
             txt_dCaracterizacion.Text = alumnoToEdit.Caracterizacion;
@@ -84,7 +83,6 @@ namespace EjemploLibreriaForms.Alumnos
             txt_dAlumnoTel1.Text = "";
             txt_dAlumnoTel2.Text = "";
             txt_dNivel.Text = "";
-            txt_dGrupo.Text = "";
             txt_dFormacion.Text = "";
             txt_dCiclo.Text = "";
             txt_dCaracterizacion.Text = "";
@@ -111,7 +109,7 @@ namespace EjemploLibreriaForms.Alumnos
             var alumnoToSave = new AlumnoModel(txt_dNombre.Text, txt_dApellido.Text, txt_dCuit.Text,
                 dtp_dFechaNacimiento.Value, txt_dDomicilio.Text, txt_dLocalidad.Text,
                 txt_dAlumnoTel1.Text, txt_dAlumnoTel2.Text, txt_dNivel.Text,
-                txt_dFormacion.Text, txt_dCiclo.Text, txt_dCaracterizacion.Text, txt_dGrupo.Text);
+                txt_dFormacion.Text, txt_dCiclo.Text, txt_dCaracterizacion.Text);
             
             alumnos.Add(alumnoToSave);
 
@@ -145,7 +143,7 @@ namespace EjemploLibreriaForms.Alumnos
                 if (result == DialogResult.Yes)
                 {
                     //dataGridView1.Rows.RemoveAt(selectedRowCount);
-                    alumnos = alumnos.Where(x => x.DNI != alumnoToDelete.DNI).ToList();
+                    alumnos = alumnos.Where(x => x.CUIT != alumnoToDelete.CUIT).ToList();
                     dataGridView1.DataSource = alumnos;
                     MessageBox.Show("Alumno eliminado correctamente!");
                 }

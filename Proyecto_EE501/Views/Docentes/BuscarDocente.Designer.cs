@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.tabPageDetalleDocente = new System.Windows.Forms.TabPage();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txt_dGrupo = new System.Windows.Forms.TextBox();
-            this.txt_dEmail = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txt_dTelefono = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txt_dDni = new System.Windows.Forms.TextBox();
+            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            this.txt_dEmail = new System.Windows.Forms.TextBox();
+            this.txt_dTelefono = new System.Windows.Forms.TextBox();
+            this.txt_dCuit = new System.Windows.Forms.TextBox();
             this.txt_dApellido = new System.Windows.Forms.TextBox();
             this.txt_dNombre = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -59,6 +58,8 @@
             this.txt_lTelefono = new System.Windows.Forms.TextBox();
             this.txt_IDNI = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_lApellido = new System.Windows.Forms.TextBox();
+            this.txt_lNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -66,13 +67,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_lApellido = new System.Windows.Forms.TextBox();
-            this.txt_lNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.tabPageDetalleDocente.SuspendLayout();
             this.tabPageListaDocentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -81,19 +77,15 @@
             // 
             // tabPageDetalleDocente
             // 
-            this.tabPageDetalleDocente.Controls.Add(this.button1);
-            this.tabPageDetalleDocente.Controls.Add(this.button2);
-            this.tabPageDetalleDocente.Controls.Add(this.materialDivider2);
-            this.tabPageDetalleDocente.Controls.Add(this.label27);
-            this.tabPageDetalleDocente.Controls.Add(this.txt_dGrupo);
-            this.tabPageDetalleDocente.Controls.Add(this.txt_dEmail);
-            this.tabPageDetalleDocente.Controls.Add(this.label6);
             this.tabPageDetalleDocente.Controls.Add(this.btnCancel);
-            this.tabPageDetalleDocente.Controls.Add(this.txt_dTelefono);
             this.tabPageDetalleDocente.Controls.Add(this.btnSave);
-            this.tabPageDetalleDocente.Controls.Add(this.txt_dDni);
+            this.tabPageDetalleDocente.Controls.Add(this.materialDivider2);
+            this.tabPageDetalleDocente.Controls.Add(this.txt_dEmail);
+            this.tabPageDetalleDocente.Controls.Add(this.txt_dTelefono);
+            this.tabPageDetalleDocente.Controls.Add(this.txt_dCuit);
             this.tabPageDetalleDocente.Controls.Add(this.txt_dApellido);
             this.tabPageDetalleDocente.Controls.Add(this.txt_dNombre);
+            this.tabPageDetalleDocente.Controls.Add(this.label6);
             this.tabPageDetalleDocente.Controls.Add(this.materialLabel1);
             this.tabPageDetalleDocente.Controls.Add(this.label10);
             this.tabPageDetalleDocente.Controls.Add(this.label12);
@@ -108,85 +100,64 @@
             this.tabPageDetalleDocente.Text = "Detalle Docente";
             this.tabPageDetalleDocente.UseVisualStyleBackColor = true;
             // 
-            // label27
+            // btnCancel
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label27.Location = new System.Drawing.Point(458, 231);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(45, 16);
-            this.label27.TabIndex = 321;
-            this.label27.Text = "Grupo";
+            this.btnCancel.Location = new System.Drawing.Point(508, 388);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(183, 44);
+            this.btnCancel.TabIndex = 325;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txt_dGrupo
+            // btnSave
             // 
-            this.txt_dGrupo.Location = new System.Drawing.Point(542, 231);
-            this.txt_dGrupo.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_dGrupo.Name = "txt_dGrupo";
-            this.txt_dGrupo.Size = new System.Drawing.Size(132, 22);
-            this.txt_dGrupo.TabIndex = 320;
+            this.btnSave.Location = new System.Drawing.Point(311, 388);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(183, 44);
+            this.btnSave.TabIndex = 324;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // materialDivider2
+            // 
+            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(1, 372);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(1018, 1);
+            this.materialDivider2.TabIndex = 323;
+            this.materialDivider2.Text = "materialDivider2";
             // 
             // txt_dEmail
             // 
-            this.txt_dEmail.Location = new System.Drawing.Point(272, 231);
+            this.txt_dEmail.Location = new System.Drawing.Point(311, 232);
             this.txt_dEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txt_dEmail.Name = "txt_dEmail";
             this.txt_dEmail.Size = new System.Drawing.Size(132, 22);
             this.txt_dEmail.TabIndex = 310;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label6.Location = new System.Drawing.Point(165, 236);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 16);
-            this.label6.TabIndex = 309;
-            this.label6.Text = "Email";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(705, 471);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(244, 54);
-            this.btnCancel.TabIndex = 308;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
             // txt_dTelefono
             // 
-            this.txt_dTelefono.Location = new System.Drawing.Point(542, 177);
+            this.txt_dTelefono.Location = new System.Drawing.Point(628, 179);
             this.txt_dTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txt_dTelefono.Name = "txt_dTelefono";
             this.txt_dTelefono.Size = new System.Drawing.Size(132, 22);
             this.txt_dTelefono.TabIndex = 307;
             // 
-            // btnSave
+            // txt_dCuit
             // 
-            this.btnSave.Location = new System.Drawing.Point(417, 471);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(244, 54);
-            this.btnSave.TabIndex = 306;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // txt_dDni
-            // 
-            this.txt_dDni.Location = new System.Drawing.Point(272, 177);
-            this.txt_dDni.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_dDni.Name = "txt_dDni";
-            this.txt_dDni.Size = new System.Drawing.Size(132, 22);
-            this.txt_dDni.TabIndex = 271;
+            this.txt_dCuit.Location = new System.Drawing.Point(311, 178);
+            this.txt_dCuit.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_dCuit.Name = "txt_dCuit";
+            this.txt_dCuit.Size = new System.Drawing.Size(132, 22);
+            this.txt_dCuit.TabIndex = 271;
             // 
             // txt_dApellido
             // 
-            this.txt_dApellido.Location = new System.Drawing.Point(542, 131);
+            this.txt_dApellido.Location = new System.Drawing.Point(628, 126);
             this.txt_dApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txt_dApellido.Name = "txt_dApellido";
             this.txt_dApellido.Size = new System.Drawing.Size(132, 22);
@@ -194,11 +165,22 @@
             // 
             // txt_dNombre
             // 
-            this.txt_dNombre.Location = new System.Drawing.Point(272, 125);
+            this.txt_dNombre.Location = new System.Drawing.Point(311, 126);
             this.txt_dNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_dNombre.Name = "txt_dNombre";
             this.txt_dNombre.Size = new System.Drawing.Size(132, 22);
             this.txt_dNombre.TabIndex = 267;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label6.Location = new System.Drawing.Point(204, 237);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 16);
+            this.label6.TabIndex = 309;
+            this.label6.Text = "Email";
             // 
             // materialLabel1
             // 
@@ -206,7 +188,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(61, 23);
+            this.materialLabel1.Location = new System.Drawing.Point(72, 51);
             this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
@@ -218,7 +200,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label10.Location = new System.Drawing.Point(448, 181);
+            this.label10.Location = new System.Drawing.Point(538, 184);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 16);
@@ -229,18 +211,18 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label12.Location = new System.Drawing.Point(165, 184);
+            this.label12.Location = new System.Drawing.Point(204, 185);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 16);
+            this.label12.Size = new System.Drawing.Size(39, 16);
             this.label12.TabIndex = 272;
-            this.label12.Text = "DNI";
+            this.label12.Text = "CUIT";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label13.Location = new System.Drawing.Point(441, 133);
+            this.label13.Location = new System.Drawing.Point(538, 133);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(58, 16);
@@ -251,7 +233,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label14.Location = new System.Drawing.Point(165, 132);
+            this.label14.Location = new System.Drawing.Point(204, 133);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(57, 16);
@@ -266,6 +248,8 @@
             this.tabPageListaDocentes.Controls.Add(this.txt_lTelefono);
             this.tabPageListaDocentes.Controls.Add(this.txt_IDNI);
             this.tabPageListaDocentes.Controls.Add(this.textBox1);
+            this.tabPageListaDocentes.Controls.Add(this.txt_lApellido);
+            this.tabPageListaDocentes.Controls.Add(this.txt_lNombre);
             this.tabPageListaDocentes.Controls.Add(this.label5);
             this.tabPageListaDocentes.Controls.Add(this.btnDelete);
             this.tabPageListaDocentes.Controls.Add(this.btnEdit);
@@ -273,8 +257,6 @@
             this.tabPageListaDocentes.Controls.Add(this.label4);
             this.tabPageListaDocentes.Controls.Add(this.label3);
             this.tabPageListaDocentes.Controls.Add(this.label2);
-            this.tabPageListaDocentes.Controls.Add(this.txt_lApellido);
-            this.tabPageListaDocentes.Controls.Add(this.txt_lNombre);
             this.tabPageListaDocentes.Controls.Add(this.label1);
             this.tabPageListaDocentes.Location = new System.Drawing.Point(4, 25);
             this.tabPageListaDocentes.Margin = new System.Windows.Forms.Padding(4);
@@ -301,11 +283,11 @@
             this.Ciclo,
             this.Caracterizacion,
             this.Grupo});
-            this.dataGridView1.Location = new System.Drawing.Point(9, 144);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 126);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(834, 231);
+            this.dataGridView1.Size = new System.Drawing.Size(834, 296);
             this.dataGridView1.TabIndex = 41;
             // 
             // Nombre
@@ -368,7 +350,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label7.Location = new System.Drawing.Point(544, 89);
+            this.label7.Location = new System.Drawing.Point(571, 78);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 16);
@@ -389,7 +371,7 @@
             "8",
             "9",
             "10"});
-            this.cmb_lGrupo.Location = new System.Drawing.Point(596, 89);
+            this.cmb_lGrupo.Location = new System.Drawing.Point(673, 70);
             this.cmb_lGrupo.Margin = new System.Windows.Forms.Padding(5);
             this.cmb_lGrupo.Name = "cmb_lGrupo";
             this.cmb_lGrupo.Size = new System.Drawing.Size(160, 24);
@@ -397,7 +379,7 @@
             // 
             // txt_lTelefono
             // 
-            this.txt_lTelefono.Location = new System.Drawing.Point(362, 86);
+            this.txt_lTelefono.Location = new System.Drawing.Point(374, 72);
             this.txt_lTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.txt_lTelefono.Name = "txt_lTelefono";
             this.txt_lTelefono.Size = new System.Drawing.Size(160, 22);
@@ -405,7 +387,7 @@
             // 
             // txt_IDNI
             // 
-            this.txt_IDNI.Location = new System.Drawing.Point(81, 80);
+            this.txt_IDNI.Location = new System.Drawing.Point(96, 72);
             this.txt_IDNI.Margin = new System.Windows.Forms.Padding(5);
             this.txt_IDNI.Name = "txt_IDNI";
             this.txt_IDNI.Size = new System.Drawing.Size(160, 22);
@@ -413,17 +395,33 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(596, 48);
+            this.textBox1.Location = new System.Drawing.Point(673, 24);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(160, 22);
             this.textBox1.TabIndex = 36;
             // 
+            // txt_lApellido
+            // 
+            this.txt_lApellido.Location = new System.Drawing.Point(374, 24);
+            this.txt_lApellido.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_lApellido.Name = "txt_lApellido";
+            this.txt_lApellido.Size = new System.Drawing.Size(160, 22);
+            this.txt_lApellido.TabIndex = 19;
+            // 
+            // txt_lNombre
+            // 
+            this.txt_lNombre.Location = new System.Drawing.Point(96, 24);
+            this.txt_lNombre.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_lNombre.Name = "txt_lNombre";
+            this.txt_lNombre.Size = new System.Drawing.Size(160, 22);
+            this.txt_lNombre.TabIndex = 17;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label5.Location = new System.Drawing.Point(544, 48);
+            this.label5.Location = new System.Drawing.Point(571, 30);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 16);
@@ -433,7 +431,7 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(863, 292);
+            this.btnDelete.Location = new System.Drawing.Point(860, 259);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(5);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(132, 37);
@@ -445,7 +443,7 @@
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(863, 222);
+            this.btnEdit.Location = new System.Drawing.Point(860, 189);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(5);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(132, 37);
@@ -457,7 +455,7 @@
             // btnAddNew
             // 
             this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddNew.Location = new System.Drawing.Point(863, 159);
+            this.btnAddNew.Location = new System.Drawing.Point(860, 126);
             this.btnAddNew.Margin = new System.Windows.Forms.Padding(5);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(132, 37);
@@ -470,7 +468,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label4.Location = new System.Drawing.Point(271, 86);
+            this.label4.Location = new System.Drawing.Point(288, 78);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 16);
@@ -481,46 +479,29 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label3.Location = new System.Drawing.Point(14, 86);
+            this.label3.Location = new System.Drawing.Point(13, 75);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 16);
+            this.label3.Size = new System.Drawing.Size(39, 16);
             this.label3.TabIndex = 22;
-            this.label3.Text = "DNI";
+            this.label3.Text = "CUIT";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.Location = new System.Drawing.Point(275, 45);
+            this.label2.Location = new System.Drawing.Point(288, 30);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 16);
             this.label2.TabIndex = 20;
             this.label2.Text = "Apellido";
             // 
-            // txt_lApellido
-            // 
-            this.txt_lApellido.Location = new System.Drawing.Point(362, 45);
-            this.txt_lApellido.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_lApellido.Name = "txt_lApellido";
-            this.txt_lApellido.Size = new System.Drawing.Size(160, 22);
-            this.txt_lApellido.TabIndex = 19;
-            // 
-            // txt_lNombre
-            // 
-            this.txt_lNombre.Location = new System.Drawing.Point(81, 39);
-            this.txt_lNombre.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_lNombre.Name = "txt_lNombre";
-            this.txt_lNombre.Size = new System.Drawing.Size(160, 22);
-            this.txt_lNombre.TabIndex = 17;
-            this.txt_lNombre.TextChanged += new System.EventHandler(this.txt_lNombre_TextChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label1.Location = new System.Drawing.Point(14, 39);
+            this.label1.Location = new System.Drawing.Point(13, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 16);
@@ -538,35 +519,6 @@
             this.tabControl1.Size = new System.Drawing.Size(1029, 466);
             this.tabControl1.TabIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(508, 388);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 44);
-            this.button1.TabIndex = 325;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(311, 388);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 44);
-            this.button2.TabIndex = 324;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // materialDivider2
-            // 
-            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider2.Depth = 0;
-            this.materialDivider2.Location = new System.Drawing.Point(1, 372);
-            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider2.Name = "materialDivider2";
-            this.materialDivider2.Size = new System.Drawing.Size(1018, 1);
-            this.materialDivider2.TabIndex = 323;
-            this.materialDivider2.Text = "materialDivider2";
-            // 
             // BuscarDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -577,7 +529,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BuscarDocente";
-            this.Text = "BuscarDocente";
+            this.Text = "Docentes";
             this.Load += new System.EventHandler(this.BuscarDocente_Load);
             this.tabPageDetalleDocente.ResumeLayout(false);
             this.tabPageDetalleDocente.PerformLayout();
@@ -592,38 +544,21 @@
         #endregion
 
         private System.Windows.Forms.TabPage tabPageDetalleDocente;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txt_dDni;
+        private MaterialSkin.Controls.MaterialDivider materialDivider2;
+        private System.Windows.Forms.TextBox txt_dEmail;
+        private System.Windows.Forms.TextBox txt_dTelefono;
+        private System.Windows.Forms.TextBox txt_dCuit;
         private System.Windows.Forms.TextBox txt_dApellido;
         private System.Windows.Forms.TextBox txt_dNombre;
+        private System.Windows.Forms.Label label6;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabPage tabPageListaDocentes;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnAddNew;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_lApellido;
-        private System.Windows.Forms.TextBox txt_lNombre;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_lTelefono;
-        private System.Windows.Forms.TextBox txt_IDNI;
-        private System.Windows.Forms.TextBox txt_dTelefono;
-        private System.Windows.Forms.TextBox txt_dEmail;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cmb_lGrupo;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txt_dGrupo;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
@@ -633,9 +568,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ciclo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Caracterizacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private MaterialSkin.Controls.MaterialDivider materialDivider2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmb_lGrupo;
+        private System.Windows.Forms.TextBox txt_lTelefono;
+        private System.Windows.Forms.TextBox txt_IDNI;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_lApellido;
+        private System.Windows.Forms.TextBox txt_lNombre;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnAddNew;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabControl tabControl1;
+
 
     }
 }

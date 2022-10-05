@@ -8,13 +8,13 @@ namespace EjemploLibreriaForms.Models
     class AlumnoModel
     {
 
-        public AlumnoModel(string Nombre, string Apellido, string DNI, DateTime FechaNacimiento,
+        public AlumnoModel(string Nombre, string Apellido, string CUIT, DateTime FechaNacimiento,
             string Domicilio, string Localidad, string Telefono1, string Telefono2,
-            string Nivel, string Formacion, string Ciclo, string Caracterizacion, string Grupo)
+            string Nivel, string Formacion, string Ciclo, string Caracterizacion)
         {
             this.Nombre = Nombre;
             this.Apellido = Apellido;
-            this.DNI = DNI;
+            this.CUIT = CUIT;
             this.FechaNacimiento = FechaNacimiento.ToShortDateString();
             this.Domicilio = Domicilio;
             this.Localidad = Localidad;
@@ -24,11 +24,10 @@ namespace EjemploLibreriaForms.Models
             this.Formacion = Formacion;
             this.Ciclo = Ciclo;
             this.Caracterizacion = Caracterizacion;
-            this.Grupo = Grupo;
         }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public string DNI { get; set; }
+        public string CUIT { get; set; }
         public string FechaNacimiento { get; set; }
         public string Domicilio { get; set; }
         public string Localidad { get; set; }
@@ -36,7 +35,6 @@ namespace EjemploLibreriaForms.Models
         public string Telefono2 { get; set; }
 
         public string Nivel { get; set; }
-        public string Grupo { get; set; }
         public string Formacion { get; set; }
         public string Ciclo { get; set; }
         public string Caracterizacion { get; set; }
