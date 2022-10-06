@@ -25,8 +25,13 @@ namespace EjemploLibreriaForms.Alumnos
             InitializeComponent();
             tabControl1.TabPages.Remove(tabPageDetalleAlumno);
             tabControl1.TabPages.Remove(tabPageNuevoAdulto);
+            tabControl1.TabPages.Remove(tabPageLegajo);
+            tabControl1.TabPages.Remove(tabPageDetalleLegajo);
+            tabControl1.TabPages.Remove(tabPageObservaciones);
             Skin.CargarSkin(this);
             this.CargarGrilla();
+            this.CargarGrillaObservaciones();
+            this.CargarGrillaActasAdjuntas();
         }
 
         private void BuscarAlumno_Load(object sender, EventArgs e) {  }
@@ -188,7 +193,7 @@ namespace EjemploLibreriaForms.Alumnos
                 if (chxAddNewAdulto1.Checked)
                 {
                     tabControl1.TabPages.Add(tabPageNuevoAdulto);
-                    tabControl1.SelectedTab = tabControl1.TabPages[1];
+                    tabControl1.SelectedTab = tabControl1.TabPages["tabPageNuevoAdulto"];
                 }
             } 
             
@@ -199,5 +204,47 @@ namespace EjemploLibreriaForms.Alumnos
             tabControl1.TabPages.Remove(tabPageNuevoAdulto);
         }
 
+
+
+
+        /* ----------------------------- Legajo -------------------------------------*/
+
+        private void CargarGrillaObservaciones()
+        {
+            dataGridView2.Rows.Add(new string[] { "2020", "SAFI", "Aguante bokita", "Buena asistencia" });
+        }
+
+        private void CargarGrillaActasAdjuntas()
+        {
+            dataGridView3.Rows.Add(new string[] { "201", DateTime.Now.ToShortDateString(), "Informe inicial", "Aguante bokita" });
+            dataGridView3.Rows.Add(new string[] { "202", DateTime.Now.ToShortDateString(), "Certificacion SAFI", "lorem ipsum bla bla..." });
+        }
+
+        private void btnLegajo_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabPageListaAlumnos);
+            tabControl1.TabPages.Add(tabPageLegajo);
+        }
+
+        private void btnObservaciones_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Add(tabPageObservaciones);
+            tabControl1.SelectedTab = tabControl1.TabPages["tabPageObservaciones"];
+        }
+
+        private void btnLegajoDetalle_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Add(tabPageDetalleLegajo);
+            tabControl1.SelectedTab = tabControl1.TabPages["tabPageDetalleLegajo"];
+            richTextBox1.Text = dataGridView3.Rows[dataGridView3.CurrentRow.Index].Cells[3].Value.ToString();
+        }
+
+        private void dataGridView3_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView3.Rows[dataGridView3.CurrentRow.Index].Cells[3].Value != null)
+            {
+                richTextBox1.Text = dataGridView3.Rows[dataGridView3.CurrentRow.Index].Cells[3].Value.ToString();
+            }
+        }
     }
 }

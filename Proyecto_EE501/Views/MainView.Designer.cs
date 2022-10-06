@@ -30,14 +30,15 @@ namespace EjemploLibreriaForms.Views
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGrupos = new System.Windows.Forms.Button();
             this.btnDocentes = new System.Windows.Forms.Button();
             this.btnAlumnos = new System.Windows.Forms.Button();
-            this.btnGrupos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnGrupos);
             this.panel1.Controls.Add(this.btnDocentes);
             this.panel1.Controls.Add(this.btnAlumnos);
@@ -46,6 +47,17 @@ namespace EjemploLibreriaForms.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 565);
             this.panel1.TabIndex = 0;
+            // 
+            // btnGrupos
+            // 
+            this.btnGrupos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrupos.Location = new System.Drawing.Point(0, 246);
+            this.btnGrupos.Name = "btnGrupos";
+            this.btnGrupos.Size = new System.Drawing.Size(200, 37);
+            this.btnGrupos.TabIndex = 2;
+            this.btnGrupos.Text = "Grupos";
+            this.btnGrupos.UseVisualStyleBackColor = true;
+            this.btnGrupos.Click += new System.EventHandler(this.btnGrupos_Click);
             // 
             // btnDocentes
             // 
@@ -68,17 +80,6 @@ namespace EjemploLibreriaForms.Views
             this.btnAlumnos.Text = "Alumnos";
             this.btnAlumnos.UseVisualStyleBackColor = true;
             this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
-            // 
-            // btnGrupos
-            // 
-            this.btnGrupos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrupos.Location = new System.Drawing.Point(0, 246);
-            this.btnGrupos.Name = "btnGrupos";
-            this.btnGrupos.Size = new System.Drawing.Size(200, 37);
-            this.btnGrupos.TabIndex = 2;
-            this.btnGrupos.Text = "Grupos";
-            this.btnGrupos.UseVisualStyleBackColor = true;
-            this.btnGrupos.Click += new System.EventHandler(this.btnGrupos_Click);
             // 
             // MainView
             // 
