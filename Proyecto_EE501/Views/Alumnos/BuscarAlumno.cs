@@ -211,7 +211,7 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void CargarGrillaObservaciones()
         {
-            dataGridView2.Rows.Add(new string[] { "2020", "SAFI", "Aguante bokita", "Buena asistencia" });
+            dataGridView2.Rows.Add(new string[] { "2020", "3", "Herreria", "8", "SAFI", "Aguante Bokita", "Buenas asistencias" });
         }
 
         private void CargarGrillaActasAdjuntas()

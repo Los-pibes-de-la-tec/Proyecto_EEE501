@@ -151,6 +151,38 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.tabPageLegajo = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLegajoDetalle = new System.Windows.Forms.Button();
+            this.btnObservaciones = new System.Windows.Forms.Button();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.label63 = new System.Windows.Forms.Label();
+            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.textBox35 = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.label60 = new System.Windows.Forms.Label();
+            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.label55 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
@@ -167,54 +199,25 @@
             this.label44 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.label54 = new System.Windows.Forms.Label();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.label57 = new System.Windows.Forms.Label();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.label58 = new System.Windows.Forms.Label();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.label59 = new System.Windows.Forms.Label();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.label60 = new System.Windows.Forms.Label();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.label61 = new System.Windows.Forms.Label();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.label63 = new System.Windows.Forms.Label();
-            this.btnObservaciones = new System.Windows.Forms.Button();
-            this.btnLegajoDetalle = new System.Windows.Forms.Button();
             this.tabPageObservaciones = new System.Windows.Forms.TabPage();
-            this.tabPageDetalleLegajo = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FormacionGeneral = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OtrasPropuestas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabPageDetalleLegajo = new System.Windows.Forms.TabPage();
+            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.NroActa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoActa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Texto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.A = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Taller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Calificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FormacionGeneral = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OtrasPropuestas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPageListaAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -223,8 +226,8 @@
             this.tabPageLegajo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPageObservaciones.SuspendLayout();
-            this.tabPageDetalleLegajo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPageDetalleLegajo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1497,6 +1500,278 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // btnLegajoDetalle
+            // 
+            this.btnLegajoDetalle.Location = new System.Drawing.Point(801, 344);
+            this.btnLegajoDetalle.Name = "btnLegajoDetalle";
+            this.btnLegajoDetalle.Size = new System.Drawing.Size(140, 41);
+            this.btnLegajoDetalle.TabIndex = 384;
+            this.btnLegajoDetalle.Text = "Ver actas adjuntas";
+            this.btnLegajoDetalle.UseVisualStyleBackColor = true;
+            this.btnLegajoDetalle.Click += new System.EventHandler(this.btnLegajoDetalle_Click);
+            // 
+            // btnObservaciones
+            // 
+            this.btnObservaciones.Location = new System.Drawing.Point(640, 344);
+            this.btnObservaciones.Name = "btnObservaciones";
+            this.btnObservaciones.Size = new System.Drawing.Size(140, 41);
+            this.btnObservaciones.TabIndex = 383;
+            this.btnObservaciones.Text = "Ver observaciones";
+            this.btnObservaciones.UseVisualStyleBackColor = true;
+            this.btnObservaciones.Click += new System.EventHandler(this.btnObservaciones_Click);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(596, 289);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(61, 20);
+            this.checkBox6.TabIndex = 382;
+            this.checkBox6.Text = "Si/No";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(494, 293);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(84, 16);
+            this.label63.TabIndex = 381;
+            this.label63.Text = "Permanente:";
+            // 
+            // textBox36
+            // 
+            this.textBox36.Location = new System.Drawing.Point(111, 287);
+            this.textBox36.Name = "textBox36";
+            this.textBox36.Size = new System.Drawing.Size(344, 22);
+            this.textBox36.TabIndex = 380;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(25, 293);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(76, 16);
+            this.label62.TabIndex = 379;
+            this.label62.Text = "Ocupación:";
+            // 
+            // textBox33
+            // 
+            this.textBox33.Location = new System.Drawing.Point(784, 248);
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(108, 22);
+            this.textBox33.TabIndex = 378;
+            // 
+            // textBox34
+            // 
+            this.textBox34.Location = new System.Drawing.Point(663, 248);
+            this.textBox34.Name = "textBox34";
+            this.textBox34.Size = new System.Drawing.Size(115, 22);
+            this.textBox34.TabIndex = 377;
+            // 
+            // textBox35
+            // 
+            this.textBox35.Location = new System.Drawing.Point(542, 248);
+            this.textBox35.Name = "textBox35";
+            this.textBox35.Size = new System.Drawing.Size(115, 22);
+            this.textBox35.TabIndex = 376;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(464, 254);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(72, 16);
+            this.label61.TabIndex = 375;
+            this.label61.Text = "Telefonos:";
+            // 
+            // textBox31
+            // 
+            this.textBox31.Location = new System.Drawing.Point(315, 249);
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new System.Drawing.Size(140, 22);
+            this.textBox31.TabIndex = 374;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(240, 254);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(71, 16);
+            this.label59.TabIndex = 373;
+            this.label59.Text = "Localidad:";
+            // 
+            // textBox32
+            // 
+            this.textBox32.Location = new System.Drawing.Point(100, 250);
+            this.textBox32.Name = "textBox32";
+            this.textBox32.Size = new System.Drawing.Size(123, 22);
+            this.textBox32.TabIndex = 372;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(25, 255);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(67, 16);
+            this.label60.TabIndex = 371;
+            this.label60.Text = "Domicilio:";
+            // 
+            // textBox30
+            // 
+            this.textBox30.Location = new System.Drawing.Point(695, 212);
+            this.textBox30.Name = "textBox30";
+            this.textBox30.Size = new System.Drawing.Size(197, 22);
+            this.textBox30.TabIndex = 370;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(598, 218);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(80, 16);
+            this.label58.TabIndex = 369;
+            this.label58.Text = "Parentesco:";
+            // 
+            // textBox28
+            // 
+            this.textBox28.Location = new System.Drawing.Point(438, 212);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(140, 22);
+            this.textBox28.TabIndex = 368;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(380, 218);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(42, 16);
+            this.label56.TabIndex = 367;
+            this.label56.Text = "CUIT:";
+            // 
+            // textBox29
+            // 
+            this.textBox29.Location = new System.Drawing.Point(161, 212);
+            this.textBox29.Name = "textBox29";
+            this.textBox29.Size = new System.Drawing.Size(198, 22);
+            this.textBox29.TabIndex = 366;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(25, 218);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(130, 16);
+            this.label57.TabIndex = 365;
+            this.label57.Text = "Apellido y Nombres:";
+            // 
+            // materialLabel7
+            // 
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel7.Location = new System.Drawing.Point(17, 181);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(177, 19);
+            this.materialLabel7.TabIndex = 364;
+            this.materialLabel7.Text = "Datos del adulto a cargo:";
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel6.Location = new System.Drawing.Point(17, 0);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(131, 19);
+            this.materialLabel6.TabIndex = 363;
+            this.materialLabel6.Text = "Datos del alumno:";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(158, 149);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(114, 16);
+            this.label55.TabIndex = 25;
+            this.label55.Text = "Especificaciones:";
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(69, 145);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(61, 20);
+            this.checkBox5.TabIndex = 24;
+            this.checkBox5.Text = "Si/No";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // textBox27
+            // 
+            this.textBox27.Location = new System.Drawing.Point(278, 145);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(663, 22);
+            this.textBox27.TabIndex = 23;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(18, 149);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(40, 16);
+            this.label54.TabIndex = 22;
+            this.label54.Text = "CUD:";
+            // 
+            // textBox26
+            // 
+            this.textBox26.Location = new System.Drawing.Point(747, 99);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(194, 22);
+            this.textBox26.TabIndex = 21;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(681, 105);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(60, 16);
+            this.label53.TabIndex = 20;
+            this.label53.Text = "Pensión:";
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(504, 99);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(161, 22);
+            this.textBox25.TabIndex = 19;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(465, 105);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(33, 16);
+            this.label52.TabIndex = 18;
+            this.label52.Text = "O.S:";
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(338, 99);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(108, 22);
+            this.textBox24.TabIndex = 17;
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(217, 99);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(115, 22);
+            this.textBox23.TabIndex = 16;
+            // 
             // textBox22
             // 
             this.textBox22.Location = new System.Drawing.Point(96, 99);
@@ -1626,278 +1901,6 @@
             this.label43.TabIndex = 0;
             this.label43.Text = "Nro de legajo";
             // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(217, 99);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(115, 22);
-            this.textBox23.TabIndex = 16;
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(338, 99);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(108, 22);
-            this.textBox24.TabIndex = 17;
-            // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(504, 99);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(161, 22);
-            this.textBox25.TabIndex = 19;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(465, 105);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(33, 16);
-            this.label52.TabIndex = 18;
-            this.label52.Text = "O.S:";
-            // 
-            // textBox26
-            // 
-            this.textBox26.Location = new System.Drawing.Point(747, 99);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(194, 22);
-            this.textBox26.TabIndex = 21;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(681, 105);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(60, 16);
-            this.label53.TabIndex = 20;
-            this.label53.Text = "Pensión:";
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(278, 145);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(663, 22);
-            this.textBox27.TabIndex = 23;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(18, 149);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(40, 16);
-            this.label54.TabIndex = 22;
-            this.label54.Text = "CUD:";
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(69, 145);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(61, 20);
-            this.checkBox5.TabIndex = 24;
-            this.checkBox5.Text = "Si/No";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(158, 149);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(114, 16);
-            this.label55.TabIndex = 25;
-            this.label55.Text = "Especificaciones:";
-            // 
-            // materialLabel6
-            // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(17, 0);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(131, 19);
-            this.materialLabel6.TabIndex = 363;
-            this.materialLabel6.Text = "Datos del alumno:";
-            // 
-            // materialLabel7
-            // 
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(17, 181);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(177, 19);
-            this.materialLabel7.TabIndex = 364;
-            this.materialLabel7.Text = "Datos del adulto a cargo:";
-            // 
-            // textBox28
-            // 
-            this.textBox28.Location = new System.Drawing.Point(438, 212);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(140, 22);
-            this.textBox28.TabIndex = 368;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(380, 218);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(42, 16);
-            this.label56.TabIndex = 367;
-            this.label56.Text = "CUIT:";
-            // 
-            // textBox29
-            // 
-            this.textBox29.Location = new System.Drawing.Point(161, 212);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(198, 22);
-            this.textBox29.TabIndex = 366;
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(25, 218);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(130, 16);
-            this.label57.TabIndex = 365;
-            this.label57.Text = "Apellido y Nombres:";
-            // 
-            // textBox30
-            // 
-            this.textBox30.Location = new System.Drawing.Point(695, 212);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(197, 22);
-            this.textBox30.TabIndex = 370;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(598, 218);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(80, 16);
-            this.label58.TabIndex = 369;
-            this.label58.Text = "Parentesco:";
-            // 
-            // textBox31
-            // 
-            this.textBox31.Location = new System.Drawing.Point(315, 249);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(140, 22);
-            this.textBox31.TabIndex = 374;
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(240, 254);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(71, 16);
-            this.label59.TabIndex = 373;
-            this.label59.Text = "Localidad:";
-            // 
-            // textBox32
-            // 
-            this.textBox32.Location = new System.Drawing.Point(100, 250);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(123, 22);
-            this.textBox32.TabIndex = 372;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(25, 255);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(67, 16);
-            this.label60.TabIndex = 371;
-            this.label60.Text = "Domicilio:";
-            // 
-            // textBox33
-            // 
-            this.textBox33.Location = new System.Drawing.Point(784, 248);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(108, 22);
-            this.textBox33.TabIndex = 378;
-            // 
-            // textBox34
-            // 
-            this.textBox34.Location = new System.Drawing.Point(663, 248);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(115, 22);
-            this.textBox34.TabIndex = 377;
-            // 
-            // textBox35
-            // 
-            this.textBox35.Location = new System.Drawing.Point(542, 248);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(115, 22);
-            this.textBox35.TabIndex = 376;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(464, 254);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(72, 16);
-            this.label61.TabIndex = 375;
-            this.label61.Text = "Telefonos:";
-            // 
-            // textBox36
-            // 
-            this.textBox36.Location = new System.Drawing.Point(111, 287);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(344, 22);
-            this.textBox36.TabIndex = 380;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(25, 293);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(76, 16);
-            this.label62.TabIndex = 379;
-            this.label62.Text = "Ocupación:";
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(596, 289);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(61, 20);
-            this.checkBox6.TabIndex = 382;
-            this.checkBox6.Text = "Si/No";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(494, 293);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(84, 16);
-            this.label63.TabIndex = 381;
-            this.label63.Text = "Permanente:";
-            // 
-            // btnObservaciones
-            // 
-            this.btnObservaciones.Location = new System.Drawing.Point(640, 344);
-            this.btnObservaciones.Name = "btnObservaciones";
-            this.btnObservaciones.Size = new System.Drawing.Size(140, 41);
-            this.btnObservaciones.TabIndex = 383;
-            this.btnObservaciones.Text = "Ver observaciones";
-            this.btnObservaciones.UseVisualStyleBackColor = true;
-            this.btnObservaciones.Click += new System.EventHandler(this.btnObservaciones_Click);
-            // 
-            // btnLegajoDetalle
-            // 
-            this.btnLegajoDetalle.Location = new System.Drawing.Point(801, 344);
-            this.btnLegajoDetalle.Name = "btnLegajoDetalle";
-            this.btnLegajoDetalle.Size = new System.Drawing.Size(140, 41);
-            this.btnLegajoDetalle.TabIndex = 384;
-            this.btnLegajoDetalle.Text = "Ver actas adjuntas";
-            this.btnLegajoDetalle.UseVisualStyleBackColor = true;
-            this.btnLegajoDetalle.Click += new System.EventHandler(this.btnLegajoDetalle_Click);
-            // 
             // tabPageObservaciones
             // 
             this.tabPageObservaciones.Controls.Add(this.button1);
@@ -1911,36 +1914,14 @@
             this.tabPageObservaciones.Text = "Observaciones";
             this.tabPageObservaciones.UseVisualStyleBackColor = true;
             // 
-            // tabPageDetalleLegajo
+            // button1
             // 
-            this.tabPageDetalleLegajo.Controls.Add(this.materialLabel8);
-            this.tabPageDetalleLegajo.Controls.Add(this.dataGridView3);
-            this.tabPageDetalleLegajo.Controls.Add(this.richTextBox1);
-            this.tabPageDetalleLegajo.Location = new System.Drawing.Point(4, 25);
-            this.tabPageDetalleLegajo.Name = "tabPageDetalleLegajo";
-            this.tabPageDetalleLegajo.Size = new System.Drawing.Size(1021, 437);
-            this.tabPageDetalleLegajo.TabIndex = 5;
-            this.tabPageDetalleLegajo.Text = "Detalle Legajo";
-            this.tabPageDetalleLegajo.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Año,
-            this.FormacionGeneral,
-            this.OtrasPropuestas,
-            this.Observaciones});
-            this.dataGridView2.Location = new System.Drawing.Point(33, 43);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(932, 315);
-            this.dataGridView2.TabIndex = 17;
+            this.button1.Location = new System.Drawing.Point(825, 365);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 41);
+            this.button1.TabIndex = 384;
+            this.button1.Text = "Guardar observaciones";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // materialLabel5
             // 
@@ -1955,42 +1936,52 @@
             this.materialLabel5.TabIndex = 364;
             this.materialLabel5.Text = "Observaciones del alumno:";
             // 
-            // Año
+            // dataGridView2
             // 
-            this.Año.HeaderText = "Año";
-            this.Año.Name = "Año";
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Año,
+            this.A,
+            this.Taller,
+            this.Calificacion,
+            this.FormacionGeneral,
+            this.OtrasPropuestas,
+            this.Observaciones});
+            this.dataGridView2.Location = new System.Drawing.Point(33, 43);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(932, 315);
+            this.dataGridView2.TabIndex = 17;
             // 
-            // FormacionGeneral
+            // tabPageDetalleLegajo
             // 
-            this.FormacionGeneral.HeaderText = "Formación General";
-            this.FormacionGeneral.Name = "FormacionGeneral";
+            this.tabPageDetalleLegajo.Controls.Add(this.materialLabel8);
+            this.tabPageDetalleLegajo.Controls.Add(this.dataGridView3);
+            this.tabPageDetalleLegajo.Controls.Add(this.richTextBox1);
+            this.tabPageDetalleLegajo.Location = new System.Drawing.Point(4, 25);
+            this.tabPageDetalleLegajo.Name = "tabPageDetalleLegajo";
+            this.tabPageDetalleLegajo.Size = new System.Drawing.Size(1021, 437);
+            this.tabPageDetalleLegajo.TabIndex = 5;
+            this.tabPageDetalleLegajo.Text = "Detalle Legajo";
+            this.tabPageDetalleLegajo.UseVisualStyleBackColor = true;
             // 
-            // OtrasPropuestas
+            // materialLabel8
             // 
-            this.OtrasPropuestas.HeaderText = "Otras Propuestas";
-            this.OtrasPropuestas.Name = "OtrasPropuestas";
-            // 
-            // Observaciones
-            // 
-            this.Observaciones.HeaderText = "Observaciones";
-            this.Observaciones.Name = "Observaciones";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(825, 365);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 41);
-            this.button1.TabIndex = 384;
-            this.button1.Text = "Guardar observaciones";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(577, 50);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(367, 359);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Depth = 0;
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel8.Location = new System.Drawing.Point(40, 23);
+            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(174, 19);
+            this.materialLabel8.TabIndex = 365;
+            this.materialLabel8.Text = "Actas adjuntas al legajo:";
             // 
             // dataGridView3
             // 
@@ -2032,18 +2023,48 @@
             this.Texto.HeaderText = "Texto";
             this.Texto.Name = "Texto";
             // 
-            // materialLabel8
+            // richTextBox1
             // 
-            this.materialLabel8.AutoSize = true;
-            this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(40, 23);
-            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(174, 19);
-            this.materialLabel8.TabIndex = 365;
-            this.materialLabel8.Text = "Actas adjuntas al legajo:";
+            this.richTextBox1.Location = new System.Drawing.Point(577, 50);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(367, 359);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
+            // Año
+            // 
+            this.Año.HeaderText = "Año";
+            this.Año.Name = "Año";
+            // 
+            // A
+            // 
+            this.A.HeaderText = "Grupo";
+            this.A.Name = "A";
+            // 
+            // Taller
+            // 
+            this.Taller.HeaderText = "Taller";
+            this.Taller.Name = "Taller";
+            // 
+            // Calificacion
+            // 
+            this.Calificacion.HeaderText = "Calificacion";
+            this.Calificacion.Name = "Calificacion";
+            // 
+            // FormacionGeneral
+            // 
+            this.FormacionGeneral.HeaderText = "Formación General";
+            this.FormacionGeneral.Name = "FormacionGeneral";
+            // 
+            // OtrasPropuestas
+            // 
+            this.OtrasPropuestas.HeaderText = "Otras Propuestas";
+            this.OtrasPropuestas.Name = "OtrasPropuestas";
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.HeaderText = "Observaciones";
+            this.Observaciones.Name = "Observaciones";
             // 
             // BuscarAlumno
             // 
@@ -2072,9 +2093,9 @@
             this.groupBox1.PerformLayout();
             this.tabPageObservaciones.ResumeLayout(false);
             this.tabPageObservaciones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPageDetalleLegajo.ResumeLayout(false);
             this.tabPageDetalleLegajo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
@@ -2255,10 +2276,6 @@
         private System.Windows.Forms.TabPage tabPageObservaciones;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Año;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FormacionGeneral;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OtrasPropuestas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
         private System.Windows.Forms.TabPage tabPageDetalleLegajo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView3;
@@ -2268,6 +2285,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Texto;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Año;
+        private System.Windows.Forms.DataGridViewTextBoxColumn A;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Taller;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Calificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FormacionGeneral;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OtrasPropuestas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
 
     }
 }

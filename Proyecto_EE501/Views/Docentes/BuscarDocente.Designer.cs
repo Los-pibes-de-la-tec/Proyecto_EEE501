@@ -272,7 +272,7 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
@@ -295,56 +295,48 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.Visible = false;
-            this.Nombre.Width = 99;
             // 
             // Apellido
             // 
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
             this.Apellido.Visible = false;
-            this.Apellido.Width = 99;
             // 
             // Nivel
             // 
             this.Nivel.HeaderText = "Nivel";
             this.Nivel.Name = "Nivel";
             this.Nivel.Visible = false;
-            this.Nivel.Width = 99;
             // 
             // DNI
             // 
             this.DNI.HeaderText = "DNI";
             this.DNI.Name = "DNI";
             this.DNI.Visible = false;
-            this.DNI.Width = 99;
             // 
             // Formacion
             // 
             this.Formacion.HeaderText = "Formación";
             this.Formacion.Name = "Formacion";
             this.Formacion.Visible = false;
-            this.Formacion.Width = 98;
             // 
             // Ciclo
             // 
             this.Ciclo.HeaderText = "Ciclo";
             this.Ciclo.Name = "Ciclo";
             this.Ciclo.Visible = false;
-            this.Ciclo.Width = 99;
             // 
             // Caracterizacion
             // 
             this.Caracterizacion.HeaderText = "Caracterización";
             this.Caracterizacion.Name = "Caracterizacion";
             this.Caracterizacion.Visible = false;
-            this.Caracterizacion.Width = 99;
             // 
             // Grupo
             // 
             this.Grupo.HeaderText = "Grupo";
             this.Grupo.Name = "Grupo";
             this.Grupo.Visible = false;
-            this.Grupo.Width = 99;
             // 
             // label7
             // 
