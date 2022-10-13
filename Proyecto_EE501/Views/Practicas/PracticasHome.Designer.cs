@@ -34,7 +34,16 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAddNew = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NombrePractica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Institucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageDetallePractica = new System.Windows.Forms.TabPage();
+            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.CUIT = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -42,15 +51,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.NombrePractica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Institucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
-            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.tabControl1.SuspendLayout();
             this.tabPageListaPracticas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -123,6 +123,7 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombrePractica,
@@ -134,6 +135,21 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(824, 376);
             this.dataGridView1.TabIndex = 16;
+            // 
+            // NombrePractica
+            // 
+            this.NombrePractica.HeaderText = "Nombre Práctica";
+            this.NombrePractica.Name = "NombrePractica";
+            // 
+            // Institucion
+            // 
+            this.Institucion.HeaderText = "Institución";
+            this.Institucion.Name = "Institucion";
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono Contacto";
+            this.Telefono.Name = "Telefono";
             // 
             // tabPageDetallePractica
             // 
@@ -157,6 +173,66 @@
             this.tabPageDetallePractica.TabIndex = 1;
             this.tabPageDetallePractica.Text = "Detalle Práctica";
             this.tabPageDetallePractica.UseVisualStyleBackColor = true;
+            // 
+            // materialDivider1
+            // 
+            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(495, -1);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(1, 349);
+            this.materialDivider1.TabIndex = 329;
+            this.materialDivider1.Text = "materialDivider1";
+            // 
+            // materialDivider2
+            // 
+            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(-3, 349);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(1018, 1);
+            this.materialDivider2.TabIndex = 328;
+            this.materialDivider2.Text = "materialDivider2";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label2.Location = new System.Drawing.Point(167, 157);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 16);
+            this.label2.TabIndex = 327;
+            this.label2.Text = "Nombre Institución";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(302, 154);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(160, 20);
+            this.textBox4.TabIndex = 326;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(618, 153);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(160, 20);
+            this.textBox3.TabIndex = 325;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label1.Location = new System.Drawing.Point(527, 154);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 16);
+            this.label1.TabIndex = 324;
+            this.label1.Text = "Email";
             // 
             // textBox2
             // 
@@ -227,81 +303,6 @@
             this.materialLabel1.Size = new System.Drawing.Size(247, 19);
             this.materialLabel1.TabIndex = 283;
             this.materialLabel1.Text = "Datos de práctica profesionalizante";
-            // 
-            // NombrePractica
-            // 
-            this.NombrePractica.HeaderText = "Nombre Práctica";
-            this.NombrePractica.Name = "NombrePractica";
-            // 
-            // Institucion
-            // 
-            this.Institucion.HeaderText = "Institución";
-            this.Institucion.Name = "Institucion";
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono Contacto";
-            this.Telefono.Name = "Telefono";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(618, 153);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(160, 20);
-            this.textBox3.TabIndex = 325;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label1.Location = new System.Drawing.Point(527, 154);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 16);
-            this.label1.TabIndex = 324;
-            this.label1.Text = "Email";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.Location = new System.Drawing.Point(167, 157);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 16);
-            this.label2.TabIndex = 327;
-            this.label2.Text = "Nombre Institución";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(302, 154);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(160, 20);
-            this.textBox4.TabIndex = 326;
-            // 
-            // materialDivider2
-            // 
-            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider2.Depth = 0;
-            this.materialDivider2.Location = new System.Drawing.Point(-3, 349);
-            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider2.Name = "materialDivider2";
-            this.materialDivider2.Size = new System.Drawing.Size(1018, 1);
-            this.materialDivider2.TabIndex = 328;
-            this.materialDivider2.Text = "materialDivider2";
-            // 
-            // materialDivider1
-            // 
-            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(495, -1);
-            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(1, 349);
-            this.materialDivider1.TabIndex = 329;
-            this.materialDivider1.Text = "materialDivider1";
             // 
             // PracticasHome
             // 

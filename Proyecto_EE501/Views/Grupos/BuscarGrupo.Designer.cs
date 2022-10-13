@@ -162,9 +162,6 @@
             // cmb_lDocente
             // 
             this.cmb_lDocente.FormattingEnabled = true;
-            this.cmb_lDocente.Items.AddRange(new object[] {
-            "TEL",
-            "SV"});
             this.cmb_lDocente.Location = new System.Drawing.Point(390, 26);
             this.cmb_lDocente.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_lDocente.Name = "cmb_lDocente";
@@ -439,9 +436,6 @@
             // comboBox11
             // 
             this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
-            "TEL",
-            "SV"});
             this.comboBox11.Location = new System.Drawing.Point(238, 110);
             this.comboBox11.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox11.Name = "comboBox11";
@@ -461,9 +455,6 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "TEL",
-            "SV"});
             this.comboBox1.Location = new System.Drawing.Point(557, 105);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
@@ -494,16 +485,9 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
+            "Inicial",
+            "Primario",
+            "SAFI"});
             this.comboBox2.Location = new System.Drawing.Point(238, 276);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
@@ -678,9 +662,6 @@
             // comboBox6
             // 
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "TEL",
-            "SV"});
             this.comboBox6.Location = new System.Drawing.Point(397, 21);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox6.Name = "comboBox6";
@@ -711,16 +692,9 @@
             // 
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
+            "Inicial",
+            "Primaria",
+            "SAFI"});
             this.comboBox7.Location = new System.Drawing.Point(716, 20);
             this.comboBox7.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox7.Name = "comboBox7";

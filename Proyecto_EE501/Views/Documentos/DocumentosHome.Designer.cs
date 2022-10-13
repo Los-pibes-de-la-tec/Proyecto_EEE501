@@ -45,9 +45,11 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Institucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CuitAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPageListaDocumentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -81,7 +83,7 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(848, 247);
+            this.btnDelete.Location = new System.Drawing.Point(858, 166);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(132, 37);
@@ -92,7 +94,7 @@
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(848, 186);
+            this.btnEdit.Location = new System.Drawing.Point(858, 105);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(132, 37);
@@ -103,7 +105,7 @@
             // btnAddNew
             // 
             this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddNew.Location = new System.Drawing.Point(848, 126);
+            this.btnAddNew.Location = new System.Drawing.Point(858, 45);
             this.btnAddNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(132, 37);
@@ -120,18 +122,20 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Fecha,
-            this.Institucion,
-            this.Telefono});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 113);
+            this.TipoDoc,
+            this.NombreDoc,
+            this.CuitAlumno});
+            this.dataGridView1.Location = new System.Drawing.Point(16, 45);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(824, 312);
+            this.dataGridView1.Size = new System.Drawing.Size(824, 376);
             this.dataGridView1.TabIndex = 16;
             // 
             // tabPageAgregarDocumento
             // 
+            this.tabPageAgregarDocumento.Controls.Add(this.checkBox1);
+            this.tabPageAgregarDocumento.Controls.Add(this.label2);
             this.tabPageAgregarDocumento.Controls.Add(this.richTextBox1);
             this.tabPageAgregarDocumento.Controls.Add(this.textBox2);
             this.tabPageAgregarDocumento.Controls.Add(this.comboBox6);
@@ -152,7 +156,8 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(29, 156);
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.richTextBox1.Location = new System.Drawing.Point(32, 171);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(953, 166);
             this.richTextBox1.TabIndex = 323;
@@ -160,9 +165,10 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(527, 61);
+            this.textBox2.Location = new System.Drawing.Point(527, 105);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(160, 20);
             this.textBox2.TabIndex = 322;
             // 
@@ -187,20 +193,20 @@
             this.label1.Location = new System.Drawing.Point(87, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 16);
+            this.label1.Size = new System.Drawing.Size(125, 16);
             this.label1.TabIndex = 320;
-            this.label1.Text = "Tipo De documento";
+            this.label1.Text = "Tipo de documento";
             // 
             // CUIT
             // 
             this.CUIT.AutoSize = true;
             this.CUIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.CUIT.Location = new System.Drawing.Point(441, 62);
+            this.CUIT.Location = new System.Drawing.Point(421, 109);
             this.CUIT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CUIT.Name = "CUIT";
-            this.CUIT.Size = new System.Drawing.Size(78, 16);
+            this.CUIT.Size = new System.Drawing.Size(87, 16);
             this.CUIT.TabIndex = 318;
-            this.CUIT.Text = "Cuit Alumno";
+            this.CUIT.Text = "CUIT Alumno";
             // 
             // label12
             // 
@@ -253,20 +259,42 @@
             this.materialLabel1.TabIndex = 283;
             this.materialLabel1.Text = "Datos del documento";
             // 
-            // Fecha
+            // TipoDoc
             // 
-            this.Fecha.HeaderText = "Nombre Taller";
-            this.Fecha.Name = "Fecha";
+            this.TipoDoc.HeaderText = "Tipo Documento";
+            this.TipoDoc.Name = "TipoDoc";
             // 
-            // Institucion
+            // NombreDoc
             // 
-            this.Institucion.HeaderText = "Institución";
-            this.Institucion.Name = "Institucion";
+            this.NombreDoc.HeaderText = "Nombre Documento";
+            this.NombreDoc.Name = "NombreDoc";
             // 
-            // Telefono
+            // CuitAlumno
             // 
-            this.Telefono.HeaderText = "Telefono contacto";
-            this.Telefono.Name = "Telefono";
+            this.CuitAlumno.HeaderText = "CUIT del alumno";
+            this.CuitAlumno.Name = "CuitAlumno";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(29, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 16);
+            this.label2.TabIndex = 324;
+            this.label2.Text = "Texto del documento:";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(424, 58);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(144, 17);
+            this.checkBox1.TabIndex = 325;
+            this.checkBox1.Text = "Es referente a un alumno";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // DocumentosHome
             // 
@@ -305,8 +333,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Institucion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CuitAlumno;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

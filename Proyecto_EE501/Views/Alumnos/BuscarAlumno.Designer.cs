@@ -35,7 +35,6 @@
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.btnLegajo = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmb_lGrupo = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAddNew = new System.Windows.Forms.Button();
@@ -203,6 +202,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.A = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Taller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Calificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FormacionGeneral = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OtrasPropuestas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageDetalleLegajo = new System.Windows.Forms.TabPage();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -211,13 +217,7 @@
             this.TipoActa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Texto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.A = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Taller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Calificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FormacionGeneral = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OtrasPropuestas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_lGrupo = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageListaAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -247,11 +247,11 @@
             // 
             // tabPageListaAlumnos
             // 
+            this.tabPageListaAlumnos.Controls.Add(this.txt_lGrupo);
             this.tabPageListaAlumnos.Controls.Add(this.label47);
             this.tabPageListaAlumnos.Controls.Add(this.textBox19);
             this.tabPageListaAlumnos.Controls.Add(this.btnLegajo);
             this.tabPageListaAlumnos.Controls.Add(this.label6);
-            this.tabPageListaAlumnos.Controls.Add(this.cmb_lGrupo);
             this.tabPageListaAlumnos.Controls.Add(this.btnDelete);
             this.tabPageListaAlumnos.Controls.Add(this.btnEdit);
             this.tabPageListaAlumnos.Controls.Add(this.btnAddNew);
@@ -313,26 +313,6 @@
             this.label6.Size = new System.Drawing.Size(45, 16);
             this.label6.TabIndex = 31;
             this.label6.Text = "Grupo";
-            // 
-            // cmb_lGrupo
-            // 
-            this.cmb_lGrupo.FormattingEnabled = true;
-            this.cmb_lGrupo.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cmb_lGrupo.Location = new System.Drawing.Point(679, 22);
-            this.cmb_lGrupo.Margin = new System.Windows.Forms.Padding(4);
-            this.cmb_lGrupo.Name = "cmb_lGrupo";
-            this.cmb_lGrupo.Size = new System.Drawing.Size(160, 24);
-            this.cmb_lGrupo.TabIndex = 30;
             // 
             // btnDelete
             // 
@@ -1958,6 +1938,41 @@
             this.dataGridView2.Size = new System.Drawing.Size(932, 315);
             this.dataGridView2.TabIndex = 17;
             // 
+            // Año
+            // 
+            this.Año.HeaderText = "Año";
+            this.Año.Name = "Año";
+            // 
+            // A
+            // 
+            this.A.HeaderText = "Grupo";
+            this.A.Name = "A";
+            // 
+            // Taller
+            // 
+            this.Taller.HeaderText = "Taller";
+            this.Taller.Name = "Taller";
+            // 
+            // Calificacion
+            // 
+            this.Calificacion.HeaderText = "Calificacion";
+            this.Calificacion.Name = "Calificacion";
+            // 
+            // FormacionGeneral
+            // 
+            this.FormacionGeneral.HeaderText = "Formación General";
+            this.FormacionGeneral.Name = "FormacionGeneral";
+            // 
+            // OtrasPropuestas
+            // 
+            this.OtrasPropuestas.HeaderText = "Otras Propuestas";
+            this.OtrasPropuestas.Name = "OtrasPropuestas";
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.HeaderText = "Observaciones";
+            this.Observaciones.Name = "Observaciones";
+            // 
             // tabPageDetalleLegajo
             // 
             this.tabPageDetalleLegajo.Controls.Add(this.materialLabel8);
@@ -2031,40 +2046,13 @@
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
-            // Año
+            // txt_lGrupo
             // 
-            this.Año.HeaderText = "Año";
-            this.Año.Name = "Año";
-            // 
-            // A
-            // 
-            this.A.HeaderText = "Grupo";
-            this.A.Name = "A";
-            // 
-            // Taller
-            // 
-            this.Taller.HeaderText = "Taller";
-            this.Taller.Name = "Taller";
-            // 
-            // Calificacion
-            // 
-            this.Calificacion.HeaderText = "Calificacion";
-            this.Calificacion.Name = "Calificacion";
-            // 
-            // FormacionGeneral
-            // 
-            this.FormacionGeneral.HeaderText = "Formación General";
-            this.FormacionGeneral.Name = "FormacionGeneral";
-            // 
-            // OtrasPropuestas
-            // 
-            this.OtrasPropuestas.HeaderText = "Otras Propuestas";
-            this.OtrasPropuestas.Name = "OtrasPropuestas";
-            // 
-            // Observaciones
-            // 
-            this.Observaciones.HeaderText = "Observaciones";
-            this.Observaciones.Name = "Observaciones";
+            this.txt_lGrupo.Location = new System.Drawing.Point(679, 27);
+            this.txt_lGrupo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_lGrupo.Name = "txt_lGrupo";
+            this.txt_lGrupo.Size = new System.Drawing.Size(160, 22);
+            this.txt_lGrupo.TabIndex = 35;
             // 
             // BuscarAlumno
             // 
@@ -2106,7 +2094,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPageListaAlumnos;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmb_lGrupo;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAddNew;
@@ -2292,6 +2279,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FormacionGeneral;
         private System.Windows.Forms.DataGridViewTextBoxColumn OtrasPropuestas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
+        private System.Windows.Forms.TextBox txt_lGrupo;
 
     }
 }

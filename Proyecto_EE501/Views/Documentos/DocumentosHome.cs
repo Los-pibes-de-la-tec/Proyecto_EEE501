@@ -32,5 +32,17 @@ namespace EjemploLibreriaForms
             tabControl1.TabPages.Remove(tabPageAgregarDocumento);
             tabControl1.TabPages.Add(tabPageListaDocumentos);
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox2.ReadOnly = false;
+            }
+            else
+            {
+                textBox2.ReadOnly = true;
+            }
+        }
     }
 }
