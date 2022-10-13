@@ -83,16 +83,23 @@ namespace EjemploLibreriaForms.Views
 
         private void btn_domicilio_Click(object sender, EventArgs e)
         {
-            var Domicilio = new Domicilio.Domicilio();
+            var DomicilioForm = new Domicilio.Domicilio();
 
-            var view = this.GetInstace(this, Domicilio);
+            var view = this.GetInstace(this, DomicilioForm);
         }
 
         private void btn_docs_Click(object sender, EventArgs e)
         {
-            var Documentos = new DocumentosHome();
+            var DocumentosForm = new DocumentosHome();
 
-            var view = this.GetInstace(this, Documentos);
+            var view = this.GetInstace(this, DocumentosForm);
+        }
+
+        private void btn_practicas_Click(object sender, EventArgs e)
+        {
+            var PracticasForm = new PracticasHome();
+
+            var view = this.GetInstace(this, PracticasForm);
         }
     }
 }
