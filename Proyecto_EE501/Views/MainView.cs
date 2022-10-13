@@ -10,6 +10,7 @@ using MaterialSkin.Controls;
 using EjemploLibreriaForms.Alumnos;
 using EjemploLibreriaForms.Docentes;
 using EjemploLibreriaForms.Grupos;
+using EjemploLibreriaForms.Domicilio;
 
 namespace EjemploLibreriaForms.Views
 {
@@ -78,6 +79,20 @@ namespace EjemploLibreriaForms.Views
             var GrupoForm = new BuscarGrupo();
 
             this.GetInstace(this, GrupoForm);
+        }
+
+        private void btn_domicilio_Click(object sender, EventArgs e)
+        {
+            var Domicilio = new Domicilio.Domicilio();
+
+            var view = this.GetInstace(this, Domicilio);
+        }
+
+        private void btn_docs_Click(object sender, EventArgs e)
+        {
+            var Documentos = new DocumentosHome();
+
+            var view = this.GetInstace(this, Documentos);
         }
     }
 }

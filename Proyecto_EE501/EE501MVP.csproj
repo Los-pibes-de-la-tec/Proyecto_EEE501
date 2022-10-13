@@ -63,6 +63,12 @@
     <Compile Include="Views\Alumnos\BuscarAlumno.Designer.cs">
       <DependentUpon>BuscarAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Alumnos\Domicilio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Alumnos\Domicilio.Designer.cs">
+      <DependentUpon>Domicilio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Docentes\BuscarDocente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,8 +104,14 @@
     <EmbeddedResource Include="Views\Alumnos\BuscarAlumno.resx">
       <DependentUpon>BuscarAlumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Alumnos\Domicilio.resx">
+      <DependentUpon>Domicilio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Docentes\BuscarDocente.resx">
       <DependentUpon>BuscarDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documentos\DocumentosHome.resx">
+      <DependentUpon>DocumentosHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Grupos\BuscarGrupo.resx">
       <DependentUpon>BuscarGrupo.cs</DependentUpon>
