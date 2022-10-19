@@ -521,6 +521,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BuscarDocente";
+            this.Sizable = false;
             this.Text = "Docentes";
             this.Load += new System.EventHandler(this.BuscarDocente_Load);
             this.tabPageDetalleDocente.ResumeLayout(false);

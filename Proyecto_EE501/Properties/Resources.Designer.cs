@@ -63,6 +63,16 @@ namespace EjemploLibreriaForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap goku_pelado {
+            get {
+                object obj = ResourceManager.GetObject("goku pelado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo501 {
             get {
                 object obj = ResourceManager.GetObject("logo501", resourceCulture);
@@ -76,6 +86,16 @@ namespace EjemploLibreriaForms.Properties {
         internal static System.Drawing.Bitmap SV_logo {
             get {
                 object obj = ResourceManager.GetObject("SV_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2022_10_13_at_18_53_41_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp_Image_2022-10-13_at_18.53.41-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarAlumno));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageListaAlumnos = new System.Windows.Forms.TabPage();
+            this.txt_lGrupo = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.btnLegajo = new System.Windows.Forms.Button();
@@ -217,7 +218,14 @@
             this.TipoActa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Texto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.txt_lGrupo = new System.Windows.Forms.TextBox();
+            this.tabPageIngresarACurso = new System.Windows.Forms.TabPage();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageListaAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -229,6 +237,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPageDetalleLegajo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPageIngresarACurso.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -239,7 +248,8 @@
             this.tabControl1.Controls.Add(this.tabPageLegajo);
             this.tabControl1.Controls.Add(this.tabPageObservaciones);
             this.tabControl1.Controls.Add(this.tabPageDetalleLegajo);
-            this.tabControl1.Location = new System.Drawing.Point(2, 64);
+            this.tabControl1.Controls.Add(this.tabPageIngresarACurso);
+            this.tabControl1.Location = new System.Drawing.Point(0, 64);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1029, 466);
@@ -247,6 +257,7 @@
             // 
             // tabPageListaAlumnos
             // 
+            this.tabPageListaAlumnos.Controls.Add(this.btnIngresar);
             this.tabPageListaAlumnos.Controls.Add(this.txt_lGrupo);
             this.tabPageListaAlumnos.Controls.Add(this.label47);
             this.tabPageListaAlumnos.Controls.Add(this.textBox19);
@@ -274,6 +285,14 @@
             this.tabPageListaAlumnos.Text = "Lista Alumnos";
             this.tabPageListaAlumnos.UseVisualStyleBackColor = true;
             // 
+            // txt_lGrupo
+            // 
+            this.txt_lGrupo.Location = new System.Drawing.Point(679, 27);
+            this.txt_lGrupo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_lGrupo.Name = "txt_lGrupo";
+            this.txt_lGrupo.Size = new System.Drawing.Size(160, 22);
+            this.txt_lGrupo.TabIndex = 35;
+            // 
             // label47
             // 
             this.label47.AutoSize = true;
@@ -295,7 +314,7 @@
             // btnLegajo
             // 
             this.btnLegajo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLegajo.Location = new System.Drawing.Point(858, 306);
+            this.btnLegajo.Location = new System.Drawing.Point(858, 327);
             this.btnLegajo.Margin = new System.Windows.Forms.Padding(4);
             this.btnLegajo.Name = "btnLegajo";
             this.btnLegajo.Size = new System.Drawing.Size(132, 37);
@@ -317,7 +336,7 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(858, 247);
+            this.btnDelete.Location = new System.Drawing.Point(858, 268);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(132, 37);
@@ -329,7 +348,7 @@
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(858, 186);
+            this.btnEdit.Location = new System.Drawing.Point(858, 207);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(132, 37);
@@ -341,7 +360,7 @@
             // btnAddNew
             // 
             this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddNew.Location = new System.Drawing.Point(858, 126);
+            this.btnAddNew.Location = new System.Drawing.Point(858, 147);
             this.btnAddNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(132, 37);
@@ -473,7 +492,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(834, 275);
+            this.dataGridView1.Size = new System.Drawing.Size(834, 272);
             this.dataGridView1.TabIndex = 16;
             // 
             // Nombre
@@ -481,56 +500,56 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.Visible = false;
-            this.Nombre.Width = 99;
+            this.Nombre.Width = 69;
             // 
             // Apellido
             // 
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
             this.Apellido.Visible = false;
-            this.Apellido.Width = 99;
+            this.Apellido.Width = 69;
             // 
             // Nivel
             // 
             this.Nivel.HeaderText = "Nivel";
             this.Nivel.Name = "Nivel";
             this.Nivel.Visible = false;
-            this.Nivel.Width = 99;
+            this.Nivel.Width = 56;
             // 
             // DNI
             // 
             this.DNI.HeaderText = "DNI";
             this.DNI.Name = "DNI";
             this.DNI.Visible = false;
-            this.DNI.Width = 99;
+            this.DNI.Width = 51;
             // 
             // Formacion
             // 
             this.Formacion.HeaderText = "Formación";
             this.Formacion.Name = "Formacion";
             this.Formacion.Visible = false;
-            this.Formacion.Width = 98;
+            this.Formacion.Width = 81;
             // 
             // Ciclo
             // 
             this.Ciclo.HeaderText = "Ciclo";
             this.Ciclo.Name = "Ciclo";
             this.Ciclo.Visible = false;
-            this.Ciclo.Width = 99;
+            this.Ciclo.Width = 55;
             // 
             // Caracterizacion
             // 
             this.Caracterizacion.HeaderText = "Caracterización";
             this.Caracterizacion.Name = "Caracterizacion";
             this.Caracterizacion.Visible = false;
-            this.Caracterizacion.Width = 99;
+            this.Caracterizacion.Width = 105;
             // 
             // Grupo
             // 
             this.Grupo.HeaderText = "Grupo";
             this.Grupo.Name = "Grupo";
             this.Grupo.Visible = false;
-            this.Grupo.Width = 99;
+            this.Grupo.Width = 61;
             // 
             // tabPageDetalleAlumno
             // 
@@ -795,12 +814,12 @@
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(542, 43);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(189, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(185, 18);
             this.materialLabel2.TabIndex = 292;
             this.materialLabel2.Text = "Datos del adulto a cargo 1:";
             // 
@@ -872,12 +891,12 @@
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(46, 19);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(131, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(128, 18);
             this.materialLabel1.TabIndex = 283;
             this.materialLabel1.Text = "Datos del alumno:";
             // 
@@ -1152,12 +1171,12 @@
             // 
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel4.Location = new System.Drawing.Point(42, 48);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(189, 19);
+            this.materialLabel4.Size = new System.Drawing.Size(185, 18);
             this.materialLabel4.TabIndex = 361;
             this.materialLabel4.Text = "Datos del adulto a cargo 2:";
             // 
@@ -1345,12 +1364,12 @@
             // 
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel3.Location = new System.Drawing.Point(540, 48);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(189, 19);
+            this.materialLabel3.Size = new System.Drawing.Size(185, 18);
             this.materialLabel3.TabIndex = 338;
             this.materialLabel3.Text = "Datos del adulto a cargo 3:";
             // 
@@ -1649,12 +1668,12 @@
             // 
             this.materialLabel7.AutoSize = true;
             this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel7.Location = new System.Drawing.Point(17, 181);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(177, 19);
+            this.materialLabel7.Size = new System.Drawing.Size(173, 18);
             this.materialLabel7.TabIndex = 364;
             this.materialLabel7.Text = "Datos del adulto a cargo:";
             // 
@@ -1662,12 +1681,12 @@
             // 
             this.materialLabel6.AutoSize = true;
             this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel6.Location = new System.Drawing.Point(17, 0);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(131, 19);
+            this.materialLabel6.Size = new System.Drawing.Size(128, 18);
             this.materialLabel6.TabIndex = 363;
             this.materialLabel6.Text = "Datos del alumno:";
             // 
@@ -1907,12 +1926,12 @@
             // 
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel5.Location = new System.Drawing.Point(29, 20);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(190, 19);
+            this.materialLabel5.Size = new System.Drawing.Size(188, 18);
             this.materialLabel5.TabIndex = 364;
             this.materialLabel5.Text = "Observaciones del alumno:";
             // 
@@ -1989,12 +2008,12 @@
             // 
             this.materialLabel8.AutoSize = true;
             this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel8.Location = new System.Drawing.Point(40, 23);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(174, 19);
+            this.materialLabel8.Size = new System.Drawing.Size(166, 18);
             this.materialLabel8.TabIndex = 365;
             this.materialLabel8.Text = "Actas adjuntas al legajo:";
             // 
@@ -2046,13 +2065,94 @@
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
-            // txt_lGrupo
+            // tabPageIngresarACurso
             // 
-            this.txt_lGrupo.Location = new System.Drawing.Point(679, 27);
-            this.txt_lGrupo.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_lGrupo.Name = "txt_lGrupo";
-            this.txt_lGrupo.Size = new System.Drawing.Size(160, 22);
-            this.txt_lGrupo.TabIndex = 35;
+            this.tabPageIngresarACurso.Controls.Add(this.button2);
+            this.tabPageIngresarACurso.Controls.Add(this.button3);
+            this.tabPageIngresarACurso.Controls.Add(this.comboBox2);
+            this.tabPageIngresarACurso.Controls.Add(this.label65);
+            this.tabPageIngresarACurso.Controls.Add(this.label64);
+            this.tabPageIngresarACurso.Controls.Add(this.comboBox1);
+            this.tabPageIngresarACurso.Location = new System.Drawing.Point(4, 25);
+            this.tabPageIngresarACurso.Name = "tabPageIngresarACurso";
+            this.tabPageIngresarACurso.Size = new System.Drawing.Size(1021, 437);
+            this.tabPageIngresarACurso.TabIndex = 6;
+            this.tabPageIngresarACurso.Text = "Ingresar A Curso";
+            this.tabPageIngresarACurso.UseVisualStyleBackColor = true;
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIngresar.Location = new System.Drawing.Point(858, 385);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(132, 37);
+            this.btnIngresar.TabIndex = 36;
+            this.btnIngresar.Text = "Ingresar a un curso";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Campo",
+            "Taller",
+            "Practica profesionaliozante "});
+            this.comboBox1.Location = new System.Drawing.Point(233, 57);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(196, 24);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(26, 57);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(163, 24);
+            this.label64.TabIndex = 1;
+            this.label64.Text = "Tipo de formacion";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(26, 125);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(167, 24);
+            this.label65.TabIndex = 3;
+            this.label65.Text = "Nombre formacion";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Campo",
+            "Taller",
+            "Practica profesionaliozante "});
+            this.comboBox2.Location = new System.Drawing.Point(233, 125);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(196, 24);
+            this.comboBox2.TabIndex = 5;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(502, 375);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(183, 44);
+            this.button2.TabIndex = 309;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(305, 375);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(183, 44);
+            this.button3.TabIndex = 308;
+            this.button3.Text = "Guardar";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // BuscarAlumno
             // 
@@ -2065,6 +2165,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BuscarAlumno";
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Alumnos";
             this.Load += new System.EventHandler(this.BuscarAlumno_Load);
@@ -2085,6 +2186,8 @@
             this.tabPageDetalleLegajo.ResumeLayout(false);
             this.tabPageDetalleLegajo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabPageIngresarACurso.ResumeLayout(false);
+            this.tabPageIngresarACurso.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2280,6 +2383,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn OtrasPropuestas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
         private System.Windows.Forms.TextBox txt_lGrupo;
+        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.TabPage tabPageIngresarACurso;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
 
     }
 }

@@ -246,5 +246,11 @@ namespace EjemploLibreriaForms.Alumnos
                 richTextBox1.Text = dataGridView3.Rows[dataGridView3.CurrentRow.Index].Cells[3].Value.ToString();
             }
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Add(tabPageObservaciones);
+            tabControl1.SelectedTab = tabControl1.TabPages["tabPageIngresarACurso"];
+        }
     }
 }

@@ -88,6 +88,11 @@ namespace EjemploLibreriaForms.Grupos
             }
             
         }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
  
     }
 }

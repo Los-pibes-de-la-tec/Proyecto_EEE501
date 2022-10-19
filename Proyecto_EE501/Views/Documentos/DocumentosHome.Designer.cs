@@ -34,7 +34,12 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAddNew = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CuitAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageAgregarDocumento = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
@@ -45,11 +50,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.TipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CuitAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPageListaDocumentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -132,6 +132,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(824, 376);
             this.dataGridView1.TabIndex = 16;
             // 
+            // TipoDoc
+            // 
+            this.TipoDoc.HeaderText = "Tipo Documento";
+            this.TipoDoc.Name = "TipoDoc";
+            // 
+            // NombreDoc
+            // 
+            this.NombreDoc.HeaderText = "Nombre Documento";
+            this.NombreDoc.Name = "NombreDoc";
+            // 
+            // CuitAlumno
+            // 
+            this.CuitAlumno.HeaderText = "CUIT del alumno";
+            this.CuitAlumno.Name = "CuitAlumno";
+            // 
             // tabPageAgregarDocumento
             // 
             this.tabPageAgregarDocumento.Controls.Add(this.checkBox1);
@@ -153,6 +168,28 @@
             this.tabPageAgregarDocumento.TabIndex = 1;
             this.tabPageAgregarDocumento.Text = "Nuevo Documento";
             this.tabPageAgregarDocumento.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(424, 58);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(144, 17);
+            this.checkBox1.TabIndex = 325;
+            this.checkBox1.Text = "Es referente a un alumno";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(29, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 16);
+            this.label2.TabIndex = 324;
+            this.label2.Text = "Texto del documento:";
             // 
             // richTextBox1
             // 
@@ -259,43 +296,6 @@
             this.materialLabel1.TabIndex = 283;
             this.materialLabel1.Text = "Datos del documento";
             // 
-            // TipoDoc
-            // 
-            this.TipoDoc.HeaderText = "Tipo Documento";
-            this.TipoDoc.Name = "TipoDoc";
-            // 
-            // NombreDoc
-            // 
-            this.NombreDoc.HeaderText = "Nombre Documento";
-            this.NombreDoc.Name = "NombreDoc";
-            // 
-            // CuitAlumno
-            // 
-            this.CuitAlumno.HeaderText = "CUIT del alumno";
-            this.CuitAlumno.Name = "CuitAlumno";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(29, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 16);
-            this.label2.TabIndex = 324;
-            this.label2.Text = "Texto del documento:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(424, 58);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(144, 17);
-            this.checkBox1.TabIndex = 325;
-            this.checkBox1.Text = "Es referente a un alumno";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // DocumentosHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,6 +304,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
             this.Name = "DocumentosHome";
+            this.Sizable = false;
             this.Text = "DocumentosHome";
             this.tabControl1.ResumeLayout(false);
             this.tabPageListaDocumentos.ResumeLayout(false);

@@ -143,10 +143,10 @@ namespace EjemploLibreriaForms.Views
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EjemploLibreriaForms.Properties.Resources.logo501;
+            this.pictureBox1.Image = global::EjemploLibreriaForms.Properties.Resources.WhatsApp_Image_2022_10_13_at_18_53_41_removebg_preview;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(194, 82);
+            this.pictureBox1.Size = new System.Drawing.Size(194, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;

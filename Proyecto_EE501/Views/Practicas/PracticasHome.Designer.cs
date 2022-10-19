@@ -65,6 +65,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1019, 466);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 1;
             // 
             // tabPageListaPracticas
@@ -312,6 +313,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
             this.Name = "PracticasHome";
+            this.Sizable = false;
             this.Text = "PracticasHome";
             this.tabControl1.ResumeLayout(false);
             this.tabPageListaPracticas.ResumeLayout(false);
