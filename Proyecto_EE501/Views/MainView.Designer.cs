@@ -30,20 +30,21 @@ namespace EjemploLibreriaForms.Views
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_practicas = new System.Windows.Forms.Button();
             this.btn_docs = new System.Windows.Forms.Button();
             this.btn_domicilio = new System.Windows.Forms.Button();
             this.btnGrupos = new System.Windows.Forms.Button();
             this.btnDocentes = new System.Windows.Forms.Button();
             this.btnAlumnos = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::EjemploLibreriaForms.Properties.Resources.fondo;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btn_practicas);
             this.panel1.Controls.Add(this.btn_docs);
@@ -56,6 +57,16 @@ namespace EjemploLibreriaForms.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 565);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EjemploLibreriaForms.Properties.Resources.WhatsApp_Image_2022_10_13_at_18_53_41_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 109);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // btn_practicas
             // 
@@ -140,16 +151,6 @@ namespace EjemploLibreriaForms.Views
             this.btnAlumnos.Text = "Alumnos";
             this.btnAlumnos.UseVisualStyleBackColor = true;
             this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::EjemploLibreriaForms.Properties.Resources.WhatsApp_Image_2022_10_13_at_18_53_41_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(194, 109);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // MainView
             // 

@@ -28,6 +28,7 @@ namespace EjemploLibreriaForms.Alumnos
             tabControl1.TabPages.Remove(tabPageLegajo);
             tabControl1.TabPages.Remove(tabPageDetalleLegajo);
             tabControl1.TabPages.Remove(tabPageObservaciones);
+            tabControl1.TabPages.Remove(tabPageIngresarACurso);
             Skin.CargarSkin(this);
             this.CargarGrilla();
             this.CargarGrillaObservaciones();
@@ -99,6 +100,7 @@ namespace EjemploLibreriaForms.Alumnos
             tabControl1.TabPages.Remove(tabPageListaAlumnos);
             tabControl1.TabPages.Add(tabPageDetalleAlumno);
             tabPageDetalleAlumno.Text = "Agregar Nuevo";
+            
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -125,7 +127,12 @@ namespace EjemploLibreriaForms.Alumnos
                 tabControl1.TabPages.Add(tabPageListaAlumnos);
             }
             checkBox1.Checked = false;
+            string insertPer = "INSERT INTO Alumnos(Apellido, Nombre, Domicilio, Localidad) VALUES (' " +
+            txt_dApellido.Text + " ' , ' " + txt_dNombre.Text + " ' , ' " + txt_dDomicilio.Text + " ' , ' " + txt_dLocalidad.Text + "' ) ; ";
+            para_BD.BD.AbrirDB();
+            para_BD.BD.CargarDB(insertPer);
             MessageBox.Show("Alumno registrado exitosamente!");
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -249,7 +256,7 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Add(tabPageObservaciones);
+            tabControl1.TabPages.Add(tabPageIngresarACurso);
             tabControl1.SelectedTab = tabControl1.TabPages["tabPageIngresarACurso"];
         }
     }

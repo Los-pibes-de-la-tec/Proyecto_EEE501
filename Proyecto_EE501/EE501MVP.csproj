@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Models\AlumnoModel.cs" />
     <Compile Include="Models\DocenteModel.cs" />
+    <Compile Include="para_BD\BD.cs" />
     <Compile Include="Skin.cs" />
     <Compile Include="Views\Alumnos\BuscarAlumno.cs">
       <SubType>Form</SubType>
@@ -166,6 +167,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\goku pelado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
