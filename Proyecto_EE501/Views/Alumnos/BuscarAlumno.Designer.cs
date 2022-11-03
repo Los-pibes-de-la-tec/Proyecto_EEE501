@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarAlumno));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageListaAlumnos = new System.Windows.Forms.TabPage();
+            this.btnIngresar = new System.Windows.Forms.Button();
             this.txt_lGrupo = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
@@ -59,14 +60,13 @@
             this.Caracterizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageDetalleAlumno = new System.Windows.Forms.TabPage();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txt_dNivel = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txt_dCiclo = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.txt_dCaracterizacion = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.txt_dFormacion = new System.Windows.Forms.TextBox();
+            this.txt_DOS = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txt_dCuit = new System.Windows.Forms.TextBox();
+            this.chkb_CuitNo = new System.Windows.Forms.CheckBox();
+            this.chkb_CuitSi = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnCancel1 = new System.Windows.Forms.Button();
             this.btnSave1 = new System.Windows.Forms.Button();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
@@ -102,8 +102,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txt_dDomicilio = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_dCuit = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txt_dApellido = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -219,13 +217,12 @@
             this.Texto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabPageIngresarACurso = new System.Windows.Forms.TabPage();
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPageListaAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -284,6 +281,18 @@
             this.tabPageListaAlumnos.TabIndex = 0;
             this.tabPageListaAlumnos.Text = "Lista Alumnos";
             this.tabPageListaAlumnos.UseVisualStyleBackColor = true;
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIngresar.Location = new System.Drawing.Point(858, 385);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(132, 37);
+            this.btnIngresar.TabIndex = 36;
+            this.btnIngresar.Text = "Ingresar a un curso";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // txt_lGrupo
             // 
@@ -494,6 +503,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(834, 272);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Nombre
             // 
@@ -553,14 +563,13 @@
             // 
             // tabPageDetalleAlumno
             // 
-            this.tabPageDetalleAlumno.Controls.Add(this.label28);
-            this.tabPageDetalleAlumno.Controls.Add(this.txt_dNivel);
-            this.tabPageDetalleAlumno.Controls.Add(this.label26);
-            this.tabPageDetalleAlumno.Controls.Add(this.txt_dCiclo);
-            this.tabPageDetalleAlumno.Controls.Add(this.label23);
-            this.tabPageDetalleAlumno.Controls.Add(this.txt_dCaracterizacion);
             this.tabPageDetalleAlumno.Controls.Add(this.label24);
-            this.tabPageDetalleAlumno.Controls.Add(this.txt_dFormacion);
+            this.tabPageDetalleAlumno.Controls.Add(this.txt_DOS);
+            this.tabPageDetalleAlumno.Controls.Add(this.label23);
+            this.tabPageDetalleAlumno.Controls.Add(this.txt_dCuit);
+            this.tabPageDetalleAlumno.Controls.Add(this.chkb_CuitNo);
+            this.tabPageDetalleAlumno.Controls.Add(this.chkb_CuitSi);
+            this.tabPageDetalleAlumno.Controls.Add(this.label12);
             this.tabPageDetalleAlumno.Controls.Add(this.btnCancel1);
             this.tabPageDetalleAlumno.Controls.Add(this.btnSave1);
             this.tabPageDetalleAlumno.Controls.Add(this.materialDivider2);
@@ -596,8 +605,6 @@
             this.tabPageDetalleAlumno.Controls.Add(this.label10);
             this.tabPageDetalleAlumno.Controls.Add(this.txt_dDomicilio);
             this.tabPageDetalleAlumno.Controls.Add(this.label11);
-            this.tabPageDetalleAlumno.Controls.Add(this.label12);
-            this.tabPageDetalleAlumno.Controls.Add(this.txt_dCuit);
             this.tabPageDetalleAlumno.Controls.Add(this.label13);
             this.tabPageDetalleAlumno.Controls.Add(this.txt_dApellido);
             this.tabPageDetalleAlumno.Controls.Add(this.label14);
@@ -610,69 +617,69 @@
             this.tabPageDetalleAlumno.Text = "Detalle Alumno";
             this.tabPageDetalleAlumno.UseVisualStyleBackColor = true;
             // 
-            // label28
+            // label24
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(47, 254);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(39, 16);
-            this.label28.TabIndex = 317;
-            this.label28.Text = "Nivel";
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(254, 233);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(79, 16);
+            this.label24.TabIndex = 326;
+            this.label24.Text = "Obra Social";
             // 
-            // txt_dNivel
+            // txt_DOS
             // 
-            this.txt_dNivel.Location = new System.Drawing.Point(127, 248);
-            this.txt_dNivel.Name = "txt_dNivel";
-            this.txt_dNivel.Size = new System.Drawing.Size(100, 22);
-            this.txt_dNivel.TabIndex = 316;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(254, 254);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(38, 16);
-            this.label26.TabIndex = 313;
-            this.label26.Text = "Ciclo";
-            // 
-            // txt_dCiclo
-            // 
-            this.txt_dCiclo.Location = new System.Drawing.Point(377, 248);
-            this.txt_dCiclo.Name = "txt_dCiclo";
-            this.txt_dCiclo.Size = new System.Drawing.Size(100, 22);
-            this.txt_dCiclo.TabIndex = 312;
+            this.txt_DOS.Location = new System.Drawing.Point(377, 227);
+            this.txt_DOS.Name = "txt_DOS";
+            this.txt_DOS.Size = new System.Drawing.Size(100, 22);
+            this.txt_DOS.TabIndex = 325;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(254, 297);
+            this.label23.Location = new System.Drawing.Point(47, 106);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(101, 16);
-            this.label23.TabIndex = 311;
-            this.label23.Text = "Caracterización";
+            this.label23.Size = new System.Drawing.Size(30, 16);
+            this.label23.TabIndex = 324;
+            this.label23.Text = "Cuit";
             // 
-            // txt_dCaracterizacion
+            // txt_dCuit
             // 
-            this.txt_dCaracterizacion.Location = new System.Drawing.Point(377, 293);
-            this.txt_dCaracterizacion.Name = "txt_dCaracterizacion";
-            this.txt_dCaracterizacion.Size = new System.Drawing.Size(100, 22);
-            this.txt_dCaracterizacion.TabIndex = 310;
+            this.txt_dCuit.Location = new System.Drawing.Point(127, 100);
+            this.txt_dCuit.Name = "txt_dCuit";
+            this.txt_dCuit.Size = new System.Drawing.Size(100, 22);
+            this.txt_dCuit.TabIndex = 323;
+            this.txt_dCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dCuit_KeyPress);
             // 
-            // label24
+            // chkb_CuitNo
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(47, 296);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(72, 16);
-            this.label24.TabIndex = 309;
-            this.label24.Text = "Formación";
+            this.chkb_CuitNo.AutoSize = true;
+            this.chkb_CuitNo.Location = new System.Drawing.Point(137, 232);
+            this.chkb_CuitNo.Name = "chkb_CuitNo";
+            this.chkb_CuitNo.Size = new System.Drawing.Size(45, 20);
+            this.chkb_CuitNo.TabIndex = 322;
+            this.chkb_CuitNo.Text = "No";
+            this.chkb_CuitNo.UseVisualStyleBackColor = true;
+            this.chkb_CuitNo.CheckedChanged += new System.EventHandler(this.chkb_CuitNo_CheckedChanged_1);
             // 
-            // txt_dFormacion
+            // chkb_CuitSi
             // 
-            this.txt_dFormacion.Location = new System.Drawing.Point(127, 290);
-            this.txt_dFormacion.Name = "txt_dFormacion";
-            this.txt_dFormacion.Size = new System.Drawing.Size(100, 22);
-            this.txt_dFormacion.TabIndex = 308;
+            this.chkb_CuitSi.AutoSize = true;
+            this.chkb_CuitSi.Location = new System.Drawing.Point(92, 231);
+            this.chkb_CuitSi.Name = "chkb_CuitSi";
+            this.chkb_CuitSi.Size = new System.Drawing.Size(39, 20);
+            this.chkb_CuitSi.TabIndex = 321;
+            this.chkb_CuitSi.Text = "Si";
+            this.chkb_CuitSi.UseVisualStyleBackColor = true;
+            this.chkb_CuitSi.CheckedChanged += new System.EventHandler(this.chkb_CuitSi_CheckedChanged_1);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(47, 233);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(39, 16);
+            this.label12.TabIndex = 320;
+            this.label12.Text = "CUIT";
             // 
             // btnCancel1
             // 
@@ -814,12 +821,12 @@
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(542, 43);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(185, 18);
+            this.materialLabel2.Size = new System.Drawing.Size(189, 19);
             this.materialLabel2.TabIndex = 292;
             this.materialLabel2.Text = "Datos del adulto a cargo 1:";
             // 
@@ -891,12 +898,12 @@
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(46, 19);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(128, 18);
+            this.materialLabel1.Size = new System.Drawing.Size(131, 19);
             this.materialLabel1.TabIndex = 283;
             this.materialLabel1.Text = "Datos del alumno:";
             // 
@@ -985,22 +992,6 @@
             this.label11.Size = new System.Drawing.Size(114, 16);
             this.label11.TabIndex = 273;
             this.label11.Text = "Fecha nacimiento";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(47, 107);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(39, 16);
-            this.label12.TabIndex = 272;
-            this.label12.Text = "CUIT";
-            // 
-            // txt_dCuit
-            // 
-            this.txt_dCuit.Location = new System.Drawing.Point(127, 101);
-            this.txt_dCuit.Name = "txt_dCuit";
-            this.txt_dCuit.Size = new System.Drawing.Size(100, 22);
-            this.txt_dCuit.TabIndex = 271;
             // 
             // label13
             // 
@@ -1171,12 +1162,12 @@
             // 
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel4.Location = new System.Drawing.Point(42, 48);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(185, 18);
+            this.materialLabel4.Size = new System.Drawing.Size(189, 19);
             this.materialLabel4.TabIndex = 361;
             this.materialLabel4.Text = "Datos del adulto a cargo 2:";
             // 
@@ -1364,12 +1355,12 @@
             // 
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel3.Location = new System.Drawing.Point(540, 48);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(185, 18);
+            this.materialLabel3.Size = new System.Drawing.Size(189, 19);
             this.materialLabel3.TabIndex = 338;
             this.materialLabel3.Text = "Datos del adulto a cargo 3:";
             // 
@@ -1668,12 +1659,12 @@
             // 
             this.materialLabel7.AutoSize = true;
             this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel7.Location = new System.Drawing.Point(17, 181);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(173, 18);
+            this.materialLabel7.Size = new System.Drawing.Size(177, 19);
             this.materialLabel7.TabIndex = 364;
             this.materialLabel7.Text = "Datos del adulto a cargo:";
             // 
@@ -1681,12 +1672,12 @@
             // 
             this.materialLabel6.AutoSize = true;
             this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel6.Location = new System.Drawing.Point(17, 0);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(128, 18);
+            this.materialLabel6.Size = new System.Drawing.Size(131, 19);
             this.materialLabel6.TabIndex = 363;
             this.materialLabel6.Text = "Datos del alumno:";
             // 
@@ -1926,12 +1917,12 @@
             // 
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel5.Location = new System.Drawing.Point(29, 20);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(188, 18);
+            this.materialLabel5.Size = new System.Drawing.Size(190, 19);
             this.materialLabel5.TabIndex = 364;
             this.materialLabel5.Text = "Observaciones del alumno:";
             // 
@@ -2008,12 +1999,12 @@
             // 
             this.materialLabel8.AutoSize = true;
             this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel8.Location = new System.Drawing.Point(40, 23);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(166, 18);
+            this.materialLabel8.Size = new System.Drawing.Size(174, 19);
             this.materialLabel8.TabIndex = 365;
             this.materialLabel8.Text = "Actas adjuntas al legajo:";
             // 
@@ -2080,62 +2071,6 @@
             this.tabPageIngresarACurso.Text = "Ingresar A Curso";
             this.tabPageIngresarACurso.UseVisualStyleBackColor = true;
             // 
-            // btnIngresar
-            // 
-            this.btnIngresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngresar.Location = new System.Drawing.Point(858, 385);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(132, 37);
-            this.btnIngresar.TabIndex = 36;
-            this.btnIngresar.Text = "Ingresar a un curso";
-            this.btnIngresar.UseVisualStyleBackColor = true;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Campo",
-            "Taller",
-            "Practica profesionaliozante "});
-            this.comboBox1.Location = new System.Drawing.Point(233, 57);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 24);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(26, 57);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(163, 24);
-            this.label64.TabIndex = 1;
-            this.label64.Text = "Tipo de formacion";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(26, 125);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(167, 24);
-            this.label65.TabIndex = 3;
-            this.label65.Text = "Nombre formacion";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Campo",
-            "Taller",
-            "Practica profesionaliozante "});
-            this.comboBox2.Location = new System.Drawing.Point(233, 125);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(196, 24);
-            this.comboBox2.TabIndex = 5;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(502, 375);
@@ -2153,6 +2088,50 @@
             this.button3.TabIndex = 308;
             this.button3.Text = "Guardar";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Campo",
+            "Taller",
+            "Practica profesionaliozante "});
+            this.comboBox2.Location = new System.Drawing.Point(233, 125);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(196, 24);
+            this.comboBox2.TabIndex = 5;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(26, 125);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(167, 24);
+            this.label65.TabIndex = 3;
+            this.label65.Text = "Nombre formacion";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(26, 57);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(163, 24);
+            this.label64.TabIndex = 1;
+            this.label64.Text = "Tipo de formacion";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Campo",
+            "Taller",
+            "Practica profesionaliozante "});
+            this.comboBox1.Location = new System.Drawing.Point(233, 57);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(196, 24);
+            this.comboBox1.TabIndex = 0;
             // 
             // BuscarAlumno
             // 
@@ -2244,8 +2223,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_dDomicilio;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txt_dCuit;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_dApellido;
         private System.Windows.Forms.Label label14;
@@ -2261,14 +2238,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ciclo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Caracterizacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox txt_dNivel;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox txt_dCiclo;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox txt_dCaracterizacion;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox txt_dFormacion;
         private System.Windows.Forms.TabPage tabPageNuevoAdulto;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.CheckBox checkBox3;
@@ -2391,6 +2360,13 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txt_dCuit;
+        private System.Windows.Forms.CheckBox chkb_CuitNo;
+        private System.Windows.Forms.CheckBox chkb_CuitSi;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txt_DOS;
 
     }
 }
