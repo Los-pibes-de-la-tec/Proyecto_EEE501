@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using MaterialSkin.Controls;
 using MaterialSkin;
 using EjemploLibreriaForms.Models;
+using EjemploLibreriaForms.para_BD;
 using System.Collections;
 
 namespace EjemploLibreriaForms.Alumnos
@@ -19,7 +20,7 @@ namespace EjemploLibreriaForms.Alumnos
         private List<AlumnoModel> alumnos = new List<AlumnoModel>();
         int Cud = 0;
 
-        public bool isSuccessful { get; set; }
+        public bool isEditing = false;
 
         public BuscarAlumno()
         {
@@ -37,47 +38,45 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void BuscarAlumno_Load(object sender, EventArgs e)
         {
-
             CargarGrilla();
-            chkb_CuitNo.Checked = true;
-
+            chkb_CudNo.Checked = true;
         }
 
         private void CargarGrilla()
         {
 
-            string Alumnos = "Select Id,Cuit,Apellido,Nombre,Localidad,Domicilio From Alumnos";
+            string Alumnos = "Select * From Alumnos";
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.DataSource = para_BD.BD.CargarGrilla(Alumnos);
+            dataGridView1.DataSource = BD.CargarGrilla(Alumnos);
             dataGridView1.Columns["Id"].Visible = false;
         }
 
-        private AlumnoModel GetSelectedRowAsAlumno()
+        private void CargarDatosAlumnoParaEditar()
         {
-            //List<int> indexes = dataGridView1.SelectedRows.Cast<DataGridViewRow>().Select(x => x.Index).ToList();
-
-            foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
+            //var id = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Id"].Value;
+            string cud = dataGridView1.CurrentRow.Cells["Cud"].Value.ToString();
+            if (cud == "True")
             {
-                alumnoToEdit = row.DataBoundItem as AlumnoModel;
-                if (alumnoToEdit != null)
-                {
-                    return alumnoToEdit;
-                }
+                chkb_CudSi.Checked = true;
+                chkb_CudNo.Checked = false;
             }
-            return null;
-        }
+            else 
+            {
+                chkb_CudSi.Checked = false;
+                chkb_CudNo.Checked = true;
+            }
 
-        private void CargarDatosAlumnoParaEditar(AlumnoModel alumnoToEdit)
-        {
-            txt_dNombre.Text = alumnoToEdit.Nombre;
-            txt_dApellido.Text = alumnoToEdit.Apellido;
-            //txt_dCuit.Text = alumnoToEdit.CUIT;
-            dtp_dFechaNacimiento.Text = alumnoToEdit.FechaNacimiento;
-            txt_dDomicilio.Text = alumnoToEdit.Domicilio;
-            txt_dLocalidad.Text = alumnoToEdit.Localidad;
-            txt_dAlumnoTel1.Text = alumnoToEdit.Telefono1;
-            txt_dAlumnoTel2.Text = alumnoToEdit.Telefono2;
+            txt_dNombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+            txt_dApellido.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Apellido"].Value.ToString();
+            txt_dCuit.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Cuit"].Value.ToString();
+            dtp_dFechaNacimiento.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Fecha_Nacimi"].Value.ToString();
+            txt_dDomicilio.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Domicilio"].Value.ToString();
+            txt_dLocalidad.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Localidad"].Value.ToString();
+            txt_DOS.Text = dataGridView1.CurrentRow.Cells["Obra_Social"].Value.ToString();
+            //txt_dAlumnoTel1.Text = alumnoToEdit.Telefono1;
+            //txt_dAlumnoTel2.Text = alumnoToEdit.Telefono2;
+
             //txt_dNivel.Text = alumnoToEdit.Nivel;
             //txt_dFormacion.Text = alumnoToEdit.Formacion;
             //txt_dCiclo.Text = alumnoToEdit.Ciclo;
@@ -88,8 +87,8 @@ namespace EjemploLibreriaForms.Alumnos
         {
             txt_dNombre.Text = "";
             txt_dApellido.Text = "";
-            chkb_CuitNo.Checked = false;
-            chkb_CuitSi.Checked = false;
+            chkb_CudNo.Checked = false;
+            chkb_CudSi.Checked = false;
             txt_dCuit.Text = "";
             dtp_dFechaNacimiento.Text = DateTime.Now.ToShortDateString();
             txt_dDomicilio.Text = "";
@@ -112,35 +111,53 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            CargarDatosAlumnoParaEditar(GetSelectedRowAsAlumno());
+            CargarDatosAlumnoParaEditar();
             tabControl1.TabPages.Remove(tabPageListaAlumnos);
             tabControl1.TabPages.Add(tabPageDetalleAlumno);
             tabPageDetalleAlumno.Text = "Editar Alumno";
+            isEditing = true;
             
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            isSuccessful = true;
-            if (isSuccessful)
-            {
-                tabControl1.TabPages.Remove(tabPageDetalleAlumno);
-                tabControl1.TabPages.Add(tabPageListaAlumnos);
-            }
+            tabControl1.TabPages.Remove(tabPageDetalleAlumno);
+            tabControl1.TabPages.Add(tabPageListaAlumnos);
             checkBox1.Checked = false;
 
-            string Legajo = "SELECT TOP 1 * FROM Alumnos ORDER BY Id DESC";
-            para_BD.BD.LecturaDB(Legajo);
-            int ult_leg = 0;
-            while (para_BD.BD.lector.Read())
-                ult_leg = Convert.ToInt32(para_BD.BD.lector["Num_Legajo"]) + 1;
-            string AltaAlum = "INSERT INTO Alumnos(Apellido, Nombre, Domicilio, Localidad,Cud,Fecha_Nacimi,Cuit,Obra_Social,Num_Legajo) VALUES (' " +
-            txt_dApellido.Text + " ' , ' " + txt_dNombre.Text + " ' , ' " + txt_dDomicilio.Text + " ' , ' " + txt_dLocalidad.Text + "'," + Cud + ",'" + dtp_dFechaNacimiento.Value.ToString("dd/MM/yyyy") + "'," + txt_dCuit.Text + ",'" + txt_DOS.Text + "'," + ult_leg + ") ; ";
-            para_BD.BD.CargarDB(AltaAlum);
-            CargarGrilla();
-            MessageBox.Show("Alumno registrado exitosamente!");
-            BorrarDatosAlumno();
+            if (!isEditing)
+            {
+                string Legajo = "SELECT TOP 1 * FROM Alumnos ORDER BY Id DESC";
+                para_BD.BD.LecturaDB(Legajo);
+                int ult_leg = 0;
+                while (para_BD.BD.lector.Read())
+                    ult_leg = Convert.ToInt32(para_BD.BD.lector["Num_Legajo"]) + 1;
+                string AltaAlum = "INSERT INTO Alumnos(Apellido, Nombre, Domicilio, Localidad,Cud,Fecha_Nacimi,Cuit,Obra_Social,Num_Legajo) VALUES (' " +
+                txt_dApellido.Text + " ' , ' " + txt_dNombre.Text + " ' , ' " + txt_dDomicilio.Text + " ' , ' " + txt_dLocalidad.Text + "'," + Cud + ",'" + dtp_dFechaNacimiento.Value.ToString("dd/MM/yyyy") + "'," + txt_dCuit.Text + ",'" + txt_DOS.Text + "'," + ult_leg + ") ; ";
+                para_BD.BD.CargarDB(AltaAlum);
+                CargarGrilla();
+                MessageBox.Show("Alumno registrado exitosamente!");
+                BorrarDatosAlumno();
 
+            }
+            else
+            {
+                string AltaAlum = "UPDATE [Alumnos] SET Apellido=?, Nombre=?, Domicilio=?, Localidad=?,Cud=?,Fecha_Nacimi=?,Cuit=?,Obra_Social=? WHERE Id=?";
+                var parametros = new Dictionary<string, string>();
+                parametros.Add("@Apellido", txt_dApellido.Text);
+                parametros.Add("@Nombre", txt_dNombre.Text);
+                parametros.Add("@Domicilio", txt_dDomicilio.Text);
+                parametros.Add("@Localidad", txt_dLocalidad.Text);
+                parametros.Add("@Cud", CheckCudChecked().ToString());
+                parametros.Add("@FechaNacimiento", DateTime.Parse((dtp_dFechaNacimiento.Text)).ToString("dd/MM/yyyy"));
+                parametros.Add("@Cuit", txt_dCuit.Text);
+                parametros.Add("@Obra", txt_DOS.Text);
+                parametros.Add("@Id", GetAlumnoId().ToString());
+                para_BD.BD.CargarDB(AltaAlum, parametros);
+                CargarGrilla();
+                MessageBox.Show("Datos editados exitosamente!");
+                BorrarDatosAlumno();
+            }
 
         }
 
@@ -157,7 +174,7 @@ namespace EjemploLibreriaForms.Alumnos
                       MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                string consulta = "delete from Alumnos where Id = (" + getid() + ");";
+                string consulta = "delete from Alumnos where Id = (" + GetAlumnoId() + ");";
                 para_BD.BD.CargarDB(consulta);
                 MessageBox.Show("Alumno eliminado correctamente!");
                 CargarGrilla();
@@ -274,39 +291,51 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            getid();
+            GetAlumnoId();
         }
 
-        private int getid()
+        private int GetAlumnoId()
         {
             return Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Id"].Value);
         
         }
 
+        private int CheckCudChecked()
+        {
+            if (chkb_CudSi.Checked)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
         private void chkb_CuitSi_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (chkb_CuitSi.Checked)
+            if (chkb_CudSi.Checked)
             {
-                chkb_CuitNo.Checked = false;
+                chkb_CudNo.Checked = false;
                 Cud = -1;
             }
             else
             {
-                chkb_CuitNo.Checked = true;
+                chkb_CudNo.Checked = true;
                 Cud = 0;
             }
         }
 
         private void chkb_CuitNo_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (chkb_CuitNo.Checked)
+            if (chkb_CudNo.Checked)
             {
-                chkb_CuitSi.Checked = false;
+                chkb_CudSi.Checked = false;
                 Cud = 0;
             }
             else
             {
-                chkb_CuitSi.Checked = true;
+                chkb_CudSi.Checked = true;
                 Cud = -1;
             }
         }

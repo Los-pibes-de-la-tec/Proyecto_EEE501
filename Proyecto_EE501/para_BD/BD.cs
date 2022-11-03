@@ -4,14 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Data.OleDb;
 using System.Data;
+using System.IO;
 
 namespace EjemploLibreriaForms.para_BD
 {
     class BD
     {
         public static OleDbConnection ConexionConBD;
+
+        static string DBPath = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName, "Proyecto_501.mdb");
+
         public static string strConexión = "Provider=Microsoft.Jet.OLEDB.4.0;" +
-        "Data SOURCE= Proyecto 501.mdb";
+        "Data SOURCE=" + DBPath + ";";
         public static OleDbCommand Orden;
         public static OleDbDataReader lector;
 
@@ -39,6 +43,30 @@ namespace EjemploLibreriaForms.para_BD
         public static void CargarDB(string consulta)
         {
             Orden = new OleDbCommand(consulta, ConexionConBD);
+            Orden.ExecuteNonQuery();
+            CerrarDB();
+        }
+
+        public static void CargarDB(string consulta, Dictionary<string, string> parametros)
+        {
+            Orden = ConexionConBD.CreateCommand();
+            Orden.CommandText = consulta;
+
+            int valorNumerico;
+
+            foreach (var param in parametros)
+            {
+                bool isNumerical = int.TryParse(param.Value, out valorNumerico);
+                if (isNumerical)
+                {
+                    Orden.Parameters.Add(new OleDbParameter(param.Key, Int32.Parse(param.Value)));
+                }
+                else
+                {
+                    Orden.Parameters.Add(new OleDbParameter(param.Key, param.Value));
+                }
+            }
+
             Orden.ExecuteNonQuery();
             CerrarDB();
         }

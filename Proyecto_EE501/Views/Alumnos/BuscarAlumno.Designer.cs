@@ -51,21 +51,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_lNombre = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Formacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ciclo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Caracterizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageDetalleAlumno = new System.Windows.Forms.TabPage();
             this.label24 = new System.Windows.Forms.Label();
             this.txt_DOS = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txt_dCuit = new System.Windows.Forms.TextBox();
-            this.chkb_CuitNo = new System.Windows.Forms.CheckBox();
-            this.chkb_CuitSi = new System.Windows.Forms.CheckBox();
+            this.chkb_CudNo = new System.Windows.Forms.CheckBox();
+            this.chkb_CudSi = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnCancel1 = new System.Windows.Forms.Button();
             this.btnSave1 = new System.Windows.Forms.Button();
@@ -488,15 +480,6 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Apellido,
-            this.Nivel,
-            this.DNI,
-            this.Formacion,
-            this.Ciclo,
-            this.Caracterizacion,
-            this.Grupo});
             this.dataGridView1.Location = new System.Drawing.Point(16, 147);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
@@ -505,70 +488,14 @@
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Visible = false;
-            this.Nombre.Width = 69;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.Visible = false;
-            this.Apellido.Width = 69;
-            // 
-            // Nivel
-            // 
-            this.Nivel.HeaderText = "Nivel";
-            this.Nivel.Name = "Nivel";
-            this.Nivel.Visible = false;
-            this.Nivel.Width = 56;
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            this.DNI.Visible = false;
-            this.DNI.Width = 51;
-            // 
-            // Formacion
-            // 
-            this.Formacion.HeaderText = "Formación";
-            this.Formacion.Name = "Formacion";
-            this.Formacion.Visible = false;
-            this.Formacion.Width = 81;
-            // 
-            // Ciclo
-            // 
-            this.Ciclo.HeaderText = "Ciclo";
-            this.Ciclo.Name = "Ciclo";
-            this.Ciclo.Visible = false;
-            this.Ciclo.Width = 55;
-            // 
-            // Caracterizacion
-            // 
-            this.Caracterizacion.HeaderText = "Caracterización";
-            this.Caracterizacion.Name = "Caracterizacion";
-            this.Caracterizacion.Visible = false;
-            this.Caracterizacion.Width = 105;
-            // 
-            // Grupo
-            // 
-            this.Grupo.HeaderText = "Grupo";
-            this.Grupo.Name = "Grupo";
-            this.Grupo.Visible = false;
-            this.Grupo.Width = 61;
-            // 
             // tabPageDetalleAlumno
             // 
             this.tabPageDetalleAlumno.Controls.Add(this.label24);
             this.tabPageDetalleAlumno.Controls.Add(this.txt_DOS);
             this.tabPageDetalleAlumno.Controls.Add(this.label23);
             this.tabPageDetalleAlumno.Controls.Add(this.txt_dCuit);
-            this.tabPageDetalleAlumno.Controls.Add(this.chkb_CuitNo);
-            this.tabPageDetalleAlumno.Controls.Add(this.chkb_CuitSi);
+            this.tabPageDetalleAlumno.Controls.Add(this.chkb_CudNo);
+            this.tabPageDetalleAlumno.Controls.Add(this.chkb_CudSi);
             this.tabPageDetalleAlumno.Controls.Add(this.label12);
             this.tabPageDetalleAlumno.Controls.Add(this.btnCancel1);
             this.tabPageDetalleAlumno.Controls.Add(this.btnSave1);
@@ -650,36 +577,36 @@
             this.txt_dCuit.TabIndex = 323;
             this.txt_dCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dCuit_KeyPress);
             // 
-            // chkb_CuitNo
+            // chkb_CudNo
             // 
-            this.chkb_CuitNo.AutoSize = true;
-            this.chkb_CuitNo.Location = new System.Drawing.Point(137, 232);
-            this.chkb_CuitNo.Name = "chkb_CuitNo";
-            this.chkb_CuitNo.Size = new System.Drawing.Size(45, 20);
-            this.chkb_CuitNo.TabIndex = 322;
-            this.chkb_CuitNo.Text = "No";
-            this.chkb_CuitNo.UseVisualStyleBackColor = true;
-            this.chkb_CuitNo.CheckedChanged += new System.EventHandler(this.chkb_CuitNo_CheckedChanged_1);
+            this.chkb_CudNo.AutoSize = true;
+            this.chkb_CudNo.Location = new System.Drawing.Point(137, 232);
+            this.chkb_CudNo.Name = "chkb_CudNo";
+            this.chkb_CudNo.Size = new System.Drawing.Size(45, 20);
+            this.chkb_CudNo.TabIndex = 322;
+            this.chkb_CudNo.Text = "No";
+            this.chkb_CudNo.UseVisualStyleBackColor = true;
+            this.chkb_CudNo.CheckedChanged += new System.EventHandler(this.chkb_CuitNo_CheckedChanged_1);
             // 
-            // chkb_CuitSi
+            // chkb_CudSi
             // 
-            this.chkb_CuitSi.AutoSize = true;
-            this.chkb_CuitSi.Location = new System.Drawing.Point(92, 231);
-            this.chkb_CuitSi.Name = "chkb_CuitSi";
-            this.chkb_CuitSi.Size = new System.Drawing.Size(39, 20);
-            this.chkb_CuitSi.TabIndex = 321;
-            this.chkb_CuitSi.Text = "Si";
-            this.chkb_CuitSi.UseVisualStyleBackColor = true;
-            this.chkb_CuitSi.CheckedChanged += new System.EventHandler(this.chkb_CuitSi_CheckedChanged_1);
+            this.chkb_CudSi.AutoSize = true;
+            this.chkb_CudSi.Location = new System.Drawing.Point(92, 231);
+            this.chkb_CudSi.Name = "chkb_CudSi";
+            this.chkb_CudSi.Size = new System.Drawing.Size(39, 20);
+            this.chkb_CudSi.TabIndex = 321;
+            this.chkb_CudSi.Text = "Si";
+            this.chkb_CudSi.UseVisualStyleBackColor = true;
+            this.chkb_CudSi.CheckedChanged += new System.EventHandler(this.chkb_CuitSi_CheckedChanged_1);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(47, 233);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(39, 16);
+            this.label12.Size = new System.Drawing.Size(32, 16);
             this.label12.TabIndex = 320;
-            this.label12.Text = "CUIT";
+            this.label12.Text = "Cud";
             // 
             // btnCancel1
             // 
@@ -2230,14 +2157,6 @@
         private System.Windows.Forms.Button btnCancel1;
         private System.Windows.Forms.Button btnSave1;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nivel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Formacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ciclo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Caracterizacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
         private System.Windows.Forms.TabPage tabPageNuevoAdulto;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.CheckBox checkBox3;
@@ -2362,8 +2281,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txt_dCuit;
-        private System.Windows.Forms.CheckBox chkb_CuitNo;
-        private System.Windows.Forms.CheckBox chkb_CuitSi;
+        private System.Windows.Forms.CheckBox chkb_CudNo;
+        private System.Windows.Forms.CheckBox chkb_CudSi;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txt_DOS;

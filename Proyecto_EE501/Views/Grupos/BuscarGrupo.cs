@@ -34,11 +34,11 @@ namespace EjemploLibreriaForms.Grupos
         private void CargarGrilla()
         {
 
-            alumnos.Add(new AlumnoModel("Pepito", "Ramirez", "51453546", new DateTime(2014, 12, 31), "Belgrano 268", "San Vicente", "11111111", "222222222", "Primario", "SEDE", "1° Ciclo", "SV"));
-            alumnos.Add(new AlumnoModel("Juanito", "Perez", "44566768", new DateTime(2004, 8, 23), "Av. Pres. Perón 6550", "Alejandro Korn", "11111111", "222222222", "SAFI", "SEDE", "2° Ciclo", "DV"));
-            alumnos.Add(new AlumnoModel("Ramon", "Lopez", "43656765", new DateTime(2003, 4, 7), "Calle falsa 123", "Springfield", "11111111", "222222222", "Secundario", "INCLUSION", "2° Ciclo", "TEL"));
+            //alumnos.Add(new AlumnoModel("Pepito", "Ramirez", "51453546", new DateTime(2014, 12, 31), "Belgrano 268", "San Vicente", "11111111", "222222222", "Primario", "SEDE", "1° Ciclo", "SV"));
+            //alumnos.Add(new AlumnoModel("Juanito", "Perez", "44566768", new DateTime(2004, 8, 23), "Av. Pres. Perón 6550", "Alejandro Korn", "11111111", "222222222", "SAFI", "SEDE", "2° Ciclo", "DV"));
+            //alumnos.Add(new AlumnoModel("Ramon", "Lopez", "43656765", new DateTime(2003, 4, 7), "Calle falsa 123", "Springfield", "11111111", "222222222", "Secundario", "INCLUSION", "2° Ciclo", "TEL"));
 
-            dataGridView2.DataSource = alumnos;
+            //dataGridView2.DataSource = alumnos;
         }
 
         private AlumnoModel GetSelectedRowAsAlumno()
@@ -81,7 +81,7 @@ namespace EjemploLibreriaForms.Grupos
         private void btnAddAlumnoToList_Click(object sender, EventArgs e)
         {
             var alumno = this.GetSelectedRowAsAlumno();
-            string alumnoStringToAdd = string.Format("{0} {1} {2}", alumno.CUIT, alumno.Nombre, alumno.Apellido);
+            string alumnoStringToAdd = string.Format("{0} {1} {2}", alumno.Cuit, alumno.Nombre, alumno.Apellido);
             if (!listBox1.Items.Contains(alumnoStringToAdd)) 
             {
                 listBox1.Items.Add(alumnoStringToAdd);
