@@ -25,26 +25,22 @@ namespace EjemploLibreriaForms.para_BD
             ConexionConBD.Open();
         }
 
-        public static OleDbDataReader LecturaDB(string mi_consulta)
-        {
-            AbrirDB();
-            Orden = new OleDbCommand(mi_consulta, ConexionConBD);
-            lector = Orden.ExecuteReader();
-            return lector;
-           
-            
-        }
-
         public static void CerrarDB()
         {
             ConexionConBD.Close();
+        }
+
+        public static OleDbDataReader LecturaDB(string mi_consulta)
+        {
+            Orden = new OleDbCommand(mi_consulta, ConexionConBD);
+            lector = Orden.ExecuteReader();
+            return lector;
         }
 
         public static void CargarDB(string consulta)
         {
             Orden = new OleDbCommand(consulta, ConexionConBD);
             Orden.ExecuteNonQuery();
-            CerrarDB();
         }
 
         public static void CargarDB(string consulta, Dictionary<string, string> parametros)
@@ -56,30 +52,28 @@ namespace EjemploLibreriaForms.para_BD
 
             foreach (var param in parametros)
             {
-                bool isNumerical = int.TryParse(param.Value, out valorNumerico);
-                if (isNumerical)
-                {
-                    Orden.Parameters.Add(new OleDbParameter(param.Key, Int32.Parse(param.Value)));
-                }
-                else
-                {
-                    Orden.Parameters.Add(new OleDbParameter(param.Key, param.Value));
-                }
+                //bool isNumerical = int.TryParse(param.Value, out valorNumerico);
+                //if (isNumerical)
+                //{
+                //    Orden.Parameters.Add(new OleDbParameter(param.Key, Int32.Parse(param.Value)));
+                //}
+                //else
+                //{
+                //    Orden.Parameters.Add(new OleDbParameter(param.Key, param.Value));
+                //}
+                Orden.Parameters.Add(new OleDbParameter(param.Key, param.Value));
             }
 
             Orden.ExecuteNonQuery();
-            CerrarDB();
         }
 
-        public static DataTable  CargarGrilla(string Consulta)
+        public static DataTable CargarGrilla(string Consulta)
         {
-            AbrirDB();
             Orden = new OleDbCommand(Consulta, ConexionConBD);
             OleDbDataAdapter adapter = new OleDbDataAdapter(Orden);
             DataTable D = new DataTable();
             adapter.Fill(D);
-            return D;  
-        
+            return D;
         }
        
     }

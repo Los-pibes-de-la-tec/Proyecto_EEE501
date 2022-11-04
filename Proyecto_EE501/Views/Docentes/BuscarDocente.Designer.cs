@@ -45,14 +45,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tabPageListaDocentes = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Formacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ciclo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Caracterizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.cmb_lGrupo = new System.Windows.Forms.ComboBox();
             this.txt_lTelefono = new System.Windows.Forms.TextBox();
@@ -274,69 +266,13 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Apellido,
-            this.Nivel,
-            this.DNI,
-            this.Formacion,
-            this.Ciclo,
-            this.Caracterizacion,
-            this.Grupo});
             this.dataGridView1.Location = new System.Drawing.Point(16, 126);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(834, 296);
             this.dataGridView1.TabIndex = 41;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Visible = false;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.Visible = false;
-            // 
-            // Nivel
-            // 
-            this.Nivel.HeaderText = "Nivel";
-            this.Nivel.Name = "Nivel";
-            this.Nivel.Visible = false;
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            this.DNI.Visible = false;
-            // 
-            // Formacion
-            // 
-            this.Formacion.HeaderText = "Formación";
-            this.Formacion.Name = "Formacion";
-            this.Formacion.Visible = false;
-            // 
-            // Ciclo
-            // 
-            this.Ciclo.HeaderText = "Ciclo";
-            this.Ciclo.Name = "Ciclo";
-            this.Ciclo.Visible = false;
-            // 
-            // Caracterizacion
-            // 
-            this.Caracterizacion.HeaderText = "Caracterización";
-            this.Caracterizacion.Name = "Caracterizacion";
-            this.Caracterizacion.Visible = false;
-            // 
-            // Grupo
-            // 
-            this.Grupo.HeaderText = "Grupo";
-            this.Grupo.Name = "Grupo";
-            this.Grupo.Visible = false;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label7
             // 
@@ -553,14 +489,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabPage tabPageListaDocentes;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nivel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Formacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ciclo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Caracterizacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmb_lGrupo;
         private System.Windows.Forms.TextBox txt_lTelefono;

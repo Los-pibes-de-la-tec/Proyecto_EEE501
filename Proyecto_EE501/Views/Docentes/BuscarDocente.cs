@@ -10,72 +10,65 @@ using MaterialSkin.Controls;
 using MaterialSkin;
 using EjemploLibreriaForms.Models;
 using System.Collections;
+using EjemploLibreriaForms.para_BD;
 
 namespace EjemploLibreriaForms.Docentes
 {
     public partial class BuscarDocente : MaterialForm
     {
-        private DocenteModel DocenteToEdit;
-        private List<DocenteModel> docentes = new List<DocenteModel>();
-        public bool isSuccessful { get; set; }
+        public bool isEditing = false;
         public BuscarDocente()
         {
             InitializeComponent();
             Skin.CargarSkin(this);
             tabControl1.TabPages.Remove(tabPageDetalleDocente);
+            BD.AbrirDB();
             this.CargarGrilla();
+            BD.CerrarDB();
         }
 
         private void BuscarDocente_Load(object sender, EventArgs e)
         {
-
+            BD.AbrirDB();
+            this.CargarGrilla();
+            BD.CerrarDB();
         }
 
         private void CargarGrilla()
         {
-
-            docentes.Add(new DocenteModel("Pablo", "Sanch", "31453546", "124344453", "p_sanch@gmail.com"));
-            docentes.Add(new DocenteModel("Graciela", "Brassat", "20453546", "41243553", "mbrassat@gmail.com"));
-
-            dataGridView1.DataSource = docentes;
+            string Docentes = "Select * From Docentes";
+            dataGridView1.AutoGenerateColumns = true;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.DataSource = BD.CargarGrilla(Docentes);
+            dataGridView1.Columns["Id"].Visible = false;
         }
 
         private void btnAddNew_Click(object sender, EventArgs e)
         {
             tabControl1.TabPages.Remove(tabPageListaDocentes);
             tabControl1.TabPages.Add(tabPageDetalleDocente);
+            isEditing = false;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            CargarDatosDocenteParaEditar(GetSelectedRowAsDocente());
+            CargarDatosDocenteParaEditar();
             tabControl1.TabPages.Remove(tabPageListaDocentes);
             tabControl1.TabPages.Add(tabPageDetalleDocente);
+            tabPageDetalleDocente.Text = "Editar Docente";
+            isEditing = true;
+
         }
 
-        private void CargarDatosDocenteParaEditar(DocenteModel docenteToEdit)
+        private void CargarDatosDocenteParaEditar()
         {
-            txt_dNombre.Text = docenteToEdit.Nombre;
-            txt_dApellido.Text = docenteToEdit.Apellido;
-            txt_dCuit.Text = docenteToEdit.CUIT;
-            txt_dEmail.Text = docenteToEdit.Email;
-            txt_dTelefono.Text = docenteToEdit.Telefono;
+            txt_dNombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+            txt_dApellido.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Apellido"].Value.ToString();
+            txt_dCuit.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Cuit"].Value.ToString();
+            txt_dEmail.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Email"].Value.ToString();
+            txt_dTelefono.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Telefono"].Value.ToString();
         }
 
-        private DocenteModel GetSelectedRowAsDocente()
-        {
-            //List<int> indexes = dataGridView1.SelectedRows.Cast<DataGridViewRow>().Select(x => x.Index).ToList();
-
-            foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
-            {
-                DocenteToEdit = row.DataBoundItem as DocenteModel;
-                if (DocenteToEdit != null)
-                {
-                    return DocenteToEdit;
-                }
-            }
-            return null;
-        }
 
         private void BorrarDatosDocente()
         {
@@ -84,28 +77,23 @@ namespace EjemploLibreriaForms.Docentes
             txt_dCuit.Text = "";
             txt_dEmail.Text = "";
             txt_dTelefono.Text = "";
-           
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            // obtiene el indice de la fila seleccionada en el GridView
-            //int selectedRowCount =
-            //    dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
-
-            var docenteToDelete = GetSelectedRowAsDocente();
-
-            var result = MessageBox.Show("¿Estás seguro que quieres eliminar este ALUMNO?", "Advertencia",
-                      MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var result = MessageBox.Show("¿Estás seguro que quieres eliminar este DOCENTE?", "Advertencia",
+                  MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                //dataGridView1.Rows.RemoveAt(selectedRowCount);
-                docentes = docentes.Where(x => x.CUIT != docenteToDelete.CUIT).ToList();
-                dataGridView1.DataSource = docentes;
+                BD.AbrirDB();
+                string consulta = "delete from Docentes where Id = (" + GetDocenteId() + ");";
+                para_BD.BD.CargarDB(consulta);
                 MessageBox.Show("Docente eliminado correctamente!");
+                CargarGrilla();
+                BD.CerrarDB();
             }
-        }
 
+        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -116,18 +104,48 @@ namespace EjemploLibreriaForms.Docentes
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            var docenteTosave = new DocenteModel(txt_dNombre.Text, txt_dApellido.Text, txt_dCuit.Text, txt_dTelefono.Text, txt_dEmail.Text);
+            tabControl1.TabPages.Remove(tabPageDetalleDocente);
+            tabControl1.TabPages.Add(tabPageListaDocentes);
 
-            docentes.Add(docenteTosave);
-
-            isSuccessful = true;
-            if (isSuccessful)
+            if (!isEditing)
             {
-                tabControl1.TabPages.Remove(tabPageDetalleDocente);
-                tabControl1.TabPages.Add(tabPageListaDocentes);
+                BD.AbrirDB();
+                string AltaDoc = "INSERT INTO Docentes(Apellido, Nombre, Email, Cuit,Telefono) VALUES (' " +
+                txt_dApellido.Text + " ' , ' " + txt_dNombre.Text + " ' , ' " + txt_dEmail.Text + " ' , '" + txt_dCuit.Text + "','" + txt_dTelefono.Text + "') ; ";
+                para_BD.BD.CargarDB(AltaDoc);
+                MessageBox.Show("Docente registrado exitosamente!");
+                CargarGrilla();
+                BorrarDatosDocente();
+                BD.CerrarDB();
             }
-            MessageBox.Show("Docente registrado exitosamente!");
+            else
+            {
+                BD.AbrirDB();
+                string AltaAlum = "UPDATE [Docentes] SET Apellido=?, Nombre=?, Email=?, Cuit=?,Telefono=? WHERE Id=?";
+                var parametros = new Dictionary<string, string>();
+                parametros.Add("@Apellido", txt_dApellido.Text);
+                parametros.Add("@Nombre", txt_dNombre.Text);
+                parametros.Add("@Email", txt_dEmail.Text);
+                parametros.Add("@Cuit", txt_dCuit.Text);
+                parametros.Add("@Telefono", txt_dTelefono.Text);
+                parametros.Add("@Id", GetDocenteId().ToString());
+                para_BD.BD.CargarDB(AltaAlum, parametros);
+                CargarGrilla();
+                MessageBox.Show("Datos editados exitosamente!");
+                BorrarDatosDocente();
+                BD.CerrarDB();
+            }
 
+        }
+
+        private int GetDocenteId()
+        {
+            return Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Id"].Value);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            GetDocenteId();
         }
 
     }

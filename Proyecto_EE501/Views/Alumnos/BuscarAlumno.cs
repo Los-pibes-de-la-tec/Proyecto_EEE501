@@ -16,7 +16,6 @@ namespace EjemploLibreriaForms.Alumnos
 {
     public partial class BuscarAlumno : MaterialForm
     {
-        private AlumnoModel alumnoToEdit;
         private List<AlumnoModel> alumnos = new List<AlumnoModel>();
         int Cud = 0;
 
@@ -38,7 +37,9 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void BuscarAlumno_Load(object sender, EventArgs e)
         {
+            BD.AbrirDB();
             CargarGrilla();
+            BD.CerrarDB();
             chkb_CudNo.Checked = true;
         }
 
@@ -97,8 +98,6 @@ namespace EjemploLibreriaForms.Alumnos
             txt_dAlumnoTel2.Text = "";
             txt_DOS.Text = "";
             checkBox1.Checked = false;
-
-
         }
 
         private void btnAddNew_Click(object sender, EventArgs e)
@@ -106,6 +105,7 @@ namespace EjemploLibreriaForms.Alumnos
             tabControl1.TabPages.Remove(tabPageListaAlumnos);
             tabControl1.TabPages.Add(tabPageDetalleAlumno);
             tabPageDetalleAlumno.Text = "Agregar Nuevo";
+            isEditing = false;
 
         }
 
@@ -127,21 +127,37 @@ namespace EjemploLibreriaForms.Alumnos
 
             if (!isEditing)
             {
+                /************  Insert de Alumno *************/
+                BD.AbrirDB();
                 string Legajo = "SELECT TOP 1 * FROM Alumnos ORDER BY Id DESC";
-                para_BD.BD.LecturaDB(Legajo);
+                BD.LecturaDB(Legajo);
                 int ult_leg = 0;
-                while (para_BD.BD.lector.Read())
-                    ult_leg = Convert.ToInt32(para_BD.BD.lector["Num_Legajo"]) + 1;
+                while (BD.lector.Read())
+                    ult_leg = Convert.ToInt32(BD.lector["Num_Legajo"]) + 1;
                 string AltaAlum = "INSERT INTO Alumnos(Apellido, Nombre, Domicilio, Localidad,Cud,Fecha_Nacimi,Cuit,Obra_Social,Num_Legajo) VALUES (' " +
-                txt_dApellido.Text + " ' , ' " + txt_dNombre.Text + " ' , ' " + txt_dDomicilio.Text + " ' , ' " + txt_dLocalidad.Text + "'," + Cud + ",'" + dtp_dFechaNacimiento.Value.ToString("dd/MM/yyyy") + "'," + txt_dCuit.Text + ",'" + txt_DOS.Text + "'," + ult_leg + ") ; ";
-                para_BD.BD.CargarDB(AltaAlum);
+                txt_dApellido.Text + " ' , ' " + txt_dNombre.Text + " ' , ' " + txt_dDomicilio.Text + " ' , ' " + txt_dLocalidad.Text + "'," + Cud + ",'" + dtp_dFechaNacimiento.Value.ToString("dd/MM/yyyy") + "','" + txt_dCuit.Text + "','" + txt_DOS.Text + "'," + ult_leg + ") ; ";
+                BD.CargarDB(AltaAlum);
+
+                /************  Insert de Telefono 1 *************/
+                //uint tel1 = unchecked((uint)Convert.ToInt32(txt_dAlumnoTel1.Text));
+                //InsertarTelefono(tel1);
+                InsertarTelefono(txt_dAlumnoTel1.Text);
+
+                /************  Insert de Telefono 2 *************/
+                if (txt_dAlumnoTel2.Text != "") 
+                {
+                    InsertarTelefono(txt_dAlumnoTel2.Text);
+                }
+                /************ Actualizar Grilla *************/
                 CargarGrilla();
+                BD.CerrarDB();
                 MessageBox.Show("Alumno registrado exitosamente!");
                 BorrarDatosAlumno();
 
             }
             else
             {
+                BD.AbrirDB();
                 string AltaAlum = "UPDATE [Alumnos] SET Apellido=?, Nombre=?, Domicilio=?, Localidad=?,Cud=?,Fecha_Nacimi=?,Cuit=?,Obra_Social=? WHERE Id=?";
                 var parametros = new Dictionary<string, string>();
                 parametros.Add("@Apellido", txt_dApellido.Text);
@@ -153,12 +169,34 @@ namespace EjemploLibreriaForms.Alumnos
                 parametros.Add("@Cuit", txt_dCuit.Text);
                 parametros.Add("@Obra", txt_DOS.Text);
                 parametros.Add("@Id", GetAlumnoId().ToString());
-                para_BD.BD.CargarDB(AltaAlum, parametros);
+                BD.CargarDB(AltaAlum, parametros);
                 CargarGrilla();
+                BD.CerrarDB();
                 MessageBox.Show("Datos editados exitosamente!");
                 BorrarDatosAlumno();
             }
 
+        }
+
+        private void InsertarTelefono(string numTelefono)
+        {
+            string insertTel = "INSERT INTO Telefonos (Num_Tel) VALUES ('" + numTelefono + "');";
+            BD.CargarDB(insertTel);
+
+            string getAlumnoLastId = "SELECT TOP 1 * FROM Alumnos ORDER BY Id DESC";
+            BD.LecturaDB(getAlumnoLastId);
+            int alumnoLastId = 0;
+            while (BD.lector.Read())
+                alumnoLastId = Convert.ToInt32(BD.lector["Id"]);
+
+            string getTelLastId = "SELECT TOP 1 * FROM Telefonos ORDER BY Id DESC";
+            BD.LecturaDB(getTelLastId);
+            int TelLastId = 0;
+            while (BD.lector.Read())
+                TelLastId = Convert.ToInt32(BD.lector["Id"]);
+
+            string insertTel_Alumno_Tel = "INSERT INTO Alum_Tel (Id_Alum, Id_Tel) VALUES (" + alumnoLastId + "," + TelLastId + ");";
+            BD.CargarDB(insertTel_Alumno_Tel);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -174,10 +212,12 @@ namespace EjemploLibreriaForms.Alumnos
                       MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
+                BD.AbrirDB();
                 string consulta = "delete from Alumnos where Id = (" + GetAlumnoId() + ");";
-                para_BD.BD.CargarDB(consulta);
+                BD.CargarDB(consulta);
                 MessageBox.Show("Alumno eliminado correctamente!");
                 CargarGrilla();
+                BD.CerrarDB();
             }
         }
 
