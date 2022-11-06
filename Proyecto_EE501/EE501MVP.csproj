@@ -171,6 +171,51 @@
   <ItemGroup>
     <None Include="Resources\fondo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp_Image_2022-10-13_at_18.53.41-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_casa-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_casa-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton casa claro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Docentes boton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo profesional.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton practic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton practic1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton alumno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton alumno1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton alumno2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton documentos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton grupo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton grupo1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
