@@ -150,6 +150,9 @@ namespace EjemploLibreriaForms.Alumnos
                 {
                     InsertarTelefono(txt_dAlumnoTel2.Text);
                 }
+                else {
+                    InsertarTelefono("0000000000");
+                }
                 /************ Actualizar Grilla *************/
                 CargarGrilla();
                 MessageBox.Show("Alumno registrado exitosamente!");
@@ -170,11 +173,46 @@ namespace EjemploLibreriaForms.Alumnos
                 parametros.Add("@Obra", txt_DOS.Text);
                 parametros.Add("@Id", GetAlumnoId().ToString());
                 BD.CargarDB(AltaAlum, parametros);
+
+
+                string Numtels = "Select T.Id, T.Num_Tel From Telefonos AS T Inner Join Alum_Tel AS Alum on T.Id = Alum.Id_Tel where Alum.Id_Alum =" + GetAlumnoId() + "";
+                BD.LecturaDB(Numtels);
+                string telId1 = "";
+                string telId2 = "";
+                int rowsCounter = 0;
+                while (BD.lector.Read()) {
+
+                    if (rowsCounter == 0)
+                    {
+                        telId1 = BD.lector["Id"].ToString();
+                    }
+                    else
+                    {
+                        telId2 = BD.lector["Id"].ToString();
+                    }
+                    rowsCounter++;
+                }
+
+                UpdateTelefono(txt_dAlumnoTel1.Text, telId1);
+                if (txt_dAlumnoTel2.Text != "")
+                {
+                    UpdateTelefono(txt_dAlumnoTel2.Text, telId2);
+                }
+
                 CargarGrilla();
                 MessageBox.Show("Datos editados exitosamente!");
                 BorrarDatosAlumno();
             }
 
+        }
+
+        private void UpdateTelefono(string numTelefenoToUpdate, string telId)
+        {
+            string updateTelNumber = "UPDATE [Telefonos] SET Num_Tel=? WHERE Id=?";
+            var telParam = new Dictionary<string, string>();
+            telParam.Add("@Telefono", numTelefenoToUpdate);
+            telParam.Add("@Id", telId);
+            BD.CargarDB(updateTelNumber, telParam);
         }
 
         private void InsertarTelefono(string numTelefono)
