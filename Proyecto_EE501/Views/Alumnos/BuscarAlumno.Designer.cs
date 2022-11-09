@@ -34,7 +34,7 @@
             this.btnIngresar = new System.Windows.Forms.Button();
             this.txt_lGrupo = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.txt_lCuit = new System.Windows.Forms.TextBox();
             this.btnLegajo = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -141,6 +141,8 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.tabPageLegajo = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.Btn_Atras = new System.Windows.Forms.Button();
             this.btnLegajoDetalle = new System.Windows.Forms.Button();
             this.btnObservaciones = new System.Windows.Forms.Button();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
@@ -190,6 +192,7 @@
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.tabPageObservaciones = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -201,6 +204,7 @@
             this.OtrasPropuestas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageDetalleLegajo = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.NroActa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -246,10 +250,11 @@
             // 
             // tabPageListaAlumnos
             // 
+            this.tabPageListaAlumnos.AutoScroll = true;
             this.tabPageListaAlumnos.Controls.Add(this.btnIngresar);
             this.tabPageListaAlumnos.Controls.Add(this.txt_lGrupo);
             this.tabPageListaAlumnos.Controls.Add(this.label47);
-            this.tabPageListaAlumnos.Controls.Add(this.textBox19);
+            this.tabPageListaAlumnos.Controls.Add(this.txt_lCuit);
             this.tabPageListaAlumnos.Controls.Add(this.btnLegajo);
             this.tabPageListaAlumnos.Controls.Add(this.label6);
             this.tabPageListaAlumnos.Controls.Add(this.btnDelete);
@@ -304,13 +309,14 @@
             this.label47.TabIndex = 34;
             this.label47.Text = "CUIT";
             // 
-            // textBox19
+            // txt_lCuit
             // 
-            this.textBox19.Location = new System.Drawing.Point(96, 117);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(160, 22);
-            this.textBox19.TabIndex = 33;
+            this.txt_lCuit.Location = new System.Drawing.Point(96, 117);
+            this.txt_lCuit.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_lCuit.Name = "txt_lCuit";
+            this.txt_lCuit.Size = new System.Drawing.Size(160, 22);
+            this.txt_lCuit.TabIndex = 33;
+            this.txt_lCuit.TextChanged += new System.EventHandler(this.txt_lCuit_TextChanged);
             // 
             // btnLegajo
             // 
@@ -471,7 +477,6 @@
             this.txt_lNombre.Name = "txt_lNombre";
             this.txt_lNombre.Size = new System.Drawing.Size(160, 22);
             this.txt_lNombre.TabIndex = 17;
-            this.txt_lNombre.TextChanged += new System.EventHandler(this.txt_lNombre_TextChanged);
             // 
             // dataGridView1
             // 
@@ -1163,6 +1168,7 @@
             this.btnCancel2.TabIndex = 353;
             this.btnCancel2.Text = "Cancelar";
             this.btnCancel2.UseVisualStyleBackColor = true;
+            this.btnCancel2.Click += new System.EventHandler(this.btnCancel2_Click_1);
             // 
             // btnSave2
             // 
@@ -1362,6 +1368,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.Btn_Atras);
             this.groupBox1.Controls.Add(this.btnLegajoDetalle);
             this.groupBox1.Controls.Add(this.btnObservaciones);
             this.groupBox1.Controls.Add(this.checkBox6);
@@ -1416,6 +1424,25 @@
             this.groupBox1.Size = new System.Drawing.Size(960, 391);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(171, 344);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(140, 41);
+            this.button5.TabIndex = 386;
+            this.button5.Text = "Guardar Cambios";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Atras
+            // 
+            this.Btn_Atras.Location = new System.Drawing.Point(14, 344);
+            this.Btn_Atras.Name = "Btn_Atras";
+            this.Btn_Atras.Size = new System.Drawing.Size(140, 41);
+            this.Btn_Atras.TabIndex = 385;
+            this.Btn_Atras.Text = "Atras";
+            this.Btn_Atras.UseVisualStyleBackColor = true;
+            this.Btn_Atras.Click += new System.EventHandler(this.Btn_Atras_Click);
             // 
             // btnLegajoDetalle
             // 
@@ -1820,6 +1847,7 @@
             // 
             // tabPageObservaciones
             // 
+            this.tabPageObservaciones.Controls.Add(this.button4);
             this.tabPageObservaciones.Controls.Add(this.button1);
             this.tabPageObservaciones.Controls.Add(this.materialLabel5);
             this.tabPageObservaciones.Controls.Add(this.dataGridView2);
@@ -1831,9 +1859,19 @@
             this.tabPageObservaciones.Text = "Observaciones";
             this.tabPageObservaciones.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(6, 389);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(140, 41);
+            this.button4.TabIndex = 386;
+            this.button4.Text = "Atras";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(825, 365);
+            this.button1.Location = new System.Drawing.Point(873, 389);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 41);
             this.button1.TabIndex = 384;
@@ -1912,6 +1950,7 @@
             // 
             // tabPageDetalleLegajo
             // 
+            this.tabPageDetalleLegajo.Controls.Add(this.button6);
             this.tabPageDetalleLegajo.Controls.Add(this.materialLabel8);
             this.tabPageDetalleLegajo.Controls.Add(this.dataGridView3);
             this.tabPageDetalleLegajo.Controls.Add(this.richTextBox1);
@@ -1921,6 +1960,16 @@
             this.tabPageDetalleLegajo.TabIndex = 5;
             this.tabPageDetalleLegajo.Text = "Detalle Legajo";
             this.tabPageDetalleLegajo.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(8, 389);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(140, 41);
+            this.button6.TabIndex = 386;
+            this.button6.Text = "Atras";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // materialLabel8
             // 
@@ -1951,7 +2000,7 @@
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(498, 359);
+            this.dataGridView3.Size = new System.Drawing.Size(498, 332);
             this.dataGridView3.TabIndex = 18;
             this.dataGridView3.SelectionChanged += new System.EventHandler(this.dataGridView3_SelectionChanged);
             // 
@@ -1979,7 +2028,7 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(577, 50);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(367, 359);
+            this.richTextBox1.Size = new System.Drawing.Size(367, 332);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -2006,6 +2055,7 @@
             this.button2.TabIndex = 309;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -2206,7 +2256,7 @@
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txt_lCuit;
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.TextBox textBox21;
@@ -2286,6 +2336,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txt_DOS;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Btn_Atras;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
 
     }
 }

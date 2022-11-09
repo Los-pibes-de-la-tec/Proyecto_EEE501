@@ -11,7 +11,6 @@ using MaterialSkin;
 using EjemploLibreriaForms.Models;
 using EjemploLibreriaForms.para_BD;
 using System.Collections;
-
 namespace EjemploLibreriaForms.Alumnos
 {
     public partial class BuscarAlumno : MaterialForm
@@ -37,15 +36,12 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void BuscarAlumno_Load(object sender, EventArgs e)
         {
-            BD.AbrirDB();
             CargarGrilla();
-            BD.CerrarDB();
             chkb_CudNo.Checked = true;
         }
 
         private void CargarGrilla()
         {
-
             string Alumnos = "Select * From Alumnos";
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.AllowUserToAddRows = false;
@@ -55,14 +51,13 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void CargarDatosAlumnoParaEditar()
         {
-            //var id = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Id"].Value;
             string cud = dataGridView1.CurrentRow.Cells["Cud"].Value.ToString();
             if (cud == "True")
             {
                 chkb_CudSi.Checked = true;
                 chkb_CudNo.Checked = false;
             }
-            else 
+            else
             {
                 chkb_CudSi.Checked = false;
                 chkb_CudNo.Checked = true;
@@ -75,15 +70,28 @@ namespace EjemploLibreriaForms.Alumnos
             txt_dDomicilio.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Domicilio"].Value.ToString();
             txt_dLocalidad.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Localidad"].Value.ToString();
             txt_DOS.Text = dataGridView1.CurrentRow.Cells["Obra_Social"].Value.ToString();
-            //txt_dAlumnoTel1.Text = alumnoToEdit.Telefono1;
-            //txt_dAlumnoTel2.Text = alumnoToEdit.Telefono2;
-
-            //txt_dNivel.Text = alumnoToEdit.Nivel;
-            //txt_dFormacion.Text = alumnoToEdit.Formacion;
-            //txt_dCiclo.Text = alumnoToEdit.Ciclo;
-            //txt_dCaracterizacion.Text = alumnoToEdit.Caracterizacion;
+            ObtenerNumTel();
         }
 
+        private void ObtenerNumTel()
+        {
+            string Numtels = "Select Num_Tel From Telefonos Inner Join Alum_Tel on Telefonos.Id = Alum_Tel.Id_Tel where Alum_Tel.Id_Alum =" + GetAlumnoId() + "";
+            BD.LecturaDB(Numtels);
+            int ContadorDetels = 0;
+            while (BD.lector.Read())
+            {
+                if (ContadorDetels == 0)
+                {
+                    txt_dAlumnoTel1.Text = Convert.ToString(BD.lector["Num_Tel"]);
+                }
+                else
+                {
+                    txt_dAlumnoTel2.Text = Convert.ToString(BD.lector["Num_Tel"]);
+                }
+                ContadorDetels++;
+
+            }
+        }
         private void BorrarDatosAlumno()
         {
             txt_dNombre.Text = "";
@@ -102,8 +110,8 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void btnAddNew_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageListaAlumnos);
-            tabControl1.TabPages.Add(tabPageDetalleAlumno);
+            Metodos.CambiarTAb(tabControl1, tabPageListaAlumnos, tabPageDetalleAlumno);
+            checkBox1.Checked = false;
             tabPageDetalleAlumno.Text = "Agregar Nuevo";
             isEditing = false;
 
@@ -112,23 +120,21 @@ namespace EjemploLibreriaForms.Alumnos
         private void btnEdit_Click(object sender, EventArgs e)
         {
             CargarDatosAlumnoParaEditar();
-            tabControl1.TabPages.Remove(tabPageListaAlumnos);
-            tabControl1.TabPages.Add(tabPageDetalleAlumno);
+            checkBox1.Checked = true;
+            Metodos.CambiarTAb(tabControl1, tabPageListaAlumnos, tabPageDetalleAlumno);
             tabPageDetalleAlumno.Text = "Editar Alumno";
             isEditing = true;
-            
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageDetalleAlumno);
-            tabControl1.TabPages.Add(tabPageListaAlumnos);
+            Metodos.CambiarTAb(tabControl1, tabPageDetalleAlumno, tabPageListaAlumnos);
             checkBox1.Checked = false;
 
             if (!isEditing)
             {
                 /************  Insert de Alumno *************/
-                BD.AbrirDB();
                 string Legajo = "SELECT TOP 1 * FROM Alumnos ORDER BY Id DESC";
                 BD.LecturaDB(Legajo);
                 int ult_leg = 0;
@@ -137,27 +143,21 @@ namespace EjemploLibreriaForms.Alumnos
                 string AltaAlum = "INSERT INTO Alumnos(Apellido, Nombre, Domicilio, Localidad,Cud,Fecha_Nacimi,Cuit,Obra_Social,Num_Legajo) VALUES (' " +
                 txt_dApellido.Text + " ' , ' " + txt_dNombre.Text + " ' , ' " + txt_dDomicilio.Text + " ' , ' " + txt_dLocalidad.Text + "'," + Cud + ",'" + dtp_dFechaNacimiento.Value.ToString("dd/MM/yyyy") + "','" + txt_dCuit.Text + "','" + txt_DOS.Text + "'," + ult_leg + ") ; ";
                 BD.CargarDB(AltaAlum);
-
                 /************  Insert de Telefono 1 *************/
-                //uint tel1 = unchecked((uint)Convert.ToInt32(txt_dAlumnoTel1.Text));
-                //InsertarTelefono(tel1);
                 InsertarTelefono(txt_dAlumnoTel1.Text);
-
                 /************  Insert de Telefono 2 *************/
-                if (txt_dAlumnoTel2.Text != "") 
+                if (txt_dAlumnoTel2.Text != "")
                 {
                     InsertarTelefono(txt_dAlumnoTel2.Text);
                 }
                 /************ Actualizar Grilla *************/
                 CargarGrilla();
-                BD.CerrarDB();
                 MessageBox.Show("Alumno registrado exitosamente!");
                 BorrarDatosAlumno();
 
             }
             else
             {
-                BD.AbrirDB();
                 string AltaAlum = "UPDATE [Alumnos] SET Apellido=?, Nombre=?, Domicilio=?, Localidad=?,Cud=?,Fecha_Nacimi=?,Cuit=?,Obra_Social=? WHERE Id=?";
                 var parametros = new Dictionary<string, string>();
                 parametros.Add("@Apellido", txt_dApellido.Text);
@@ -171,7 +171,6 @@ namespace EjemploLibreriaForms.Alumnos
                 parametros.Add("@Id", GetAlumnoId().ToString());
                 BD.CargarDB(AltaAlum, parametros);
                 CargarGrilla();
-                BD.CerrarDB();
                 MessageBox.Show("Datos editados exitosamente!");
                 BorrarDatosAlumno();
             }
@@ -182,7 +181,6 @@ namespace EjemploLibreriaForms.Alumnos
         {
             string insertTel = "INSERT INTO Telefonos (Num_Tel) VALUES ('" + numTelefono + "');";
             BD.CargarDB(insertTel);
-
             string getAlumnoLastId = "SELECT TOP 1 * FROM Alumnos ORDER BY Id DESC";
             BD.LecturaDB(getAlumnoLastId);
             int alumnoLastId = 0;
@@ -193,16 +191,13 @@ namespace EjemploLibreriaForms.Alumnos
             BD.LecturaDB(getTelLastId);
             int TelLastId = 0;
             while (BD.lector.Read())
-                TelLastId = Convert.ToInt32(BD.lector["Id"]);
-
+            TelLastId = Convert.ToInt32(BD.lector["Id"]);
             string insertTel_Alumno_Tel = "INSERT INTO Alum_Tel (Id_Alum, Id_Tel) VALUES (" + alumnoLastId + "," + TelLastId + ");";
             BD.CargarDB(insertTel_Alumno_Tel);
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageDetalleAlumno);
-            tabControl1.TabPages.Add(tabPageListaAlumnos);
+            Metodos.CambiarTAb(tabControl1, tabPageDetalleAlumno, tabPageListaAlumnos);
             BorrarDatosAlumno();
         }
 
@@ -212,25 +207,10 @@ namespace EjemploLibreriaForms.Alumnos
                       MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                BD.AbrirDB();
                 string consulta = "delete from Alumnos where Id = (" + GetAlumnoId() + ");";
                 BD.CargarDB(consulta);
                 MessageBox.Show("Alumno eliminado correctamente!");
                 CargarGrilla();
-                BD.CerrarDB();
-            }
-        }
-
-        private void txt_lNombre_TextChanged(object sender, EventArgs e)
-        {
-            if (txt_lNombre.Text != "")
-            {
-                var alumnosFiltrados = alumnos.Where(x => x.Nombre.Contains(txt_lNombre.Text)).ToList();
-                dataGridView1.DataSource = alumnosFiltrados;
-            }
-            else
-            {
-                dataGridView1.DataSource = alumnos;
             }
         }
 
@@ -259,8 +239,7 @@ namespace EjemploLibreriaForms.Alumnos
             {
                 if (chxAddNewAdulto1.Checked)
                 {
-                    tabControl1.TabPages.Add(tabPageNuevoAdulto);
-                    tabControl1.SelectedTab = tabControl1.TabPages["tabPageNuevoAdulto"];
+                    Metodos.CambiarTAb(tabControl1, tabPageListaAlumnos, tabPageNuevoAdulto);
                 }
             }
 
@@ -269,9 +248,8 @@ namespace EjemploLibreriaForms.Alumnos
         private void btnCancel2_Click(object sender, EventArgs e)
         {
             tabControl1.TabPages.Remove(tabPageNuevoAdulto);
+
         }
-
-
 
 
         /* ----------------------------- Legajo -------------------------------------*/
@@ -289,20 +267,18 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void btnLegajo_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageListaAlumnos);
-            tabControl1.TabPages.Add(tabPageLegajo);
+            Metodos.CambiarTAb(tabControl1, tabPageListaAlumnos, tabPageLegajo);
+
         }
 
         private void btnObservaciones_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Add(tabPageObservaciones);
-            tabControl1.SelectedTab = tabControl1.TabPages["tabPageObservaciones"];
+            Metodos.CambiarTAb(tabControl1, tabPageLegajo, tabPageObservaciones);
         }
 
         private void btnLegajoDetalle_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Add(tabPageDetalleLegajo);
-            tabControl1.SelectedTab = tabControl1.TabPages["tabPageDetalleLegajo"];
+            Metodos.CambiarTAb(tabControl1, tabPageLegajo, tabPageDetalleLegajo);
             richTextBox1.Text = dataGridView3.Rows[dataGridView3.CurrentRow.Index].Cells[3].Value.ToString();
         }
 
@@ -316,13 +292,13 @@ namespace EjemploLibreriaForms.Alumnos
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Add(tabPageIngresarACurso);
-            tabControl1.SelectedTab = tabControl1.TabPages["tabPageIngresarACurso"];
+            ;
+            Metodos.CambiarTAb(tabControl1, tabPageListaAlumnos, tabPageIngresarACurso);
         }
 
         private void txt_dCuit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar)&&!(char.IsControl(e.KeyChar)))
+            if (!Char.IsDigit(e.KeyChar) && !(char.IsControl(e.KeyChar)))
             {
                 e.Handled = true;
                 MessageBox.Show("pedazo de boludo ingresa un cuit numerico");
@@ -337,7 +313,7 @@ namespace EjemploLibreriaForms.Alumnos
         private int GetAlumnoId()
         {
             return Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Id"].Value);
-        
+
         }
 
         private int CheckCudChecked()
@@ -377,6 +353,45 @@ namespace EjemploLibreriaForms.Alumnos
             {
                 chkb_CudSi.Checked = true;
                 Cud = -1;
+            }
+        }
+
+        private void Btn_Atras_Click(object sender, EventArgs e)
+        {
+            Metodos.CambiarTAb(tabControl1, tabPageLegajo, tabPageListaAlumnos);
+        }
+
+        private void btnCancel2_Click_1(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabPageNuevoAdulto);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Metodos.CambiarTAb(tabControl1, tabPageIngresarACurso, tabPageListaAlumnos);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Metodos.CambiarTAb(tabControl1, tabPageObservaciones, tabPageLegajo);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Metodos.CambiarTAb(tabControl1, tabPageDetalleLegajo, tabPageLegajo);
+        }
+
+        private void txt_lCuit_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_lCuit.Text != "")
+            {
+                string FiltroCuit = "Select * From Alumnos where Cuit like'%"+txt_lCuit.Text+"%'";
+                dataGridView1.Columns["Id"].Visible = false;
+                dataGridView1.DataSource = BD.CargarGrilla(FiltroCuit);
+            }
+            else
+            {
+                this.CargarGrilla();
             }
         }
     }

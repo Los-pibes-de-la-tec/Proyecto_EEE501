@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Metodos.cs" />
     <Compile Include="Models\AlumnoModel.cs" />
     <Compile Include="Models\DocenteModel.cs" />
     <Compile Include="para_BD\BD.cs" />

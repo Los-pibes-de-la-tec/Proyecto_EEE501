@@ -15,7 +15,6 @@ namespace EjemploLibreriaForms.Grupos
 {
     public partial class BuscarGrupo : MaterialForm
     {
-        private AlumnoModel alumnoToEdit;
         private List<AlumnoModel> alumnos = new List<AlumnoModel>();
 
         public bool isSuccessful { get; set; }
