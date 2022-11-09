@@ -24,9 +24,17 @@ namespace EjemploLibreriaForms.Domicilio
 
         private void btnAddNew_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(TabPag_Domi_Alum);
-            tabControl1.TabPages.Add(TabPag_Detalle_Alum);
+            Metodos.CambiarTAb(tabControl1,TabPag_Domi_Alum,TabPag_Detalle_Alum);
+        }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Metodos.CambiarTAb(tabControl1, TabPag_Domi_Alum, TabPag_Detalle_Alum);
+        }
+
+        private void btnCancel1_Click(object sender, EventArgs e)
+        {
+            Metodos.CambiarTAb(tabControl1, TabPag_Detalle_Alum, TabPag_Domi_Alum);
         }
 
     }

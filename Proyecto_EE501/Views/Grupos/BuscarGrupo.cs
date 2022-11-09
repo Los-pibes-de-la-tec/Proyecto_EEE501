@@ -32,12 +32,6 @@ namespace EjemploLibreriaForms.Grupos
 
         private void CargarGrilla()
         {
-
-            //alumnos.Add(new AlumnoModel("Pepito", "Ramirez", "51453546", new DateTime(2014, 12, 31), "Belgrano 268", "San Vicente", "11111111", "222222222", "Primario", "SEDE", "1° Ciclo", "SV"));
-            //alumnos.Add(new AlumnoModel("Juanito", "Perez", "44566768", new DateTime(2004, 8, 23), "Av. Pres. Perón 6550", "Alejandro Korn", "11111111", "222222222", "SAFI", "SEDE", "2° Ciclo", "DV"));
-            //alumnos.Add(new AlumnoModel("Ramon", "Lopez", "43656765", new DateTime(2003, 4, 7), "Calle falsa 123", "Springfield", "11111111", "222222222", "Secundario", "INCLUSION", "2° Ciclo", "TEL"));
-
-            //dataGridView2.DataSource = alumnos;
         }
 
         private AlumnoModel GetSelectedRowAsAlumno()
@@ -55,26 +49,22 @@ namespace EjemploLibreriaForms.Grupos
 
         private void btnAddNew_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageListaGrupos);
-            tabControl1.TabPages.Add(tabPageDetalleGrupo);
+            Metodos.CambiarTAb(tabControl1, tabPageListaGrupos, tabPageDetalleGrupo);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Add(tabPageListaGrupos);
-            tabControl1.TabPages.Remove(tabPageDetalleGrupo);
+            Metodos.CambiarTAb(tabControl1, tabPageDetalleGrupo, tabPageListaGrupos);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageDetalleGrupo);
-            tabControl1.TabPages.Add(tabPageListaGrupos);
+            Metodos.CambiarTAb(tabControl1, tabPageDetalleGrupo, tabPageListaGrupos);
         }
 
         private void btnAddAlumnoToGroup_Click(object sender, EventArgs e)
-        {
-            tabControl1.TabPages.Remove(tabPageListaGrupos);
-            tabControl1.TabPages.Add(tabPageGrupoNuevoAlumno);
+        {;
+            Metodos.CambiarTAb(tabControl1, tabPageListaGrupos, tabPageGrupoNuevoAlumno);
         }
 
         private void btnAddAlumnoToList_Click(object sender, EventArgs e)
@@ -88,9 +78,9 @@ namespace EjemploLibreriaForms.Grupos
             
         }
 
-        private void label20_Click(object sender, EventArgs e)
+        private void btn_Cancelar_Click(object sender, EventArgs e)
         {
-
+            Metodos.CambiarTAb(tabControl1, tabPageGrupoNuevoAlumno, tabPageListaGrupos);
         }
  
     }

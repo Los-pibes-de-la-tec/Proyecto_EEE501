@@ -41,11 +41,19 @@
             this.btnAddNew = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TabPag_Detalle_Alum = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnCancel1 = new System.Windows.Forms.Button();
             this.btnSave1 = new System.Windows.Forms.Button();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.dtp_Adulto1FechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.txtAdulto1Apellido = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -68,14 +76,6 @@
             this.txt_dApellido = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txt_dNombre = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.dtp_Adulto1FechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.TabPag_Domi_Alum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -187,6 +187,7 @@
             this.btnEdit.TabIndex = 34;
             this.btnEdit.Text = "Editar";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAddNew
             // 
@@ -253,6 +254,55 @@
             this.TabPag_Detalle_Alum.Text = "Detalle Alumno";
             this.TabPag_Detalle_Alum.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(45, 250);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 364;
+            this.label6.Text = "Institucion";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(125, 244);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 363;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(523, 161);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 13);
+            this.label5.TabIndex = 362;
+            this.label5.Text = "Complicacion medica";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(641, 158);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(321, 161);
+            this.richTextBox1.TabIndex = 361;
+            this.richTextBox1.Text = "";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(615, 111);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
+            this.dateTimePicker1.TabIndex = 360;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(523, 116);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.TabIndex = 359;
+            this.label4.Text = "Fecha de inicio";
+            // 
             // btnCancel1
             // 
             this.btnCancel1.Location = new System.Drawing.Point(508, 393);
@@ -261,6 +311,7 @@
             this.btnCancel1.TabIndex = 358;
             this.btnCancel1.Text = "Cancelar";
             this.btnCancel1.UseVisualStyleBackColor = true;
+            this.btnCancel1.Click += new System.EventHandler(this.btnCancel1_Click);
             // 
             // btnSave1
             // 
@@ -293,6 +344,13 @@
             this.materialDivider1.TabIndex = 355;
             this.materialDivider1.Text = "materialDivider1";
             // 
+            // dtp_Adulto1FechaNacimiento
+            // 
+            this.dtp_Adulto1FechaNacimiento.Location = new System.Drawing.Point(862, 110);
+            this.dtp_Adulto1FechaNacimiento.Name = "dtp_Adulto1FechaNacimiento";
+            this.dtp_Adulto1FechaNacimiento.Size = new System.Drawing.Size(100, 20);
+            this.dtp_Adulto1FechaNacimiento.TabIndex = 353;
+            // 
             // materialLabel2
             // 
             this.materialLabel2.AutoSize = true;
@@ -305,6 +363,15 @@
             this.materialLabel2.Size = new System.Drawing.Size(205, 19);
             this.materialLabel2.TabIndex = 343;
             this.materialLabel2.Text = "Datos de servicio a domicilio";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(742, 117);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(107, 13);
+            this.label19.TabIndex = 342;
+            this.label19.Text = "Fecha de finalizacion";
             // 
             // label21
             // 
@@ -490,71 +557,6 @@
             this.txt_dNombre.Name = "txt_dNombre";
             this.txt_dNombre.Size = new System.Drawing.Size(100, 20);
             this.txt_dNombre.TabIndex = 318;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(615, 111);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker1.TabIndex = 360;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(523, 116);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
-            this.label4.TabIndex = 359;
-            this.label4.Text = "Fecha de inicio";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(742, 117);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(107, 13);
-            this.label19.TabIndex = 342;
-            this.label19.Text = "Fecha de finalizacion";
-            // 
-            // dtp_Adulto1FechaNacimiento
-            // 
-            this.dtp_Adulto1FechaNacimiento.Location = new System.Drawing.Point(862, 110);
-            this.dtp_Adulto1FechaNacimiento.Name = "dtp_Adulto1FechaNacimiento";
-            this.dtp_Adulto1FechaNacimiento.Size = new System.Drawing.Size(100, 20);
-            this.dtp_Adulto1FechaNacimiento.TabIndex = 353;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(641, 158);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(321, 161);
-            this.richTextBox1.TabIndex = 361;
-            this.richTextBox1.Text = "";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(523, 161);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 13);
-            this.label5.TabIndex = 362;
-            this.label5.Text = "Complicacion medica";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(45, 250);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 364;
-            this.label6.Text = "Institucion";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(125, 244);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 363;
             // 
             // Domicilio
             // 

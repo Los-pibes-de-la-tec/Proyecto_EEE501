@@ -55,6 +55,26 @@
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
+            this.tabPageDetalleGrupo = new System.Windows.Forms.TabPage();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
             this.tabPageListaGrupos = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,35 +102,17 @@
             this.cmb_lDocente = new System.Windows.Forms.ComboBox();
             this.btnAddAlumnoToGroup = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.tabPageDetalleGrupo = new System.Windows.Forms.TabPage();
             this.tabPageGrupoNuevoAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPageDetalleGrupo.SuspendLayout();
             this.tabPageListaGrupos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPageDetalleGrupo.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPageGrupoNuevoAlumno
             // 
+            this.tabPageGrupoNuevoAlumno.Controls.Add(this.btn_Cancelar);
             this.tabPageGrupoNuevoAlumno.Controls.Add(this.listBox1);
             this.tabPageGrupoNuevoAlumno.Controls.Add(this.comboBox6);
             this.tabPageGrupoNuevoAlumno.Controls.Add(this.label14);
@@ -395,6 +397,235 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(162, 276);
             this.listBox1.TabIndex = 343;
+            // 
+            // btn_Cancelar
+            // 
+            this.btn_Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cancelar.Location = new System.Drawing.Point(865, 299);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(132, 37);
+            this.btn_Cancelar.TabIndex = 344;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            // 
+            // tabPageDetalleGrupo
+            // 
+            this.tabPageDetalleGrupo.Controls.Add(this.comboBox11);
+            this.tabPageDetalleGrupo.Controls.Add(this.label13);
+            this.tabPageDetalleGrupo.Controls.Add(this.comboBox1);
+            this.tabPageDetalleGrupo.Controls.Add(this.label7);
+            this.tabPageDetalleGrupo.Controls.Add(this.label8);
+            this.tabPageDetalleGrupo.Controls.Add(this.comboBox2);
+            this.tabPageDetalleGrupo.Controls.Add(this.label9);
+            this.tabPageDetalleGrupo.Controls.Add(this.comboBox3);
+            this.tabPageDetalleGrupo.Controls.Add(this.label10);
+            this.tabPageDetalleGrupo.Controls.Add(this.comboBox4);
+            this.tabPageDetalleGrupo.Controls.Add(this.label11);
+            this.tabPageDetalleGrupo.Controls.Add(this.comboBox5);
+            this.tabPageDetalleGrupo.Controls.Add(this.label12);
+            this.tabPageDetalleGrupo.Controls.Add(this.textBox1);
+            this.tabPageDetalleGrupo.Controls.Add(this.btnCancel);
+            this.tabPageDetalleGrupo.Controls.Add(this.btnSave);
+            this.tabPageDetalleGrupo.Controls.Add(this.materialDivider2);
+            this.tabPageDetalleGrupo.Controls.Add(this.materialLabel1);
+            this.tabPageDetalleGrupo.Location = new System.Drawing.Point(4, 25);
+            this.tabPageDetalleGrupo.Name = "tabPageDetalleGrupo";
+            this.tabPageDetalleGrupo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageDetalleGrupo.Size = new System.Drawing.Size(1021, 437);
+            this.tabPageDetalleGrupo.TabIndex = 1;
+            this.tabPageDetalleGrupo.Text = "Detalle Grupo";
+            this.tabPageDetalleGrupo.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(46, 23);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(117, 18);
+            this.materialLabel1.TabIndex = 283;
+            this.materialLabel1.Text = "Datos del grupo:";
+            // 
+            // materialDivider2
+            // 
+            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(3, 367);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(1018, 1);
+            this.materialDivider2.TabIndex = 305;
+            this.materialDivider2.Text = "materialDivider2";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(313, 383);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(183, 44);
+            this.btnSave.TabIndex = 306;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(510, 383);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(183, 44);
+            this.btnCancel.TabIndex = 307;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(238, 162);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(160, 22);
+            this.textBox1.TabIndex = 308;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(105, 168);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(97, 16);
+            this.label12.TabIndex = 309;
+            this.label12.Text = "Nombre Grupo";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "SEDE",
+            "INCLUSION"});
+            this.comboBox5.Location = new System.Drawing.Point(238, 217);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(160, 24);
+            this.comboBox5.TabIndex = 310;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(105, 225);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 16);
+            this.label11.TabIndex = 311;
+            this.label11.Text = "Formación";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "1° Ciclo",
+            "2° Ciclo"});
+            this.comboBox4.Location = new System.Drawing.Point(557, 160);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(160, 24);
+            this.comboBox4.TabIndex = 312;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(481, 170);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 16);
+            this.label10.TabIndex = 313;
+            this.label10.Text = "Ciclo";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "TEL",
+            "SV"});
+            this.comboBox3.Location = new System.Drawing.Point(557, 221);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(160, 24);
+            this.comboBox3.TabIndex = 314;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(439, 229);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(101, 16);
+            this.label9.TabIndex = 315;
+            this.label9.Text = "Caracterización";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Inicial",
+            "Primario",
+            "SAFI"});
+            this.comboBox2.Location = new System.Drawing.Point(238, 276);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(160, 24);
+            this.comboBox2.TabIndex = 316;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(105, 284);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(39, 16);
+            this.label8.TabIndex = 317;
+            this.label8.Text = "Nivel";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(474, 113);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 16);
+            this.label7.TabIndex = 318;
+            this.label7.Text = "Turno";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(557, 105);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1.TabIndex = 319;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(105, 113);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(108, 16);
+            this.label13.TabIndex = 321;
+            this.label13.Text = "Docente a cargo";
+            // 
+            // comboBox11
+            // 
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Location = new System.Drawing.Point(238, 110);
+            this.comboBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox11.Name = "comboBox11";
+            this.comboBox11.Size = new System.Drawing.Size(160, 24);
+            this.comboBox11.TabIndex = 322;
             // 
             // tabPageListaGrupos
             // 
@@ -692,223 +923,6 @@
             this.tabControl1.Size = new System.Drawing.Size(1029, 466);
             this.tabControl1.TabIndex = 0;
             // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(46, 23);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(119, 19);
-            this.materialLabel1.TabIndex = 283;
-            this.materialLabel1.Text = "Datos del grupo:";
-            // 
-            // materialDivider2
-            // 
-            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider2.Depth = 0;
-            this.materialDivider2.Location = new System.Drawing.Point(3, 367);
-            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider2.Name = "materialDivider2";
-            this.materialDivider2.Size = new System.Drawing.Size(1018, 1);
-            this.materialDivider2.TabIndex = 305;
-            this.materialDivider2.Text = "materialDivider2";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(313, 383);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(183, 44);
-            this.btnSave.TabIndex = 306;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(510, 383);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(183, 44);
-            this.btnCancel.TabIndex = 307;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(238, 162);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 22);
-            this.textBox1.TabIndex = 308;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(105, 168);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 16);
-            this.label12.TabIndex = 309;
-            this.label12.Text = "Nombre Grupo";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "SEDE",
-            "INCLUSION"});
-            this.comboBox5.Location = new System.Drawing.Point(238, 217);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(160, 24);
-            this.comboBox5.TabIndex = 310;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(105, 225);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 16);
-            this.label11.TabIndex = 311;
-            this.label11.Text = "Formación";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "1° Ciclo",
-            "2° Ciclo"});
-            this.comboBox4.Location = new System.Drawing.Point(557, 160);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(160, 24);
-            this.comboBox4.TabIndex = 312;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(481, 170);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 16);
-            this.label10.TabIndex = 313;
-            this.label10.Text = "Ciclo";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "TEL",
-            "SV"});
-            this.comboBox3.Location = new System.Drawing.Point(557, 221);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(160, 24);
-            this.comboBox3.TabIndex = 314;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(439, 229);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 16);
-            this.label9.TabIndex = 315;
-            this.label9.Text = "Caracterización";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Inicial",
-            "Primario",
-            "SAFI"});
-            this.comboBox2.Location = new System.Drawing.Point(238, 276);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(160, 24);
-            this.comboBox2.TabIndex = 316;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(105, 284);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 16);
-            this.label8.TabIndex = 317;
-            this.label8.Text = "Nivel";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(474, 113);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 16);
-            this.label7.TabIndex = 318;
-            this.label7.Text = "Turno";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(557, 105);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
-            this.comboBox1.TabIndex = 319;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(105, 113);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(108, 16);
-            this.label13.TabIndex = 321;
-            this.label13.Text = "Docente a cargo";
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(238, 110);
-            this.comboBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(160, 24);
-            this.comboBox11.TabIndex = 322;
-            // 
-            // tabPageDetalleGrupo
-            // 
-            this.tabPageDetalleGrupo.Controls.Add(this.comboBox11);
-            this.tabPageDetalleGrupo.Controls.Add(this.label13);
-            this.tabPageDetalleGrupo.Controls.Add(this.comboBox1);
-            this.tabPageDetalleGrupo.Controls.Add(this.label7);
-            this.tabPageDetalleGrupo.Controls.Add(this.label8);
-            this.tabPageDetalleGrupo.Controls.Add(this.comboBox2);
-            this.tabPageDetalleGrupo.Controls.Add(this.label9);
-            this.tabPageDetalleGrupo.Controls.Add(this.comboBox3);
-            this.tabPageDetalleGrupo.Controls.Add(this.label10);
-            this.tabPageDetalleGrupo.Controls.Add(this.comboBox4);
-            this.tabPageDetalleGrupo.Controls.Add(this.label11);
-            this.tabPageDetalleGrupo.Controls.Add(this.comboBox5);
-            this.tabPageDetalleGrupo.Controls.Add(this.label12);
-            this.tabPageDetalleGrupo.Controls.Add(this.textBox1);
-            this.tabPageDetalleGrupo.Controls.Add(this.btnCancel);
-            this.tabPageDetalleGrupo.Controls.Add(this.btnSave);
-            this.tabPageDetalleGrupo.Controls.Add(this.materialDivider2);
-            this.tabPageDetalleGrupo.Controls.Add(this.materialLabel1);
-            this.tabPageDetalleGrupo.Location = new System.Drawing.Point(4, 25);
-            this.tabPageDetalleGrupo.Name = "tabPageDetalleGrupo";
-            this.tabPageDetalleGrupo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDetalleGrupo.Size = new System.Drawing.Size(1021, 437);
-            this.tabPageDetalleGrupo.TabIndex = 1;
-            this.tabPageDetalleGrupo.Text = "Detalle Grupo";
-            this.tabPageDetalleGrupo.UseVisualStyleBackColor = true;
-            // 
             // BuscarGrupo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -927,12 +941,12 @@
             this.tabPageGrupoNuevoAlumno.ResumeLayout(false);
             this.tabPageGrupoNuevoAlumno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPageDetalleGrupo.ResumeLayout(false);
+            this.tabPageDetalleGrupo.PerformLayout();
             this.tabPageListaGrupos.ResumeLayout(false);
             this.tabPageListaGrupos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabPageDetalleGrupo.ResumeLayout(false);
-            this.tabPageDetalleGrupo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -940,6 +954,7 @@
         #endregion
 
         private System.Windows.Forms.TabPage tabPageGrupoNuevoAlumno;
+        private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label14;
@@ -966,6 +981,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private MaterialSkin.Controls.MaterialDivider materialDivider3;
+        private System.Windows.Forms.TabPage tabPageDetalleGrupo;
+        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
+        private MaterialSkin.Controls.MaterialDivider materialDivider2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.TabPage tabPageListaGrupos;
         private System.Windows.Forms.Button btnAddAlumnoToGroup;
         private System.Windows.Forms.ComboBox cmb_lDocente;
@@ -993,25 +1027,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Caracterizacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPageDetalleGrupo;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnSave;
-        private MaterialSkin.Controls.MaterialDivider materialDivider2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+
 
 
     }

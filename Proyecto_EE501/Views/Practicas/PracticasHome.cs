@@ -23,13 +23,12 @@ namespace EjemploLibreriaForms
 
         private void btnAddNew_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageListaPracticas);
-            tabControl1.TabPages.Add(tabPageDetallePractica);
+            Metodos.CambiarTAb(tabControl1, tabPageListaPracticas, tabPageDetallePractica);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            Metodos.CambiarTAb(tabControl1, tabPageListaPracticas, tabPageDetallePractica);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -39,8 +38,7 @@ namespace EjemploLibreriaForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageDetallePractica);
-            tabControl1.TabPages.Add(tabPageListaPracticas);
+            Metodos.CambiarTAb(tabControl1, tabPageDetallePractica, tabPageListaPracticas);
         }
     }
 }

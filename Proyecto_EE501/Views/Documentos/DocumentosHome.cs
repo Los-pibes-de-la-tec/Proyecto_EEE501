@@ -23,14 +23,12 @@ namespace EjemploLibreriaForms
 
         private void btnAddNew_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageListaDocumentos);
-            tabControl1.TabPages.Add(tabPageAgregarDocumento);
+            Metodos.CambiarTAb(tabControl1, tabPageListaDocumentos, tabPageAgregarDocumento);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageAgregarDocumento);
-            tabControl1.TabPages.Add(tabPageListaDocumentos);
+            Metodos.CambiarTAb(tabControl1, tabPageAgregarDocumento, tabPageListaDocumentos);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

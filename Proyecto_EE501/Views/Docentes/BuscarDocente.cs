@@ -22,16 +22,12 @@ namespace EjemploLibreriaForms.Docentes
             InitializeComponent();
             Skin.CargarSkin(this);
             tabControl1.TabPages.Remove(tabPageDetalleDocente);
-            BD.AbrirDB();
             this.CargarGrilla();
-            BD.CerrarDB();
         }
 
         private void BuscarDocente_Load(object sender, EventArgs e)
         {
-            BD.AbrirDB();
             this.CargarGrilla();
-            BD.CerrarDB();
         }
 
         private void CargarGrilla()
@@ -45,16 +41,14 @@ namespace EjemploLibreriaForms.Docentes
 
         private void btnAddNew_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageListaDocentes);
-            tabControl1.TabPages.Add(tabPageDetalleDocente);
+            Metodos.CambiarTAb(tabControl1, tabPageListaDocentes, tabPageDetalleDocente);
             isEditing = false;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             CargarDatosDocenteParaEditar();
-            tabControl1.TabPages.Remove(tabPageListaDocentes);
-            tabControl1.TabPages.Add(tabPageDetalleDocente);
+            Metodos.CambiarTAb(tabControl1, tabPageListaDocentes, tabPageDetalleDocente);
             tabPageDetalleDocente.Text = "Editar Docente";
             isEditing = true;
 
@@ -85,42 +79,34 @@ namespace EjemploLibreriaForms.Docentes
                   MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                BD.AbrirDB();
                 string consulta = "delete from Docentes where Id = (" + GetDocenteId() + ");";
                 para_BD.BD.CargarDB(consulta);
                 MessageBox.Show("Docente eliminado correctamente!");
                 CargarGrilla();
-                BD.CerrarDB();
             }
 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageDetalleDocente);
-            tabControl1.TabPages.Add(tabPageListaDocentes);
+            Metodos.CambiarTAb(tabControl1,tabPageDetalleDocente,tabPageListaDocentes);
             BorrarDatosDocente();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageDetalleDocente);
-            tabControl1.TabPages.Add(tabPageListaDocentes);
-
+            Metodos.CambiarTAb(tabControl1, tabPageDetalleDocente, tabPageListaDocentes);
             if (!isEditing)
             {
-                BD.AbrirDB();
                 string AltaDoc = "INSERT INTO Docentes(Apellido, Nombre, Email, Cuit,Telefono) VALUES (' " +
                 txt_dApellido.Text + " ' , ' " + txt_dNombre.Text + " ' , ' " + txt_dEmail.Text + " ' , '" + txt_dCuit.Text + "','" + txt_dTelefono.Text + "') ; ";
                 para_BD.BD.CargarDB(AltaDoc);
                 MessageBox.Show("Docente registrado exitosamente!");
                 CargarGrilla();
                 BorrarDatosDocente();
-                BD.CerrarDB();
             }
             else
             {
-                BD.AbrirDB();
                 string AltaAlum = "UPDATE [Docentes] SET Apellido=?, Nombre=?, Email=?, Cuit=?,Telefono=? WHERE Id=?";
                 var parametros = new Dictionary<string, string>();
                 parametros.Add("@Apellido", txt_dApellido.Text);
@@ -133,7 +119,6 @@ namespace EjemploLibreriaForms.Docentes
                 CargarGrilla();
                 MessageBox.Show("Datos editados exitosamente!");
                 BorrarDatosDocente();
-                BD.CerrarDB();
             }
 
         }
