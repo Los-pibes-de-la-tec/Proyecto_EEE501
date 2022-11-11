@@ -141,6 +141,7 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.tabPageLegajo = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Txt_Lnom = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.Btn_Atras = new System.Windows.Forms.Button();
             this.btnLegajoDetalle = new System.Windows.Forms.Button();
@@ -169,25 +170,24 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.txt_Lpens = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.Txt_Los = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.Txt_LLOC = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.Txt_Ldomi = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.Txt_LLugar = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label46 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.Txt_LCui = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.Txt_Lape = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
@@ -483,7 +483,7 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(16, 147);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
@@ -580,7 +580,7 @@
             this.txt_dCuit.Name = "txt_dCuit";
             this.txt_dCuit.Size = new System.Drawing.Size(100, 22);
             this.txt_dCuit.TabIndex = 323;
-            this.txt_dCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dCuit_KeyPress);
+            this.txt_dCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dAlumnoTel2_KeyPress);
             // 
             // chkb_CudNo
             // 
@@ -867,6 +867,7 @@
             this.txt_dAlumnoTel2.Size = new System.Drawing.Size(100, 22);
             this.txt_dAlumnoTel2.TabIndex = 280;
             this.txt_dAlumnoTel2.Visible = false;
+            this.txt_dAlumnoTel2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dAlumnoTel2_KeyPress);
             // 
             // label7
             // 
@@ -883,6 +884,7 @@
             this.txt_dAlumnoTel1.Name = "txt_dAlumnoTel1";
             this.txt_dAlumnoTel1.Size = new System.Drawing.Size(100, 22);
             this.txt_dAlumnoTel1.TabIndex = 278;
+            this.txt_dAlumnoTel1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dAlumnoTel2_KeyPress);
             // 
             // label9
             // 
@@ -1368,6 +1370,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Controls.Add(this.Txt_Lnom);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.Btn_Atras);
             this.groupBox1.Controls.Add(this.btnLegajoDetalle);
@@ -1396,25 +1399,24 @@
             this.groupBox1.Controls.Add(this.checkBox5);
             this.groupBox1.Controls.Add(this.textBox27);
             this.groupBox1.Controls.Add(this.label54);
-            this.groupBox1.Controls.Add(this.textBox26);
+            this.groupBox1.Controls.Add(this.txt_Lpens);
             this.groupBox1.Controls.Add(this.label53);
-            this.groupBox1.Controls.Add(this.textBox25);
+            this.groupBox1.Controls.Add(this.Txt_Los);
             this.groupBox1.Controls.Add(this.label52);
-            this.groupBox1.Controls.Add(this.textBox24);
             this.groupBox1.Controls.Add(this.textBox23);
             this.groupBox1.Controls.Add(this.textBox22);
             this.groupBox1.Controls.Add(this.label51);
-            this.groupBox1.Controls.Add(this.textBox21);
+            this.groupBox1.Controls.Add(this.Txt_LLOC);
             this.groupBox1.Controls.Add(this.label50);
-            this.groupBox1.Controls.Add(this.textBox20);
+            this.groupBox1.Controls.Add(this.Txt_Ldomi);
             this.groupBox1.Controls.Add(this.label49);
-            this.groupBox1.Controls.Add(this.textBox18);
+            this.groupBox1.Controls.Add(this.Txt_LLugar);
             this.groupBox1.Controls.Add(this.label48);
             this.groupBox1.Controls.Add(this.dateTimePicker3);
             this.groupBox1.Controls.Add(this.label46);
-            this.groupBox1.Controls.Add(this.textBox17);
+            this.groupBox1.Controls.Add(this.Txt_LCui);
             this.groupBox1.Controls.Add(this.label45);
-            this.groupBox1.Controls.Add(this.textBox16);
+            this.groupBox1.Controls.Add(this.Txt_Lape);
             this.groupBox1.Controls.Add(this.label44);
             this.groupBox1.Controls.Add(this.textBox15);
             this.groupBox1.Controls.Add(this.label43);
@@ -1424,6 +1426,13 @@
             this.groupBox1.Size = new System.Drawing.Size(960, 391);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // Txt_Lnom
+            // 
+            this.Txt_Lnom.Location = new System.Drawing.Point(549, 24);
+            this.Txt_Lnom.Name = "Txt_Lnom";
+            this.Txt_Lnom.Size = new System.Drawing.Size(129, 22);
+            this.Txt_Lnom.TabIndex = 387;
             // 
             // button5
             // 
@@ -1670,12 +1679,12 @@
             this.label54.TabIndex = 22;
             this.label54.Text = "CUD:";
             // 
-            // textBox26
+            // txt_Lpens
             // 
-            this.textBox26.Location = new System.Drawing.Point(747, 99);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(194, 22);
-            this.textBox26.TabIndex = 21;
+            this.txt_Lpens.Location = new System.Drawing.Point(747, 99);
+            this.txt_Lpens.Name = "txt_Lpens";
+            this.txt_Lpens.Size = new System.Drawing.Size(194, 22);
+            this.txt_Lpens.TabIndex = 21;
             // 
             // label53
             // 
@@ -1686,12 +1695,12 @@
             this.label53.TabIndex = 20;
             this.label53.Text = "Pensión:";
             // 
-            // textBox25
+            // Txt_Los
             // 
-            this.textBox25.Location = new System.Drawing.Point(504, 99);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(161, 22);
-            this.textBox25.TabIndex = 19;
+            this.Txt_Los.Location = new System.Drawing.Point(504, 99);
+            this.Txt_Los.Name = "Txt_Los";
+            this.Txt_Los.Size = new System.Drawing.Size(161, 22);
+            this.Txt_Los.TabIndex = 19;
             // 
             // label52
             // 
@@ -1701,13 +1710,6 @@
             this.label52.Size = new System.Drawing.Size(33, 16);
             this.label52.TabIndex = 18;
             this.label52.Text = "O.S:";
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(338, 99);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(108, 22);
-            this.textBox24.TabIndex = 17;
             // 
             // textBox23
             // 
@@ -1732,12 +1734,12 @@
             this.label51.TabIndex = 14;
             this.label51.Text = "Telefonos:";
             // 
-            // textBox21
+            // Txt_LLOC
             // 
-            this.textBox21.Location = new System.Drawing.Point(801, 58);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(140, 22);
-            this.textBox21.TabIndex = 13;
+            this.Txt_LLOC.Location = new System.Drawing.Point(801, 58);
+            this.Txt_LLOC.Name = "Txt_LLOC";
+            this.Txt_LLOC.Size = new System.Drawing.Size(140, 22);
+            this.Txt_LLOC.TabIndex = 13;
             // 
             // label50
             // 
@@ -1748,12 +1750,12 @@
             this.label50.TabIndex = 12;
             this.label50.Text = "Localidad:";
             // 
-            // textBox20
+            // Txt_Ldomi
             // 
-            this.textBox20.Location = new System.Drawing.Point(586, 59);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(123, 22);
-            this.textBox20.TabIndex = 11;
+            this.Txt_Ldomi.Location = new System.Drawing.Point(586, 59);
+            this.Txt_Ldomi.Name = "Txt_Ldomi";
+            this.Txt_Ldomi.Size = new System.Drawing.Size(123, 22);
+            this.Txt_Ldomi.TabIndex = 11;
             // 
             // label49
             // 
@@ -1764,12 +1766,12 @@
             this.label49.TabIndex = 10;
             this.label49.Text = "Domicilio:";
             // 
-            // textBox18
+            // Txt_LLugar
             // 
-            this.textBox18.Location = new System.Drawing.Point(359, 60);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(140, 22);
-            this.textBox18.TabIndex = 9;
+            this.Txt_LLugar.Location = new System.Drawing.Point(359, 60);
+            this.Txt_LLugar.Name = "Txt_LLugar";
+            this.Txt_LLugar.Size = new System.Drawing.Size(140, 22);
+            this.Txt_LLugar.TabIndex = 9;
             // 
             // label48
             // 
@@ -1796,28 +1798,28 @@
             this.label46.TabIndex = 6;
             this.label46.Text = "Fecha de nacimiento:";
             // 
-            // textBox17
+            // Txt_LCui
             // 
-            this.textBox17.Location = new System.Drawing.Point(695, 24);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(140, 22);
-            this.textBox17.TabIndex = 5;
+            this.Txt_LCui.Location = new System.Drawing.Point(750, 18);
+            this.Txt_LCui.Name = "Txt_LCui";
+            this.Txt_LCui.Size = new System.Drawing.Size(140, 22);
+            this.Txt_LCui.TabIndex = 5;
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(637, 30);
+            this.label45.Location = new System.Drawing.Point(692, 21);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(42, 16);
             this.label45.TabIndex = 4;
             this.label45.Text = "CUIT:";
             // 
-            // textBox16
+            // Txt_Lape
             // 
-            this.textBox16.Location = new System.Drawing.Point(393, 24);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(198, 22);
-            this.textBox16.TabIndex = 3;
+            this.Txt_Lape.Location = new System.Drawing.Point(393, 24);
+            this.Txt_Lape.Name = "Txt_Lape";
+            this.Txt_Lape.Size = new System.Drawing.Size(132, 22);
+            this.Txt_Lape.TabIndex = 3;
             // 
             // label44
             // 
@@ -2251,7 +2253,7 @@
         private System.Windows.Forms.Button btnLegajo;
         private System.Windows.Forms.TabPage tabPageLegajo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox Txt_Lape;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label43;
@@ -2259,26 +2261,25 @@
         private System.Windows.Forms.TextBox txt_lCuit;
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox Txt_LLOC;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox Txt_Ldomi;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox Txt_LLugar;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox Txt_LCui;
         private System.Windows.Forms.Label label45;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.TextBox textBox27;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox txt_Lpens;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox Txt_Los;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.TextBox textBox23;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private System.Windows.Forms.Button btnLegajoDetalle;
@@ -2340,6 +2341,7 @@
         private System.Windows.Forms.Button Btn_Atras;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox Txt_Lnom;
 
     }
 }

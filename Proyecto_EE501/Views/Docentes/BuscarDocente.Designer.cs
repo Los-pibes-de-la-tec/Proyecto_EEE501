@@ -138,6 +138,7 @@
             this.txt_dTelefono.Name = "txt_dTelefono";
             this.txt_dTelefono.Size = new System.Drawing.Size(132, 22);
             this.txt_dTelefono.TabIndex = 307;
+            this.txt_dTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dCuit_KeyPress);
             // 
             // txt_dCuit
             // 
@@ -146,6 +147,7 @@
             this.txt_dCuit.Name = "txt_dCuit";
             this.txt_dCuit.Size = new System.Drawing.Size(132, 22);
             this.txt_dCuit.TabIndex = 271;
+            this.txt_dCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dCuit_KeyPress);
             // 
             // txt_dApellido
             // 
@@ -320,6 +322,7 @@
             this.txt_IDNI.Name = "txt_IDNI";
             this.txt_IDNI.Size = new System.Drawing.Size(160, 22);
             this.txt_IDNI.TabIndex = 37;
+            this.txt_IDNI.TextChanged += new System.EventHandler(this.txt_IDNI_TextChanged);
             // 
             // textBox1
             // 

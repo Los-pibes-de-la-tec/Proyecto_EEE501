@@ -95,31 +95,36 @@ namespace EjemploLibreriaForms.Docentes
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Metodos.CambiarTAb(tabControl1, tabPageDetalleDocente, tabPageListaDocentes);
-            if (!isEditing)
+            if (txt_dNombre.Text != "" & txt_dApellido.Text != "" & txt_dCuit.Text != "" & txt_dEmail.Text != "" & txt_dTelefono.Text != "")
             {
-                string AltaDoc = "INSERT INTO Docentes(Apellido, Nombre, Email, Cuit,Telefono) VALUES (' " +
-                txt_dApellido.Text + " ' , ' " + txt_dNombre.Text + " ' , ' " + txt_dEmail.Text + " ' , '" + txt_dCuit.Text + "','" + txt_dTelefono.Text + "') ; ";
-                para_BD.BD.CargarDB(AltaDoc);
-                MessageBox.Show("Docente registrado exitosamente!");
-                CargarGrilla();
-                BorrarDatosDocente();
+                if (!isEditing)
+                {
+                    string AltaDoc = "INSERT INTO Docentes(Apellido, Nombre, Email, Cuit,Telefono) VALUES (' " +
+                    txt_dApellido.Text + " ' , ' " + txt_dNombre.Text + " ' , ' " + txt_dEmail.Text + " ' , '" + txt_dCuit.Text + "','" + txt_dTelefono.Text + "') ; ";
+                    para_BD.BD.CargarDB(AltaDoc);
+                    MessageBox.Show("Docente registrado exitosamente!");
+                    Metodos.CambiarTAb(tabControl1, tabPageDetalleDocente, tabPageListaDocentes);
+                    CargarGrilla();
+                    BorrarDatosDocente();
+                }
+                else
+                {
+                    string AltaAlum = "UPDATE [Docentes] SET Apellido=?, Nombre=?, Email=?, Cuit=?,Telefono=? WHERE Id=?";
+                    var parametros = new Dictionary<string, string>();
+                    parametros.Add("@Apellido", txt_dApellido.Text);
+                    parametros.Add("@Nombre", txt_dNombre.Text);
+                    parametros.Add("@Email", txt_dEmail.Text);
+                    parametros.Add("@Cuit", txt_dCuit.Text);
+                    parametros.Add("@Telefono", txt_dTelefono.Text);
+                    parametros.Add("@Id", GetDocenteId().ToString());
+                    para_BD.BD.CargarDB(AltaAlum, parametros);
+                    CargarGrilla();
+                    MessageBox.Show("Datos editados exitosamente!");
+                    Metodos.CambiarTAb(tabControl1, tabPageDetalleDocente, tabPageListaDocentes);
+                    BorrarDatosDocente();
+                }
             }
-            else
-            {
-                string AltaAlum = "UPDATE [Docentes] SET Apellido=?, Nombre=?, Email=?, Cuit=?,Telefono=? WHERE Id=?";
-                var parametros = new Dictionary<string, string>();
-                parametros.Add("@Apellido", txt_dApellido.Text);
-                parametros.Add("@Nombre", txt_dNombre.Text);
-                parametros.Add("@Email", txt_dEmail.Text);
-                parametros.Add("@Cuit", txt_dCuit.Text);
-                parametros.Add("@Telefono", txt_dTelefono.Text);
-                parametros.Add("@Id", GetDocenteId().ToString());
-                para_BD.BD.CargarDB(AltaAlum, parametros);
-                CargarGrilla();
-                MessageBox.Show("Datos editados exitosamente!");
-                BorrarDatosDocente();
-            }
+          
 
         }
 
@@ -131,6 +136,30 @@ namespace EjemploLibreriaForms.Docentes
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             GetDocenteId();
+        }
+
+        private void txt_IDNI_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_IDNI.Text != "")
+            {
+                string FiltroCuit = "Select * From Docentes where Cuit like'%" + txt_IDNI.Text + "%'";
+                dataGridView1.Columns["Id"].Visible = false;
+                dataGridView1.DataSource = BD.CargarGrilla(FiltroCuit);
+            }
+            else
+            {
+                this.CargarGrilla();
+            }
+        }
+
+        private void txt_dCuit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten Numeros");
+                e.Handled = true;
+
+            }
         }
 
     }
