@@ -70,5 +70,16 @@ namespace EjemploLibreriaForms.para_BD
             return D;
         }
 
+        public static DataTable GetData(string Consulta)
+        {
+            AbrirDB();
+            OleDbDataAdapter da = new OleDbDataAdapter(Consulta, ConexionConBD);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+
+        }
+
+
     }
 }
