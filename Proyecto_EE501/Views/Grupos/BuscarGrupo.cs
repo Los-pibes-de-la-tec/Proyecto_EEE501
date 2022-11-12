@@ -121,8 +121,15 @@ namespace EjemploLibreriaForms.Grupos
         }
         private void btnAddAlumnoToList_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
-            panel1.BringToFront();
+            if (dataGridView2.CurrentRow != null)
+            {
+                panel1.Visible = true;
+                panel1.BringToFront();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un grupo primero");
+            }
 
         }
 
@@ -148,15 +155,23 @@ namespace EjemploLibreriaForms.Grupos
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("¿Estás seguro que quieres eliminar este Grupo?", "Advertencia",
-                  MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            if (dataGridView1.CurrentRow != null)
             {
-                string consulta = "delete from Grupo where Id = (" + GetGrupoId(dataGridView1) + ");";
-                para_BD.BD.CargarDB(consulta);
-                MessageBox.Show("Docente eliminado correctamente!");
-                CargarGrilla(dataGridView1);
+                var result = MessageBox.Show("¿Estás seguro que quieres eliminar este Grupo?", "Advertencia",
+                  MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    string consulta = "delete from Grupo where Id = (" + GetGrupoId(dataGridView1) + ");";
+                    para_BD.BD.CargarDB(consulta);
+                    MessageBox.Show("Grupo eliminado correctamente!");
+                    CargarGrilla(dataGridView1);
+                }
             }
+            else
+            {
+                MessageBox.Show("Seleccione un grupo primero");
+            }
+
         }
         private int GetGrupoId(DataGridView Grilla)
         {
@@ -209,15 +224,23 @@ namespace EjemploLibreriaForms.Grupos
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("¿Estás seguro que quieres eliminar este Grupo?", "Advertencia",
-                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            if (dataGridView3.CurrentRow != null)
             {
-                string consulta = "delete from GrupoAlumno where Id = (" + GetGrupoId(dataGridView3) + ");";
-                para_BD.BD.CargarDB(consulta);
-                MessageBox.Show("Alumno eliminado del grupo correctamente!");
-                CargarGrillaGrupAlum();
+                var result = MessageBox.Show("¿Estás seguro que quieres eliminar este Grupo?", "Advertencia",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    string consulta = "delete from GrupoAlumno where Id = (" + GetGrupoId(dataGridView3) + ");";
+                    para_BD.BD.CargarDB(consulta);
+                    MessageBox.Show("Alumno eliminado del grupo correctamente!");
+                    CargarGrillaGrupAlum();
+                }
             }
+            else
+            {
+                MessageBox.Show("Seleccione un Grupo primero");
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -232,7 +255,7 @@ namespace EjemploLibreriaForms.Grupos
             MessageBox.Show("Alumno Agregado al Grupo exitosamente!");
             CargarGrillaGrupAlum();
             OcultarPanel();
-           
+
         }
         private void OcultarPanel()
         {
