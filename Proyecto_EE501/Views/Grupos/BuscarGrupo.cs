@@ -35,6 +35,16 @@ namespace EjemploLibreriaForms.Grupos
             Grilla.Columns["Id"].Visible = false;
             Grilla.Columns["Id_Docente"].Visible = false;
         }
+        private void CargarGrillaGrupAlum()
+        {
+            string GrupAlum = "Select Alumnos.Nombre,Alumnos.Apellido,Alumnos.Cuit, GrupoAlumno.Id_Grupo,GrupoAlumno.Id_Alumno,GrupoAlumno.Id From Alumnos inner join GrupoAlumno on Alumnos.Id = GrupoAlumno.Id_Alumno where GrupoAlumno.Id_Grupo= (" + GetGrupoId(dataGridView2) + ");";
+            dataGridView3.AutoGenerateColumns = true;
+            dataGridView3.AllowUserToAddRows = false;
+            dataGridView3.DataSource = BD.CargarGrilla(GrupAlum);
+            dataGridView3.Columns["Id_Alumno"].Visible = false;
+            dataGridView3.Columns["Id"].Visible = false;
+            dataGridView3.Columns["Id_Grupo"].Visible = false;
+        }
 
         private void btnAddNew_Click(object sender, EventArgs e)
         {
@@ -100,25 +110,26 @@ namespace EjemploLibreriaForms.Grupos
 
         private void btnAddAlumnoToGroup_Click(object sender, EventArgs e)
         {
- 
             Metodos.CambiarTAb(tabControl1, tabPageListaGrupos, tabPageGrupoNuevoAlumno);
             CargarGrilla(dataGridView2);
+            string Alumnos = "Select Apellido,Nombre,Cuit,Cud,Id From Alumnos";
+            dataGridView4.AutoGenerateColumns = true;
+            dataGridView4.AllowUserToAddRows = false;
+            dataGridView4.DataSource = BD.CargarGrilla(Alumnos);
+            dataGridView4.Columns["Id"].Visible = false;
+            dataGridView4.Columns["Cud"].Visible = false;
         }
-
         private void btnAddAlumnoToList_Click(object sender, EventArgs e)
         {
-            //var alumno = this.GetSelectedRowAsAlumno();
-            //string alumnoStringToAdd = string.Format("{0} {1} {2}", alumno.Cuit, alumno.Nombre, alumno.Apellido);
-            //if (!listBox1.Items.Contains(alumnoStringToAdd)) 
-            //{
-            //    listBox1.Items.Add(alumnoStringToAdd);
-            //}
+            panel1.Visible = true;
+            panel1.BringToFront();
 
         }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             Metodos.CambiarTAb(tabControl1, tabPageGrupoNuevoAlumno, tabPageListaGrupos);
+            OcultarPanel();
         }
 
         private void BuscarGrupo_Load(object sender, EventArgs e)
@@ -149,7 +160,7 @@ namespace EjemploLibreriaForms.Grupos
         }
         private int GetGrupoId(DataGridView Grilla)
         {
-            return Convert.ToInt32(Grilla.Rows[dataGridView1.CurrentRow.Index].Cells["Id"].Value);
+            return Convert.ToInt32(Grilla.Rows[Grilla.CurrentRow.Index].Cells["Id"].Value);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -173,12 +184,60 @@ namespace EjemploLibreriaForms.Grupos
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             GetGrupoId(dataGridView1);
+
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            GetGrupoId(dataGridView2);
+            CargarGrillaGrupAlum();
 
+        }
+
+        private void txt_lNombreGrupo_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_lNombreGrupo.Text != "")
+            {
+                string FiltroCuit = "Select * From Grupo where Nombre like'%" + txt_lNombreGrupo.Text + "%'";
+                dataGridView1.Columns["Id"].Visible = false;
+                dataGridView1.DataSource = BD.CargarGrilla(FiltroCuit);
+            }
+            else
+            {
+                this.CargarGrilla(dataGridView1);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("¿Estás seguro que quieres eliminar este Grupo?", "Advertencia",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                string consulta = "delete from GrupoAlumno where Id = (" + GetGrupoId(dataGridView3) + ");";
+                para_BD.BD.CargarDB(consulta);
+                MessageBox.Show("Alumno eliminado del grupo correctamente!");
+                CargarGrillaGrupAlum();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OcultarPanel();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string InsertGrupAlum = "INSERT INTO GrupoAlumno(Id_Alumno, Id_Grupo) VALUES (' " + dataGridView4.CurrentRow.Cells["Id"].Value + " ' , ' " + dataGridView2.CurrentRow.Cells["Id"].Value + "') ; ";
+            BD.CargarDB(InsertGrupAlum);
+            MessageBox.Show("Alumno Agregado al Grupo exitosamente!");
+            CargarGrillaGrupAlum();
+            OcultarPanel();
+           
+        }
+        private void OcultarPanel()
+        {
+            panel1.Visible = false;
+            panel1.SendToBack();
         }
 
     }
